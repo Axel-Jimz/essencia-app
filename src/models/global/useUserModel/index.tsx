@@ -1,13 +1,19 @@
 import useUserInterfaceData from "../../data/useUserInterfaceData";
-import useUserPersonalData from "../../data/useUserPersonalData";
 import useUserInterfaceFunctions from "../../functions/useUserInterfaceFunctions";
+
+import useUserAuthFunctions from "../../functions/useUserAuthFunctions";
+
+import useUserPersonalData from "../../data/useUserPersonalData";
 import useUserPersonalDataFunctions from "../../functions/useUserPersonalDataFunctions";
+
 import { useUserModelProps } from "./props";
 
 const useUserModel = (): useUserModelProps => {
 
     const { theme } = useUserInterfaceData();
     const { changeTheme } = useUserInterfaceFunctions();
+
+    const { signInWithGoogle, signOutUser } = useUserAuthFunctions();
 
     const { userId, username, biography, profilePictureURL, profileCoverURL, followers, following, posts, accountCreated, online } = useUserPersonalData();
 
@@ -19,6 +25,9 @@ const useUserModel = (): useUserModelProps => {
         theme,
         /* User Interface - Functions*/
         changeTheme,
+        /* User Auth - Functions */
+        signInWithGoogle,
+        signOutUser,
         /* User Personal Data */
         userId,
         username,
@@ -40,7 +49,7 @@ const useUserModel = (): useUserModelProps => {
         changeFollowing,
         changePosts,
         changeAccountCreated,
-        changeOnlineStatus
+        changeOnlineStatus,
     };
   };
   

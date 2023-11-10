@@ -6,6 +6,9 @@ export const UserModelContext = createContext<UserModelContextProps>({
   theme: false,
   /* User Interface - Functions*/
   changeTheme: () => {},
+  /* User Auth - Functions */
+  signInWithGoogle: () => {},
+  signOutUser: () => {},
   /* User Personal Data */
   userId: '',
   username: '',

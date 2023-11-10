@@ -1,16 +1,26 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Auth from "../pages/Auth";
+import ProtectedAuth from "../pages/protected/ProtectedAuth";
+import ProtectedHome from "../pages/protected/ProtectedHome";
 
 export const router = createBrowserRouter([
   {
     path: "/auth",
-    element: <Auth />,
+    element: (
+      <ProtectedAuth>
+        <Auth />
+      </ProtectedAuth>
+    ),
     errorElement: <h1>Error element</h1>,
   },
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <ProtectedHome>
+        <Home />
+      </ProtectedHome>
+    ),
     errorElement: <h1>Error element</h1>,
     children: [
       {

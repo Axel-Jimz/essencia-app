@@ -3,6 +3,9 @@ export interface useUserModelProps {
   theme: boolean;
   /* User Interface - Functions*/
   changeTheme: () => void;
+  /* User Auth - Functions */
+  signInWithGoogle: () => Promise<void>;
+  signOutUser: () => Promise<void>;
   /* User Personal Data */
   userId: string;
   username: string;

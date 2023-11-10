@@ -3,6 +3,9 @@ export interface UserModelContextProps {
   theme: boolean;
   /* User Interface - Functions*/
   changeTheme: () => void;
+  /* User Auth - Functions */
+  signInWithGoogle: () => void;
+  signOutUser: () => void;
   /* User Personal Data */
   userId: string;
   username: string;
