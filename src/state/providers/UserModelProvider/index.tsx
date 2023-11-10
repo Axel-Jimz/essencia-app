@@ -1,5 +1,5 @@
 import React from "react";
-import { UserModelProviderProps } from "./types";
+import { UserModelProviderProps } from "./props";
 import { UserModelContext } from "../../contexts/UserModelContext";
 import useUserModel from "../../../models/global/useUserModel";
 

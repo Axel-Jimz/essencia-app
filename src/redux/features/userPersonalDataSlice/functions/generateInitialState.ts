@@ -1,4 +1,4 @@
-import { userPersonalDataStateProps } from "../types";
+import { userPersonalDataStateProps } from "../props";
 
 export const generateInitialState = (): userPersonalDataStateProps => ({
     userId: '',

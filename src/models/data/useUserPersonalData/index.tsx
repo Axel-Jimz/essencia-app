@@ -1,5 +1,5 @@
 import { useAppSelector } from "../../../redux/redux-hooks";
-import { useUserPersonalDataProps } from "./types";
+import { useUserPersonalDataProps } from "./props";
 
 const useUserPersonalData = (): useUserPersonalDataProps => {
     const userId = useAppSelector((state) => state.userPersonalData.userId);

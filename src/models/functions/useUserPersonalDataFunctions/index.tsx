@@ -1,5 +1,5 @@
 import { useAppDispatch } from "../../../redux/redux-hooks";
-import { useUserPersonalDataFunctionsProps } from "./types";
+import { useUserPersonalDataFunctionsProps } from "./props";
 
 import { setAccountCreated, setBiography, setFollowers, setFollowing, setOnlineStatus, setPosts, setProfileCoverURL, setProfilePictureURL, setUserId, setUsername } from "../../../redux/features/userPersonalDataSlice"
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NotificationProps, NotificationStatusProps } from "../../types";
+import { NotificationProps, NotificationStatusProps } from "../../props";
 
 const useNotification = () => {
   const [notification, setNotification] = useState<NotificationProps>({

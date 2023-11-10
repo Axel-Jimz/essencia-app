@@ -1,5 +1,5 @@
 import React from "react";
-import { NoticeNotificationProps } from "./types";
+import { NoticeNotificationProps } from "./props";
 
 import SuccessIcon from "../../icons/SuccessIcon";
 import InfoIcon from "../../icons/InfoIcon";

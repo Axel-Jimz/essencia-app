@@ -1,5 +1,5 @@
 import React from "react";
-import { NotificationProviderProps, NotificationStatusProps } from "./types";
+import { NotificationProviderProps, NotificationStatusProps } from "./props";
 import { NotificationContext } from "../../contexts/NotificationContext";
 import useNotification from "./hook/useNotification";
 import NoticeNotification from "../../../components/Notifications/NoticeNotification";

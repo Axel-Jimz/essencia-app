@@ -2,7 +2,7 @@ import useUserInterfaceData from "../../data/useUserInterfaceData";
 import useUserPersonalData from "../../data/useUserPersonalData";
 import useUserInterfaceFunctions from "../../functions/useUserInterfaceFunctions";
 import useUserPersonalDataFunctions from "../../functions/useUserPersonalDataFunctions";
-import { useUserModelProps } from "./types";
+import { useUserModelProps } from "./props";
 
 const useUserModel = (): useUserModelProps => {
 

@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { UserModelContextProps } from "./types";
+import { UserModelContextProps } from "./props";
 
 export const UserModelContext = createContext<UserModelContextProps>({
     /* User Interface */

@@ -1,5 +1,5 @@
 import { useAppDispatch } from "../../../redux/redux-hooks";
-import { useUserInterfaceFunctionsProps } from "./types";
+import { useUserInterfaceFunctionsProps } from "./props";
 
 import { setTheme } from "../../../redux/features/themeSlice";
 
