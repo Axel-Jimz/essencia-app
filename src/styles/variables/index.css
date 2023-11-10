@@ -1,0 +1,86 @@
+:root {
+  /* Fonts */
+  --font-family-montserrat: "Montserrat", sans-serif;
+  --font-family-roboto: "Roboto", sans-serif;
+  --font-family-open-sans: "Open Sans", sans-serif;
+
+  /* Font Sizes */
+  --font-size-xxl: 3.5rem;
+  --font-size-xl: 3rem;
+  --font-size-lg: 2rem;
+  --font-size-md: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 900;
+
+  /* Colors */
+  /* Blue */
+  --color-blue: #66ccff;
+  --color-blue-80: #66ccff80;
+  --color-blue-40: #66ccff40;
+  --color-blue-20: #66ccff20;
+  --color-blue-10: #66ccff10;
+  /* Red */
+  --color-red: #ff5252;
+  --color-red-80: #ff525280;
+  --color-red-40: #ff525240;
+  --color-red-20: #ff525220;
+  --color-red-10: #ff525210;
+  /* Yellow */
+  --color-yellow: #ffd740;
+  --color-yellow-80: #ffd74080;
+  --color-yellow-40: #ffd74040;
+  --color-yellow-20: #ffd74020;
+  --color-yellow-10: #ffd74010;
+  /* Green */
+  --color-green: #00bfa5;
+  --color-green-80: #00bfa580;
+  --color-green-40: #00bfa540;
+  --color-green-20: #00bfa520;
+  --color-green-10: #72807e10;
+  /* Purple */
+  --color-purple: #6200ea;
+  --color-purple-80: #6200ea80;
+  --color-purple-40: #6200ea40;
+  --color-purple-20: #6200ea20;
+  --color-purple-10: #6200ea10;
+  /* Pink */
+  --color-pink: #ff4081;
+  --color-pink-80: #ff408180;
+  --color-pink-40: #ff408140;
+  --color-pink-20: #ff408120;
+  --color-pink-10: #ff408110;
+  /* Orange */
+  --color-orange: #ffa726;
+  --color-orange-80: #ffa72680;
+  --color-orange-40: #ffa72640;
+  --color-orange-20: #ffa72620;
+  --color-orange-10: #ffa72610;
+  /* Gray */
+  --color-gray: #a3a3a3;
+  --color-gray-80: #a3a3a380;
+  --color-gray-40: #a3a3a340;
+  --color-gray-20: #a3a3a320;
+  --color-gray-10: #a3a3a310;
+  /* Black */
+  --color-black: #181818;
+  --color-black-80: #18181880;
+  --color-black-40: #18181840;
+  --color-black-20: #18181820;
+  --color-black-10: #18181810;
+  /* White */
+  --color-white: #ffffff;
+  --color-white-80: #ffffff80;
+  --color-white-40: #ffffff40;
+  --color-white-20: #ffffff20;
+  --color-white-10: #ffffff10;
+}

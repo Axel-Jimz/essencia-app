@@ -12,8 +12,8 @@ const queryClient = new QueryClient()
 import { RouterProvider } from "react-router-dom";
 import { router } from './router';
 
-import UserModelProvider from './state/provider/UserModelProvider';
-import NotificationProvider from './state/provider/NotificationProvider';
+import UserModelProvider from './state/providers/UserModelProvider';
+import NotificationProvider from './state/providers/NotificationProvider';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
