@@ -1,3 +1,8 @@
 export interface NotificationContextProps {
-  showNotification: (message: string) => void;
+  showNotification: (
+    status: "success" | "error" | "info" | "warning" | null,
+    title: string,
+    message: string,
+    
+  ) => void;
 }

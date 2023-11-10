@@ -1,16 +1,24 @@
 import React from "react";
-import { NotificationProviderProps } from "./types";
+import { NotificationProviderProps, NotificationStatusProps } from "./types";
 import { NotificationContext } from "../../contexts/NotificationContext";
-import Notificacion from "../../../components/Notification";
 import useNotification from "./hook/useNotification";
+import NoticeNotification from "../../../components/Notifications/NoticeNotification";
 
 const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const { notification, showNotification } = useNotification();
 
+  const contextValue = {
+    showNotification: (status: NotificationStatusProps['status'], title: string, message: string) => {
+      showNotification(status, title, message);
+    }
+  };
+
   return (
-    <NotificationContext.Provider value={{ showNotification }}>
+    <NotificationContext.Provider value={contextValue}>
       {children}
-      {notification.visible && <Notificacion message={notification.message} />}
+      {notification.visible && (
+        <NoticeNotification status={notification.status} title={notification.title} message={notification.message} />
+      )}
     </NotificationContext.Provider>
   );
 };

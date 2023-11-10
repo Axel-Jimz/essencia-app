@@ -15,6 +15,9 @@ import { router } from './router';
 import UserModelProvider from './state/providers/UserModelProvider';
 import NotificationProvider from './state/providers/NotificationProvider';
 
+import "./styles/normalize/index.css";
+import "./styles/variables/index.css";
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <PersistGate persistor={persistor}>
