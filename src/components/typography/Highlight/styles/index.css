@@ -1,0 +1,42 @@
+/* Highlight */
+
+.highlight.color-blue {
+    color: var(--color-blue);
+  }
+  
+  .highlight.color-red {
+    color: var(--color-red);
+  }
+  
+  .highlight.color-yellow {
+    color: var(--color-yellow);
+  }
+  
+  .highlight.color-green {
+    color: var(--color-green);
+  }
+  
+  .highlight.color-purple {
+    color: var(--color-purple);
+  }
+  
+  .highlight.color-pink {
+    color: var(--color-pink);
+  }
+  
+  .highlight.color-orange {
+    color: var(--color-orange);
+  }
+  
+  .highlight.color-gray {
+    color: var(--color-gray);
+  }
+  
+  .highlight.color-black {
+    color: var(--color-black);
+  }
+  
+  .highlight.color-white {
+    color: var(--color-white);
+  }
+  

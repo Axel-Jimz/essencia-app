@@ -1,0 +1,116 @@
+/* paragraph */
+
+.paragraph {
+    margin: 0;
+    padding: 0;
+    line-height: 1.125rem;
+}
+
+/* Families */
+
+.paragraph.family-montserrat {
+  font-family: var(--font-family-montserrat);
+}
+
+
+/* Sizes */
+
+.paragraph.size-xs {
+  font-size: var(--font-size-xs);
+}
+
+.paragraph.size-sm {
+  font-size: var(--font-size-sm);
+}
+
+.paragraph.size-md {
+  font-size: var(--font-size-md);
+}
+
+.paragraph.size-lg {
+  font-size: var(--font-size-lg);
+}
+
+.paragraph.size-xl {
+  font-size: var(--font-size-xl);
+}
+
+.paragraph.size-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+/* Weights */
+
+.paragraph.weight-thin {
+  font-weight: var(--font-weight-thin);
+}
+
+.paragraph.weight-extralight {
+  font-weight: var(--font-weight-extralight);
+}
+
+.paragraph.weight-light {
+  font-weight: var(--font-weight-light);
+}
+
+.paragraph.weight-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.paragraph.weight-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.paragraph.weight-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.paragraph.weight-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.paragraph.weight-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+/* Colors */
+
+.paragraph.color-blue {
+  color: var(--color-blue);
+}
+
+.paragraph.color-red {
+  color: var(--color-red);
+}
+
+.paragraph.color-yellow {
+  color: var(--color-yellow);
+}
+
+.paragraph.color-green {
+  color: var(--color-green);
+}
+
+.paragraph.color-purple {
+  color: var(--color-purple);
+}
+
+.paragraph.color-orange {
+  color: var(--color-orange);
+}
+
+.paragraph.color-pink {
+  color: var(--color-pink);
+}
+
+.paragraph.color-gray {
+  color: var(--color-gray);
+}
+
+.paragraph.color-black {
+  color: var(--color-black);
+}
+
+.paragraph.color-white {
+  color: var(--color-white);
+}
