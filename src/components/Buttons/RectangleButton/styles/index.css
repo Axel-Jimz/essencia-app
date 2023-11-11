@@ -1,0 +1,138 @@
+.rectangle-button {
+  position: relative;
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  min-width: 13.75rem;
+  max-width: 13.75rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  z-index: 500;
+}
+
+.rectangle-button.enabled-icon {
+  padding: 0 0 0 1rem;
+}
+
+.rectangle-button > .icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.rectangle-button > .tooltip-message {
+  position: absolute;
+  background-color: var(--color-black);
+  padding: 0.250rem 1rem;
+  bottom: -2rem;
+  left: 50%;
+  text-wrap: nowrap;
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  display: none;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: 1000;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.rectangle-button.enabled-icon > .tooltip-message {
+  margin: 0 0 0 0.5rem;
+}
+
+/* Background colors */
+
+.rectangle-button.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.rectangle-button.bg-red {
+  background-color: var(--color-red);
+}
+
+.rectangle-button.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.rectangle-button.bg-green {
+  background-color: var(--color-green);
+}
+
+.rectangle-button.bg-purple {
+  background-color: var(--color-purple);
+}
+
+.rectangle-button.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.rectangle-button.bg-orange {
+  background-color: var(--color-orange);
+}
+
+.rectangle-button.bg-gray {
+  background-color: var(--color-gray);
+}
+
+/* Disabled */
+
+.rectangle-button:disabled {
+  background-color: var(--color-gray);
+}
+
+/* Effects */
+
+.rectangle-button:active {
+  opacity: 0.8;
+}
+
+.rectangle-button:active > .tooltip-message {
+  display: block;
+}
+
+@media (hover: hover) {
+  .rectangle-button:hover {
+    opacity: 0.8;
+  }
+
+  .rectangle-button:hover > .tooltip-message {
+    display: block;
+  }
+}

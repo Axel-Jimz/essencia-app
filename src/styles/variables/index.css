@@ -5,12 +5,12 @@
   --font-family-open-sans: "Open Sans", sans-serif;
 
   /* Font Sizes */
-  --font-size-xxl: 3.5rem;
-  --font-size-xl: 3rem;
-  --font-size-lg: 1.5rem;
-  --font-size-md: 1rem;
-  --font-size-sm: 0.875rem;
-  --font-size-xs: 0.75rem;
+  --font-size-xxl: 3.75rem;
+  --font-size-xl: 21.625rem;
+  --font-size-lg: 1.875rem;
+  --font-size-md: 1.375rem;
+  --font-size-sm: 1.125rem;
+  --font-size-xs: 0.875rem;
 
   /* Font Weights */
   --font-weight-thin: 100;

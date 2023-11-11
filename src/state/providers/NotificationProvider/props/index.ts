@@ -3,6 +3,7 @@ export interface NotificationProviderProps {
 }
 
 export interface NotificationProps {
+  id: number;
   visible: boolean;
   status: 'success' | 'error' | 'info' | 'warning' | null;
   title: string;

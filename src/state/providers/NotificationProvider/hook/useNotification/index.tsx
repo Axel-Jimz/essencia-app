@@ -2,28 +2,31 @@ import { useState, useEffect } from "react";
 import { NotificationProps, NotificationStatusProps } from "../../props";
 
 const useNotification = () => {
-  const [notification, setNotification] = useState<NotificationProps>({
-    visible: false,
-    status: null,
-    title: '',
-    message: '',
-  });
+  const [notifications, setNotifications] = useState<NotificationProps[]>([]);
 
-  const showNotification = (status: NotificationStatusProps['status'], title: string, message: string, ) => {
-    setNotification({ visible: true, status, title, message });
+  const showNotification = (status: NotificationStatusProps['status'], title: string, message: string) => {
+    const newNotification: NotificationProps = {
+      id: Date.now(),
+      visible: true,
+      status,
+      title,
+      message,
+    };
+
+    setNotifications((prevNotifications) => [...prevNotifications, newNotification]);
   };
 
   useEffect(() => {
-    if (notification.visible) {
+    if (notifications.length > 0) {
       const timeout = setTimeout(() => {
-        setNotification({ visible: false, status: null, title: '', message: '' });
-      }, 3000);
+        setNotifications((prevNotifications) => prevNotifications.slice(1));
+      }, 2000);
 
       return () => clearTimeout(timeout);
     }
-  }, [notification]);
+  }, [notifications]);
 
-  return { notification, showNotification };
+  return { notifications, showNotification };
 };
 
 export default useNotification;

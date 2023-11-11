@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1>Home Page</h1>
-      <button onClick={signOutUser}>Cerrar sesion</button>
+      <button onClick={signOutUser}>Cerrar sesión</button>
     </div>
   );
 };
