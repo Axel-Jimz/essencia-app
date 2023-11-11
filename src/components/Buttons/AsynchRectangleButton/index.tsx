@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { AsynchRectangleButtonProps } from "./props";
-import { NotificationContext } from "../../../state/contexts/NotificationContext";
+import { NotificationsContext } from "../../../state/contexts/NotificationsContext";
 import LoadingIcon from "../../icons/LoadingIcon";
 import "./styles/index.css";
 import "./styles/theme.css";
+
 
 const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
   children,
@@ -17,7 +18,7 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
   errorDescription,
 }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { showNotification } = useContext(NotificationContext);
+  const { showNotification } = useContext(NotificationsContext);
 
   const classes = ['asynch-rectangle-button'];
 

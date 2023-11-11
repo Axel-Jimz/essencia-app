@@ -10,5 +10,6 @@ export interface NavRoundButtonProps {
     | "purple"
     | "pink"
     | "orange"
+    | "white"
     | "gray";
 }

@@ -1,14 +1,12 @@
-import React, { useContext } from 'react';
-import { UserModelContext } from '../../state/contexts/UserModelContext';
+import React from "react";
+
+import AuthContainer from "../../containers/AuthContainer";
 
 const Auth: React.FC = () => {
-  const { signInWithGoogle } = useContext(UserModelContext);
-
   return (
-    <div>
-      <h1>Auth Page</h1>
-      <button onClick={signInWithGoogle}>Ingresar con google</button>
-    </div>
+    <>
+      <AuthContainer />
+    </>
   );
 };
 

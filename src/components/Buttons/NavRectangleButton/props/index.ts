@@ -11,5 +11,6 @@ export interface NavRectangleButtonProps {
     | "purple"
     | "pink"
     | "orange"
+    | "white"
     | "gray";
 }

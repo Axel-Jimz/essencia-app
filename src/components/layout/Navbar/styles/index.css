@@ -1,0 +1,10 @@
+.navbar {
+    width: 100%;
+}
+
+.navbar > div {
+    width: 100%;
+    max-width: 80rem;
+    padding: 0.5rem 5.5%;
+    margin: 0 auto;
+}

@@ -103,6 +103,10 @@
   background-color: var(--color-orange);
 }
 
+.asynch-round-button.bg-white {
+  background-color: var(--color-white);
+}
+
 .asynch-round-button.bg-gray {
   background-color: var(--color-gray);
 }
@@ -116,6 +120,10 @@
 .asynch-round-button.bg-orange > svg > path,
 .asynch-round-button.bg-gray > svg > path {
   stroke: var(--color-white);
+}
+
+.asynch-round-button.bg-white > svg > path {
+  stroke: var(--color-black);
 }
 
 /* Disabled */

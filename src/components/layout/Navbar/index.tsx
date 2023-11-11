@@ -2,7 +2,6 @@ import React from "react";
 import { NavbarProps } from "./props";
 
 import "./styles/index.css";
-import "./styles/theme.css";
 
 const Navbar: React.FC<NavbarProps> = ({ children, id }) => {
   const classes = ["navbar"];
@@ -11,7 +10,9 @@ const Navbar: React.FC<NavbarProps> = ({ children, id }) => {
 
   return (
     <nav className={classes.join(" ")} id={id}>
-      {children}
+      <div>
+        {children}
+      </div>
     </nav>
   );
 };

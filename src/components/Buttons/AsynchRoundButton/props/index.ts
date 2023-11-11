@@ -10,6 +10,7 @@ export interface AsynchRoundButtonProps {
     | "purple"
     | "pink"
     | "orange"
+    | "white"
     | "gray";
   successTitle: string;
   successDescription: string;

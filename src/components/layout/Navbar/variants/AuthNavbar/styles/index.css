@@ -1,0 +1,10 @@
+.navbar#auth {
+    background-color: var(--color-blue);
+}
+
+.navbar#auth > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

@@ -107,8 +107,27 @@
   background-color: var(--color-orange);
 }
 
+.rectangle-round-button.bg-white {
+  background-color: var(--color-white);
+}
+
 .rectangle-button.bg-gray {
   background-color: var(--color-gray);
+}
+
+.rectangle-button.bg-blue > svg > path,
+.rectangle-button.bg-red > svg > path,
+.rectangle-button.bg-yellow > svg > path,
+.rectangle-button.bg-green > svg > path,
+.rectangle-button.bg-purple > svg > path,
+.rectangle-button.bg-pink > svg > path,
+.rectangle-button.bg-orange > svg > path,
+.rectangle-button.bg-gray > svg > path {
+  stroke: var(--color-white);
+}
+
+.rectangle-button.bg-white > svg > path {
+  stroke: var(--color-black);
 }
 
 /* Disabled */

@@ -1,7 +1,7 @@
 export interface AsynchRectangleButtonProps {
   children: React.ReactNode;
   icon?: React.ReactElement;
-  onClick: () => Promise<void>;
+  onClick: () => void;
   tooltipMessage?: string;
   bg:
     | "blue"
@@ -11,6 +11,7 @@ export interface AsynchRectangleButtonProps {
     | "purple"
     | "pink"
     | "orange"
+    | "white"
     | "gray";
   successTitle: string;
   successDescription: string;

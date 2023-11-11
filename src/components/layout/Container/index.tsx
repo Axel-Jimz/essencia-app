@@ -7,8 +7,6 @@ import "./styles/theme.css";
 const Container: React.FC<ContainerProps> = ({ children, id }) => {
   const classes = ["container"];
 
-  classes.push(id);
-
   return (
     <div className={classes.join(" ")} id={id}>
       {children}

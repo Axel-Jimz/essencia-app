@@ -1,8 +1,7 @@
 import React from "react";
 import { HighlightProps } from "./props";
 
-// Import the stylesheet.
-import "./styles.css";
+import "./styles/index.css";
 
 const Highlight: React.FC<HighlightProps> = ({ children, color }) => {
   const classes = ['highlight'];

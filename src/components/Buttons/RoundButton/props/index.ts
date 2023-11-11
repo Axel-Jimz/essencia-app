@@ -10,5 +10,6 @@ export interface RoundButtonProps {
     | "purple"
     | "pink"
     | "orange"
+    | "white"
     | "gray";
 }

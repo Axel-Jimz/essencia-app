@@ -11,5 +11,6 @@ export interface RectangleButtonProps {
     | "purple"
     | "pink"
     | "orange"
+    | "white"
     | "gray";
 }
