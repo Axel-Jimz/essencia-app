@@ -13,7 +13,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from './router';
 
 import UserModelProvider from './state/providers/UserModelProvider';
-import NotificationProvider from './state/providers/NotificationProvider';
+import NotificationsProvider from './state/providers/NotificationsProvider';
 
 import "./styles/normalize/index.css";
 import "./styles/variables/index.css";
@@ -24,9 +24,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
           <UserModelProvider>
-            <NotificationProvider>
+            <NotificationsProvider>
               <RouterProvider router={router} />
-            </NotificationProvider>
+            </NotificationsProvider>
           </UserModelProvider>
         </QueryClientProvider>
       </Provider>

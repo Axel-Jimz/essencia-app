@@ -1,4 +1,4 @@
-export interface NotificationProviderProps {
+export interface NotificationsProviderProps {
   children: React.ReactNode;
 }
 

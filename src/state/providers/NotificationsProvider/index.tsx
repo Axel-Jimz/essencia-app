@@ -1,10 +1,10 @@
 import React from "react";
-import { NotificationProviderProps, NotificationStatusProps } from "./props";
-import { NotificationContext } from "../../contexts/NotificationContext";
+import { NotificationsProviderProps, NotificationStatusProps } from "./props";
+import { NotificationsContext } from "../../contexts/NotificationsContext";
 import useNotification from "./hook/useNotification";
-import NoticeNotification from "../../../components/Notifications/NoticeNotification";
+import NoticeNotification from "../../../components/notifications/NoticeNotification";
 
-const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+const NotificationsProvider: React.FC<NotificationsProviderProps> = ({ children }) => {
   const { notifications, showNotification } = useNotification();
 
   const contextValue = {
@@ -14,13 +14,13 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({ children })
   };
 
   return (
-    <NotificationContext.Provider value={contextValue}>
+    <NotificationsContext.Provider value={contextValue}>
       {children}
       {notifications.map((notification) => (
         <NoticeNotification key={notification.id} status={notification.status} title={notification.title} message={notification.message} />
       ))}
-    </NotificationContext.Provider>
+    </NotificationsContext.Provider>
   );
 };
 
-export default NotificationProvider;
+export default NotificationsProvider;
