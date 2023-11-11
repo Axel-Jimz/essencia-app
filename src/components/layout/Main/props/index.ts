@@ -1,4 +1,4 @@
-export interface ContainerProps {
+export interface MainProps {
     children: React.ReactNode;
     id: string;
 }

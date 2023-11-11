@@ -1,4 +1,4 @@
-export interface ContainerProps {
+export interface NavbarProps {
     children: React.ReactNode;
     id: string;
 }
