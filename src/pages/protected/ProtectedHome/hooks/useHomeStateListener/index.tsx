@@ -14,13 +14,12 @@ const useHomeStateListener = (): useHomeStateListenerProps => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        navigate("/");
         setIsLoading(false);
       } else {
         navigate("/auth");
       }
     });
-
+  
     return () => {
       unsubscribe();
     };

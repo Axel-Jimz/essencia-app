@@ -14,17 +14,19 @@ const useAuthStateListener = (): useAuthStateListenerProps => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
+        setIsLoading(false);
         navigate("/");
       } else {
-        navigate("/auth");
         setIsLoading(false);
+        navigate("/auth");
       }
     });
-
+  
     return () => {
       unsubscribe();
     };
   }, [auth, navigate]);
+  
 
   return {
     isLoading,

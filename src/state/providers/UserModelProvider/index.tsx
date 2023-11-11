@@ -8,8 +8,6 @@ const UserModelProvider: React.FC<UserModelProviderProps> = ({ children }) => {
 
   const { theme } = useUserModel();
 
-  console.log(theme)
-
   return (
     <UserModelContext.Provider value={userModel}>
       <div className={`${theme ? 'theme-dark' : 'theme-light'}`}>
