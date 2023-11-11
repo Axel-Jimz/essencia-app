@@ -1,0 +1,145 @@
+.asynch-round-button {
+  position: relative;
+  min-width: 2.5rem;
+  max-width: 2.5rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  z-index: 500;
+}
+
+.asynch-round-button.enabled-icon {
+  padding: 0 0 0 1rem;
+}
+
+.asynch-round-button > .icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.asynch-round-button > .tooltip-message {
+  position: absolute;
+  background-color: var(--color-black);
+  padding: 0.25rem 1rem;
+  bottom: -2rem;
+  left: 50%;
+  text-wrap: nowrap;
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  display: none;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: 1000;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.asynch-round-button.enabled-icon > .tooltip-message {
+  margin: 0 0 0 0.5rem;
+}
+
+/* Background colors */
+
+.asynch-round-button.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.asynch-round-button.bg-red {
+  background-color: var(--color-red);
+}
+
+.asynch-round-button.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.asynch-round-button.bg-green {
+  background-color: var(--color-green);
+}
+
+.asynch-round-button.bg-purple {
+  background-color: var(--color-purple);
+}
+
+.asynch-round-button.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.asynch-round-button.bg-orange {
+  background-color: var(--color-orange);
+}
+
+.asynch-round-button.bg-gray {
+  background-color: var(--color-gray);
+}
+
+.asynch-round-button.bg-blue > svg > path,
+.asynch-round-button.bg-red > svg > path,
+.asynch-round-button.bg-yellow > svg > path,
+.asynch-round-button.bg-green > svg > path,
+.asynch-round-button.bg-purple > svg > path,
+.asynch-round-button.bg-pink > svg > path,
+.asynch-round-button.bg-orange > svg > path,
+.asynch-round-button.bg-gray > svg > path {
+  stroke: var(--color-white);
+}
+
+/* Disabled */
+
+.asynch-round-button:disabled {
+  background-color: var(--color-gray);
+}
+
+/* Effects */
+
+.asynch-round-button:active {
+  opacity: 0.8;
+}
+
+.asynch-round-button:active > .tooltip-message {
+  display: block;
+}
+
+@media (hover: hover) {
+  .asynch-round-button:hover {
+    opacity: 0.8;
+  }
+
+  .asynch-round-button:hover > .tooltip-message {
+    display: block;
+  }
+}

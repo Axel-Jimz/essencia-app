@@ -1,0 +1,139 @@
+.round-button {
+  position: relative;
+  min-width: 2.5rem;
+  max-width: 2.5rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  z-index: 500;
+}
+
+.round-button.enabled-icon {
+  padding: 0 0 0 1rem;
+}
+
+.round-button > .icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.round-button > .tooltip-message {
+  position: absolute;
+  background-color: var(--color-black);
+  padding: 0.25rem 1rem;
+  bottom: -2rem;
+  left: 50%;
+  text-wrap: nowrap;
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  display: none;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: 1000;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.round-button.enabled-icon > .tooltip-message {
+  margin: 0 0 0 0.5rem;
+}
+
+/* Background colors */
+
+.round-button.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.round-button.bg-red {
+  background-color: var(--color-red);
+}
+
+.round-button.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.round-button.bg-green {
+  background-color: var(--color-green);
+}
+
+.round-button.bg-purple {
+  background-color: var(--color-purple);
+}
+
+.round-button.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.round-button.bg-orange {
+  background-color: var(--color-orange);
+}
+
+.round-button.bg-gray {
+  background-color: var(--color-gray);
+}
+
+.round-button.bg-blue > svg > path,
+.round-button.bg-red > svg > path,
+.round-button.bg-yellow > svg > path,
+.round-button.bg-green > svg > path,
+.round-button.bg-purple > svg > path,
+.round-button.bg-pink > svg > path,
+.round-button.bg-orange > svg > path,
+.round-button.bg-gray > svg > path {
+  stroke: var(--color-white);
+}
+
+/* Effects */
+
+.round-button:active {
+  opacity: 0.8;
+}
+
+.round-button:active > .tooltip-message {
+  display: block;
+}
+
+@media (hover: hover) {
+  .round-button:hover {
+    opacity: 0.8;
+  }
+
+  .round-button:hover > .tooltip-message {
+    display: block;
+  }
+}

@@ -1,5 +1,4 @@
-export interface RectangleButtonProps {
-  children: React.ReactNode;
+export interface RoundButtonProps {
   icon: React.ReactElement;
   onClick: () => void;
   tooltipMessage?: string;

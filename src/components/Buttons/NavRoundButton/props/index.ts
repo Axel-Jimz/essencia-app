@@ -1,7 +1,6 @@
-export interface RectangleButtonProps {
-  children: React.ReactNode;
+export interface NavRoundButtonProps {
   icon: React.ReactElement;
-  onClick: () => void;
+  navigateTo: string;
   tooltipMessage?: string;
   bg:
     | "blue"

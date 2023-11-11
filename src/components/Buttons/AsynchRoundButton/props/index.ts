@@ -1,6 +1,5 @@
-export interface AsynchRectangleButtonProps {
-  children: React.ReactNode;
-  icon?: React.ReactElement;
+export interface AsynchRoundButtonProps {
+  icon: React.ReactElement;
   onClick: () => Promise<void>;
   tooltipMessage?: string;
   bg:
