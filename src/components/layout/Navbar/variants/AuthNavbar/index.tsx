@@ -8,7 +8,7 @@ import "./styles/index.css";
 const AuthNavbar: React.FC = () => {
   return (
     <Navbar id='auth'>
-      <Logo />
+      <Logo showText={true} />
       <ToggleThemeButton />
     </Navbar>
   );

@@ -1,15 +1,9 @@
-import React, { useContext } from "react";
-import { UserModelContext } from "../../state/contexts/UserModelContext";
-import { Outlet } from "react-router-dom";
+import React from "react";
+import HomeContainer from "../../containers/HomeContainer";
 
 const Home: React.FC = () => {
-  const { signOutUser } = useContext(UserModelContext)
-
   return (
-    <>
-      <button onClick={signOutUser}>Salir</button>
-      <Outlet />
-    </>
+    <HomeContainer />
   );
 };
 

@@ -40,6 +40,10 @@ export const router = createBrowserRouter([
         element: <h1>Notificaciones</h1>,
       },
       {
+        path: "/news",
+        element: <h1>Noticias</h1>,
+      },
+      {
         path: "/setting",
         element: <h1>setting</h1>,
       },

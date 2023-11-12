@@ -10,7 +10,7 @@ const ToggleThemeButton: React.FC = () => {
   const icon = theme ? <DarkIcon /> : <LightIcon />;
 
   return (
-    <RoundButton icon={icon} onClick={changeTheme} bg='white' />
+    <RoundButton icon={icon} onClick={changeTheme} bg='white' tooltipMessage='Cambiar tema'  />
   );
 };
 

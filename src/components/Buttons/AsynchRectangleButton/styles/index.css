@@ -130,11 +130,6 @@
   stroke: var(--color-black);
 }
 
-/* Disabled */
-
-.asynch-rectangle-button:disabled {
-  background-color: var(--color-gray);
-}
 
 /* Effects */
 

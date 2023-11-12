@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
-import { AsynchRoundButtonProps } from "./props";
-import { NotificationContext } from "../../../state/contexts/NotificationContext";
+import { AsynchRectangleButtonProps } from "../AsynchRectangleButton/props";
+import { NotificationsContext } from "../../../state/contexts/NotificationsContext";
 import LoadingIcon from "../../icons/LoadingIcon";
 import "./styles/index.css";
 import "./styles/theme.css";
 
-const AsynchRoundButton: React.FC<AsynchRoundButtonProps> = ({
+const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
+  children,
   icon,
   onClick,
   tooltipMessage,
@@ -16,10 +17,11 @@ const AsynchRoundButton: React.FC<AsynchRoundButtonProps> = ({
   errorDescription,
 }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { showNotification } = useContext(NotificationContext);
+  const { showNotification } = useContext(NotificationsContext);
 
-  const classes = ['asynch-round-button'];
+  const classes = ['asynch-rectangle-button'];
 
+  icon && classes.push(`enabled-icon`);
   bg && classes.push(`bg-${bg}`);
 
   const handleClick = async () => {
@@ -36,10 +38,11 @@ const AsynchRoundButton: React.FC<AsynchRoundButtonProps> = ({
 
   return (
     <button className={classes.join(' ')} onClick={handleClick} disabled={isLoading}>
-      {isLoading ? <LoadingIcon /> : icon}
+      {icon && <div className="icon-wrapper">{icon}</div>}
+      {isLoading ? <LoadingIcon /> : children}
       {tooltipMessage && <span className="tooltip-message">{tooltipMessage}</span>}
     </button>
   );
 };
 
-export default AsynchRoundButton;
+export default AsynchRectangleButton;

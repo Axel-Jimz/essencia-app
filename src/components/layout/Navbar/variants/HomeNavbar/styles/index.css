@@ -1,0 +1,9 @@
+.navbar#home {
+  background-color: var(--color-blue);
+}
+
+.navbar#home > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from "../../../assets/logo.svg";
+import { LogoProps } from './props';
 
 import "./styles/index.css";
 
-const Logo: React.FC = () => {
+const Logo: React.FC<LogoProps> = ({ showText = true }) => {
   return (
     <div className='logo'>
       <img src={logo} alt="logo" />
-      <span>Essencia</span>
+      {showText && <span>Essencia</span>}
     </div>
   );
 };

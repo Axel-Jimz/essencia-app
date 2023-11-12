@@ -1,0 +1,29 @@
+.button-group {
+    position: relative;
+    display: flex;
+    z-index: 500;
+}
+
+.button-group.stack-vertical {
+    flex-direction: column;
+}
+
+.button-group.stack-horizontal > button,
+.button-group.stack-horizontal > a {
+    margin: 0 0.5rem 0 0;
+}
+
+.button-group.stack-horizontal > button:nth-last-child(1),
+.button-group.stack-horizontal > a:nth-last-child(1) {
+    margin: 0;
+}
+
+.button-group.stack-vertical > button,
+.button-group.stack-vertical > a {
+    margin: 0 0 0.5rem 0;
+}
+
+.button-group.stack-vertical > button:nth-last-child(1),
+.button-group.stack-vertical > a:nth-last-child(1) {
+    margin: 0;
+}

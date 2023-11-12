@@ -126,12 +126,6 @@
   stroke: var(--color-black);
 }
 
-/* Disabled */
-
-.asynch-round-button:disabled {
-  background-color: var(--color-gray);
-}
-
 /* Effects */
 
 .asynch-round-button:active {
