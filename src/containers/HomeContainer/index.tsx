@@ -23,4 +23,3 @@ const HomeContainer: React.FC = () => {
 };
 
 export default HomeContainer;
-
