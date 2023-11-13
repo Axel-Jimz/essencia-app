@@ -9,7 +9,7 @@ const Form: React.FC<FormProps> = ({ children, id, onSubmit}) => {
   const { handleSubmit } = useForm();
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} id={id}>
+    <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data" id={id}>
       {children}
     </form>
   );

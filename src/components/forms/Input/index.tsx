@@ -1,9 +1,9 @@
 import React from "react";
 import { InputProps } from "./props";
-import ErrorIcon from "../../icons/ErrorIcon";
 
 import "./styles/index.css";
 import "./styles/theme.css";
+import ErrorIcon from "../../icons/ErrorIcon";
 
 const Input: React.FC<InputProps> = ({
   register,

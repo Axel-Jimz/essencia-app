@@ -10,7 +10,7 @@ import "./styles/index.css";
 
 const HomeContainer: React.FC = () => {
   const { signOutUser } = useContext(UserModelContext);
-
+ 
   return (
     <Container id="home">
       <HomeNavbar />
