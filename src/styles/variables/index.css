@@ -30,11 +30,11 @@
   --color-blue-20: #66ccff20;
   --color-blue-10: #66ccff10;
   /* Red */
-  --color-red: #ff5252;
-  --color-red-80: #ff525280;
-  --color-red-40: #ff525240;
-  --color-red-20: #ff525220;
-  --color-red-10: #ff525210;
+  --color-red: #FF0000;
+  --color-red-80: #FF000080;
+  --color-red-40: #FF000040;
+  --color-red-20: #FF000020;
+  --color-red-10: #FF000010;
   /* Yellow */
   --color-yellow: #ffd740;
   --color-yellow-80: #ffd74080;
