@@ -8,7 +8,7 @@ import "./styles/theme.css";
 
 
 const CustomImage: React.FC<ImageProps> = ({ src, alt, id }) => {
-  const classes = ["image"];
+  const classes = ["custom-image"];
 
   const { imageSrc, hasError } = useImageLoader(src);
 

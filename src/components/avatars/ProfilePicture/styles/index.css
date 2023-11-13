@@ -1,0 +1,37 @@
+a {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-image#profile-picture {
+    min-width: 3rem;
+    max-width: 3rem;
+    min-height: 3rem;
+    max-height: 3rem;
+    border-radius: 2.5rem;
+    -webkit-border-radius: 2.5rem;
+    -moz-border-radius: 2.5rem;
+    -ms-border-radius: 2.5rem;
+    -o-border-radius: 2.5rem;
+}
+
+.custom-image#profile-picture + .status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 2.5rem;
+    -webkit-border-radius: 2.5rem;
+    -moz-border-radius: 2.5rem;
+    -ms-border-radius: 2.5rem;
+    -o-border-radius: 2.5rem;
+}
+
+.custom-image#profile-picture + .status.online {
+    background-color: var(--color-green);
+}
+
+.custom-image#profile-picture + .status.offline {
+    background-color: var(--color-red);
+}

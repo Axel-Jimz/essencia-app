@@ -6,6 +6,18 @@
     line-height: 1.5rem;
 }
 
+.paragraph > button {
+  border: none;
+  outline: none;
+  padding: 0 0.250rem;
+  background-color: transparent;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-blue);
+  cursor: pointer;
+}
+
 /* Families */
 
 .paragraph.family-montserrat {
