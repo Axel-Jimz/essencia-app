@@ -3,7 +3,7 @@ export interface AsynchRectangleButtonProps {
   icon?: React.ReactElement;
   onClick: () => void;
   tooltipMessage?: string;
-  bg:
+  bg?:
     | "blue"
     | "red"
     | "yellow"
@@ -13,8 +13,8 @@ export interface AsynchRectangleButtonProps {
     | "orange"
     | "white"
     | "gray";
-  successTitle: string;
-  successDescription: string;
-  errorTitle: string;
-  errorDescription: string;
+  successTitle?: string;
+  successDescription?: string;
+  errorTitle?: string;
+  errorDescription?: string;
 }

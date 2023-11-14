@@ -1,7 +1,7 @@
 .custom-image {
   position: relative;
   width: 10rem;
-  height: 10rem;
+  aspect-ratio: 1;
   background-color: var(--color-gray-80);
   overflow: hidden;
 }

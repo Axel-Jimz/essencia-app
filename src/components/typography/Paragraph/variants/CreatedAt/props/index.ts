@@ -1,3 +1,3 @@
 export interface CreatedAtProps {
-  children: React.ReactNode;
+  children: string;
 }

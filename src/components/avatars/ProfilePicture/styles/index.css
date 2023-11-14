@@ -4,10 +4,10 @@ a {
 }
 
 .custom-image#profile-picture {
-    min-width: 3rem;
-    max-width: 3rem;
-    min-height: 3rem;
-    max-height: 3rem;
+    min-width: 2.5rem;
+    max-width: 2.5rem;
+    min-height: 2.5rem;
+    max-height: 2.5rem;
     border-radius: 2.5rem;
     -webkit-border-radius: 2.5rem;
     -moz-border-radius: 2.5rem;

@@ -17,6 +17,7 @@ const HomeContainer: React.FC = () => {
       <div>
         <Outlet />
         <button onClick={signOutUser}>Salir</button>
+        <br />
       </div>
     </Container>
   );

@@ -29,10 +29,10 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
     setIsLoading(true);
     try {
       await onClick?.();
-      showNotification('success', successTitle, successDescription);
+      successTitle && successDescription && showNotification('success', successTitle, successDescription);
     } catch (error) {
       console.error(error);
-      showNotification('error', errorTitle, errorDescription);
+      errorTitle && errorDescription && showNotification('error', errorTitle, errorDescription);
     }
     setIsLoading(false);
   };

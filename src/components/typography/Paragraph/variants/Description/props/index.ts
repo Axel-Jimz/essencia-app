@@ -1,3 +1,3 @@
 export interface DescriptionProps {
-    children: React.ReactNode;
+    children: string;
 }

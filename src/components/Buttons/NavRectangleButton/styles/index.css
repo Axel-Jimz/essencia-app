@@ -120,18 +120,18 @@
   background-color: var(--color-gray);
 }
 
-.nav-round-button.bg-blue > svg > path,
-.nav-round-button.bg-red > svg > path,
-.nav-round-button.bg-yellow > svg > path,
-.nav-round-button.bg-green > svg > path,
-.nav-round-button.bg-purple > svg > path,
-.nav-round-button.bg-pink > svg > path,
-.nav-round-button.bg-orange > svg > path,
-.nav-round-button.bg-gray > svg > path {
+.nav-rectangle-button.bg-blue > svg > path,
+.nav-rectangle-button.bg-red > svg > path,
+.nav-rectangle-button.bg-yellow > svg > path,
+.nav-rectangle-button.bg-green > svg > path,
+.nav-rectangle-button.bg-purple > svg > path,
+.nav-rectangle-button.bg-pink > svg > path,
+.nav-rectangle-button.bg-orange > svg > path,
+.nav-rectangle-button.bg-gray > svg > path {
   stroke: var(--color-white);
 }
 
-.nav-round-button.bg-white > svg > path {
+.nav-rectangle-button.bg-white > svg > path {
   stroke: var(--color-black);
 }
 

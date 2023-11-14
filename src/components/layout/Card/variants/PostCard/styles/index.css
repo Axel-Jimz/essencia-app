@@ -1,0 +1,93 @@
+.card#post {
+  max-width: 568px;
+  border: 0.063rem solid var(--color-gray-80);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card#post > .card-header {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr 2.5rem;
+  column-gap: 0.5rem;
+  border-bottom: 0.063rem solid var(--color-gray);
+}
+
+.card#post
+  > .card-header
+  > div:last-child
+  > .round-expandable-button-group
+  > .icon
+  > svg
+  > path {
+  stroke: var(--color-black);
+}
+
+.card#post > .card-main {
+  padding: 0.5rem 1rem;
+}
+
+.card#post > .card-main > div:last-child {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card#post > .card-main > div:last-child > .paragraph {
+  padding: 0.5rem 0 0 0;
+}
+
+.card#post > .card-main > div:last-child > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card#post > .card-main > div:last-child > div > .paragraph {
+  margin: 0 0 0 0.75rem;
+  padding: 0.5rem 0 0 0;
+}
+
+.card#post > .card-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card#post > .card-footer > button,
+.card#post > .card-footer > a {
+  min-width: unset;
+  max-width: unset;
+  border-radius: unset;
+  -webkit-border-radius: unset;
+  -moz-border-radius: unset;
+  -ms-border-radius: unset;
+  -o-border-radius: unset;
+  background-color: var(--color-gray-80);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-black);
+}
+
+.card#post > .card-footer > button > svg,
+.card#post > .card-footer > a > svg {
+  margin: 0 0.5rem 0 0;
+}
+
+.card#post > .card-footer > button > svg > path,
+.card#post > .card-footer > a > svg > path {
+  stroke: var(--color-black);
+}
+
+.theme-dark .card#post > .card-footer > button,
+.theme-dark .card#post > .card-footer > a {
+  color: var(--color-white);
+}
+
+.theme-dark .card#post > .card-footer > button > svg > path,
+.theme-dark .card#post > .card-footer > a > svg > path {
+  stroke: var(--color-white);
+}

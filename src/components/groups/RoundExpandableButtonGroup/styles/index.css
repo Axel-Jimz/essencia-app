@@ -22,13 +22,19 @@
 
 .round-expandable-button-group > .button-group {
   bottom: -0.5rem;
-  left: 0;
+  left: -196px;
   padding: 0.5rem;
+  width: 236px;
   display: none;
   flex-direction: column;
   z-index: 1000;
   background-color: var(--color-white);
   border: 0.063rem solid var(--color-gray-80);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .round-expandable-button-group > .button-group > button {

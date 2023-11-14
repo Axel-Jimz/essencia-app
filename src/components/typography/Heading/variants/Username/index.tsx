@@ -5,7 +5,7 @@ import Heading from "../..";
 const Username: React.FC<UsernameProps> = ({ children }) => {
   return (
     <Heading as="h3" family="montserrat" size="xs" weight="bold" color="black">
-      {children}
+      @{children}
     </Heading>
   );
 };
