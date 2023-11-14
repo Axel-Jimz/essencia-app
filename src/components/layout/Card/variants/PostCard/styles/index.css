@@ -17,6 +17,10 @@
   border-bottom: 0.063rem solid var(--color-gray);
 }
 
+.card#post > .card-header > div:nth-child(2) > .heading > .asynch-rectangle-button.unstyled >  svg {
+  margin: 0 0 0 0.5rem;
+}
+
 .card#post
   > .card-header
   > div:last-child

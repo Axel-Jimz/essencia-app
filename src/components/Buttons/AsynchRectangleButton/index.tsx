@@ -10,6 +10,7 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
   children,
   icon,
   onClick,
+  unstyled,
   tooltipMessage,
   bg,
   successTitle,
@@ -24,6 +25,7 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
 
   icon && classes.push(`enabled-icon`);
   bg && classes.push(`bg-${bg}`);
+  unstyled && classes.push(`unstyled`);
 
   const handleClick = async () => {
     setIsLoading(true);
@@ -39,9 +41,10 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
 
   return (
     <button className={classes.join(' ')} onClick={handleClick} disabled={isLoading}>
-      {icon && <div className="icon-wrapper">{icon}</div>}
+      {!unstyled && icon && <div className="icon-wrapper">{icon}</div>}
       {isLoading ? <LoadingIcon /> : children}
       {tooltipMessage && <span className="tooltip-message">{tooltipMessage}</span>}
+
     </button>
   );
 };

@@ -14,7 +14,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
   enableReadMore,
 }) => {
   const [showFullText, setShowFullText] = useState(false);
-  const maxCharacters = 100;
+  const maxCharacters = 150;
 
   const classes = ["paragraph"];
   if (size !== '') classes.push(`size-${size}`);

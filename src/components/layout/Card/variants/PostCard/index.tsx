@@ -16,6 +16,7 @@ import TotalComments from "../../../../typography/Paragraph/variants/TotalCommen
 
 import "./styles/index.css";
 import "./styles/theme.css";
+import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 
 const PostCard: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const PostCard: React.FC = () => {
           <ProfilePicture src="" alt="" />
         </div>
         <div>
-          <Username>Axel Jiménez</Username>
+          <Username>Axel Jiménez - <FollowUserButton /> </Username>
           <CreatedAt>11 de noviembre de 210</CreatedAt>
         </div>
         <div>

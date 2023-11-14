@@ -2,6 +2,7 @@ export interface AsynchRectangleButtonProps {
   children: React.ReactNode;
   icon?: React.ReactElement;
   onClick: () => void;
+  unstyled?: boolean;
   tooltipMessage?: string;
   bg?:
     | "blue"
@@ -17,4 +18,5 @@ export interface AsynchRectangleButtonProps {
   successDescription?: string;
   errorTitle?: string;
   errorDescription?: string;
+  
 }

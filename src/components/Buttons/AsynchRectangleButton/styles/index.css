@@ -27,8 +27,29 @@
   z-index: 500;
 }
 
+.asynch-rectangle-button.unstyled {
+  min-width: unset;
+  max-width: unset;
+  min-height: 1rem;
+  max-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  display: inline;
+}
+
+.asynch-rectangle-button.unstyled >  svg {
+  width: 0.813rem;
+  height: 0.813rem;
+}
+
 .asynch-rectangle-button.enabled-icon {
   padding: 0 0 0 1rem;
+}
+
+.asynch-rectangle-button.unstyled.enabled-icon {
+  padding: 0;
 }
 
 .asynch-rectangle-button > .icon-wrapper {
@@ -83,36 +104,81 @@
   background-color: var(--color-blue);
 }
 
+.asynch-rectangle-button.unstyled.bg-blue {
+  background-color: transparent;
+  color: var(--color-blue);
+}
+
 .asynch-rectangle-button.bg-red {
   background-color: var(--color-red);
+}
+
+.asynch-rectangle-button.unstyled.bg-red {
+  background-color: transparent;
+  color: var(--color-red);
 }
 
 .asynch-rectangle-button.bg-yellow {
   background-color: var(--color-yellow);
 }
 
+.asynch-rectangle-button.unstyled.bg-yellow {
+  background-color: transparent;
+  color: var(--color-yellow);
+}
+
 .asynch-rectangle-button.bg-green {
   background-color: var(--color-green);
+}
+
+.asynch-rectangle-button.unstyled.bg-green {
+  background-color: transparent;
+  color: var(--color-green);
 }
 
 .asynch-rectangle-button.bg-purple {
   background-color: var(--color-purple);
 }
 
+.asynch-rectangle-button.unstyled.bg-pruple {
+  background-color: transparent;
+  color: var(--color-purple);
+}
+
 .asynch-rectangle-button.bg-pink {
   background-color: var(--color-pink);
+}
+
+.asynch-rectangle-button.unstyled.bg-pink {
+  background-color: transparent;
+  color: var(--color-pink);
 }
 
 .asynch-rectangle-button.bg-orange {
   background-color: var(--color-orange);
 }
 
+.asynch-rectangle-button.unstyled.bg-orange {
+  background-color: transparent;
+  color: var(--color-orange);
+}
+
 .asynch-rectangle-button.bg-white {
   background-color: var(--color-white);
 }
 
+.asynch-rectangle-button.unstyled.bg-white {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
 .asynch-rectangle-button.bg-gray {
   background-color: var(--color-gray);
+}
+
+.asynch-rectangle-button.unstyled.bg-gray {
+  background-color: transparent;
+  color: var(--color-gray);
 }
 
 .asynch-rectangle-button.bg-blue > svg > path,
@@ -129,6 +195,8 @@
 .asynch-rectangle-button.bg-white > svg > path {
   stroke: var(--color-black);
 }
+
+/* Unstyled */
 
 
 /* Effects */
