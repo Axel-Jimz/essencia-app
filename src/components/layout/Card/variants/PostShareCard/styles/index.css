@@ -1,4 +1,4 @@
-.card#post {
+.card#post-share {
   max-width: 568px;
   border: 0.063rem solid var(--color-gray-80);
   border-radius: 0.5rem;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.card#post > .card-header {
+.card#post-share > .card-header {
   padding: 0.5rem;
   display: grid;
   grid-template-columns: 3rem 1fr 2.5rem;
@@ -17,7 +17,7 @@
   border-bottom: 0.063rem solid var(--color-gray);
 }
 
-.card#post
+.card#post-share
   > .card-header
   > div:last-child
   > .round-expandable-button-group
@@ -27,39 +27,45 @@
   stroke: var(--color-black);
 }
 
-.card#post > .card-main {
-  padding: 0.5rem 1rem;
+.card#post-share > .card-main {
+  padding: 1rem 1rem 0.5rem 1rem;
 }
 
-.card#post > .card-main > div:last-child {
+.card#post-share > .card-main > div:first-child {
+  display: grid;
+  grid-template-columns: 3rem 1fr 2.5rem;
+  column-gap: 0.5rem;
+}
+
+.card#post-share > .card-main > div:last-child {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.card#post > .card-main > div:last-child > .paragraph {
+.card#post-share > .card-main > div:last-child > .paragraph {
   padding: 0.5rem 0 0 0;
 }
 
-.card#post > .card-main > div:last-child > div {
+.card#post-share > .card-main > div:last-child > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.card#post > .card-main > div:last-child > div > .paragraph {
+.card#post-share > .card-main > div:last-child > div > .paragraph {
   margin: 0 0 0 0.75rem;
   padding: 0.5rem 0 0 0;
 }
 
-.card#post > .card-footer {
+.card#post-share > .card-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.card#post > .card-footer > button,
-.card#post > .card-footer > a {
+.card#post-share > .card-footer > button,
+.card#post-share > .card-footer > a {
   min-width: unset;
   max-width: unset;
   border-radius: unset;
@@ -72,13 +78,13 @@
   color: var(--color-black);
 }
 
-.card#post > .card-footer > button > svg,
-.card#post > .card-footer > a > svg {
+.card#post-share > .card-footer > button > svg,
+.card#post-share > .card-footer > a > svg {
   margin: 0 0.5rem 0 0;
 }
 
-.card#post > .card-footer > button > svg > path,
-.card#post > .card-footer > a > svg > path {
+.card#post-share > .card-footer > button > svg > path,
+.card#post-share > .card-footer > a > svg > path {
   stroke: var(--color-black);
 }
 

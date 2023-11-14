@@ -1,0 +1,9 @@
+.theme-dark .card#post > .card-footer > button,
+.theme-dark .card#post > .card-footer > a {
+  color: var(--color-white);
+}
+
+.theme-dark .card#post > .card-footer > button > svg > path,
+.theme-dark .card#post > .card-footer > a > svg > path {
+  stroke: var(--color-white);
+}

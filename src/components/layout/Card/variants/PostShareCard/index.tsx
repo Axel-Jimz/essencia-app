@@ -7,19 +7,20 @@ import OptionsPost from "../../../../groups/RoundExpandableButtonGroup/variants/
 
 import Content from "../../../../typography/Paragraph/variants/Content";
 import PostImage from "../../../../images/CustomImage/variants/PostImage";
-import LikePostButton from "../../../../buttons/AsynchRectangleButton/variants/LikePostButton";
-import SharePostButton from "../../../../buttons/AsynchRectangleButton/variants/SharePostButton";
-import CommentPostButton from "../../../../buttons/NavRectangleButton/variants/CommentPostButton";
-import TotalShares from "../../../../typography/Paragraph/variants/TotalShares";
 import TotalLikes from "../../../../typography/Paragraph/variants/TotalLikes";
 import TotalComments from "../../../../typography/Paragraph/variants/TotalComments";
+import TotalShares from "../../../../typography/Paragraph/variants/TotalShares";
+import LikePostButton from "../../../../buttons/AsynchRectangleButton/variants/LikePostButton";
+import CommentPostButton from "../../../../buttons/NavRectangleButton/variants/CommentPostButton";
+import SharePostButton from "../../../../buttons/AsynchRectangleButton/variants/SharePostButton";
 
 import "./styles/index.css";
 import "./styles/theme.css";
 
-const PostCard: React.FC = () => {
+
+const PostShareCard: React.FC = () => {
   return (
-    <Card id="post">
+    <Card id="post-share">
       <div className="card-header">
         <div>
           <ProfilePicture src="" alt="" />
@@ -34,17 +35,31 @@ const PostCard: React.FC = () => {
       </div>
 
       <div className="card-main">
+
+        <div>
+          <div>
+            <ProfilePicture src="" alt="" />
+          </div>
+          <div>
+            <Username>Usuario original</Username>
+            <CreatedAt>11 de noviembre de 210</CreatedAt>
+          </div>
+        </div>
+
         <div>
           <Content>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex
             atque minima at? Recusandae rerum consectetur aliquid, sunt debitis
             aperiam optio ullam excepturi suscipit ex iure veniam odit ad
-            molestias. 
+            molestias.
           </Content>
         </div>
 
         <div>
-            <PostImage src="https://www.elnuevoherald.com/ultimas-noticias/70talg/picture281778918/alternates/LANDSCAPE_768/USATSI_21886415.jpg"  alt="example"/>
+          <PostImage
+            src="https://www.elnuevoherald.com/ultimas-noticias/70talg/picture281778918/alternates/LANDSCAPE_768/USATSI_21886415.jpg"
+            alt="example"
+          />
         </div>
 
         <div>
@@ -54,7 +69,7 @@ const PostCard: React.FC = () => {
             <TotalShares value={0} />
           </div>
         </div>
-
+        
       </div>
 
       <div className="card-footer">
@@ -66,4 +81,4 @@ const PostCard: React.FC = () => {
   );
 };
 
-export default PostCard;
+export default PostShareCard;

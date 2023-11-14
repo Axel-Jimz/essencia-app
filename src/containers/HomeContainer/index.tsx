@@ -7,6 +7,8 @@ import HomeNavbar from "../../components/layout/Navbar/variants/HomeNavbar";
 import { Outlet } from "react-router-dom";
 
 import "./styles/index.css";
+import PostCard from "../../components/layout/Card/variants/PostCard";
+import PostShareCard from "../../components/layout/Card/variants/PostShareCard";
 
 const HomeContainer: React.FC = () => {
   const { signOutUser } = useContext(UserModelContext);
@@ -18,6 +20,10 @@ const HomeContainer: React.FC = () => {
         <Outlet />
         <button onClick={signOutUser}>Salir</button>
         <br />
+
+        <PostCard />
+        <PostShareCard />
+
       </div>
     </Container>
   );
