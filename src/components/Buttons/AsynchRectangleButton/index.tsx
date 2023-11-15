@@ -5,7 +5,6 @@ import LoadingIcon from "../../icons/LoadingIcon";
 import "./styles/index.css";
 import "./styles/theme.css";
 
-
 const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
   children,
   icon,
@@ -13,6 +12,7 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
   unstyled,
   tooltipMessage,
   bg,
+  bgOpacity,
   successTitle,
   successDescription,
   errorTitle,
@@ -25,6 +25,7 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
 
   icon && classes.push(`enabled-icon`);
   bg && classes.push(`bg-${bg}`);
+  bgOpacity && classes.push(`opacity-${bgOpacity}`);
   unstyled && classes.push(`unstyled`);
 
   const handleClick = async () => {
@@ -44,7 +45,6 @@ const AsynchRectangleButton: React.FC<AsynchRectangleButtonProps> = ({
       {!unstyled && icon && <div className="icon-wrapper">{icon}</div>}
       {isLoading ? <LoadingIcon /> : children}
       {tooltipMessage && <span className="tooltip-message">{tooltipMessage}</span>}
-
     </button>
   );
 };

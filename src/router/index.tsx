@@ -1,8 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
+
 import Home from "../pages/Home";
 import Auth from "../pages/Auth";
 import ProtectedAuth from "../pages/protected/ProtectedAuth";
 import ProtectedHome from "../pages/protected/ProtectedHome";
+
+import NotFound from "../pages/NotFound";
+
+import Profile from "../pages/Profile";
+import Explore from "../pages/Explore";
+import Notifications from "../pages/Notifications";
+import News from "../pages/News";
+import Setting from "../pages/Setting";
+import Feed from "../pages/Feed";
+import Create from "../pages/Create";
+
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +24,7 @@ export const router = createBrowserRouter([
         <Auth />
       </ProtectedAuth>
     ),
-    errorElement: <h1>Error element</h1>,
+    errorElement: <NotFound />,
   },
   {
     path: "/",
@@ -21,31 +33,35 @@ export const router = createBrowserRouter([
         <Home />
       </ProtectedHome>
     ),
-    errorElement: <h1>Error element</h1>,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
-        element: <h1>feed</h1>,
+        element: <Feed />,
       },
       {
         path: "/profile",
-        element: <h1>profile</h1>,
+        element: <Profile />,
       },
       {
         path: "/explore",
-        element: <h1>Explorar</h1>,
+        element: <Explore />,
       },
       {
         path: "/notifications",
-        element: <h1>Notificaciones</h1>,
+        element: <Notifications />,
       },
       {
         path: "/news",
-        element: <h1>Noticias</h1>,
+        element: <News />,
+      },
+      {
+        path: "/create",
+        element: <Create />,
       },
       {
         path: "/setting",
-        element: <h1>setting</h1>,
+        element: <Setting />,
       },
     ],
   },

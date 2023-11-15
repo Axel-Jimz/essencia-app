@@ -1,0 +1,14 @@
+.aside#home-users {
+    height: 100%;
+    padding: 1rem;
+    border-left: 0.063rem solid var(--color-gray-80);
+    border-right: 0.063rem solid var(--color-gray-80);
+    background-color: transparent;
+}
+
+.aside#home-users > div > div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}

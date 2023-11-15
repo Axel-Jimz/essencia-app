@@ -12,13 +12,14 @@ const AsynchRectangleFormButton: React.FC<AsynchRectangleFormButtonProps> = ({
   isSubmitting,
   tooltipMessage,
   bg,
+  bgOpacity,
 
 }) => {
   const classes = ['asynch-rectangle-form-button'];
 
   icon && classes.push(`enabled-icon`);
   bg && classes.push(`bg-${bg}`);
-
+  bgOpacity && classes.push(`opacity-${bgOpacity}`);
 
   return (
     <button className={classes.join(' ')}>

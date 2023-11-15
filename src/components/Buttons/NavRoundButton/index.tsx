@@ -9,12 +9,14 @@ import "./styles/theme.css";
 const NavRoundButton: React.FC<NavRoundButtonProps> = ({
   icon,
   navigateTo,
-  tooltipMessage,
   bg,
+  bgOpacity,
+  tooltipMessage,
 }) => {
   const classes = ['nav-round-button'];
 
   bg && classes.push(`bg-${bg}`);
+  bgOpacity && classes.push(`opacity-${bgOpacity}`);
 
   return (
     <NavLink className={classes.join(' ')} to={navigateTo}>

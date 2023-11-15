@@ -28,8 +28,29 @@
   z-index: 500;
 }
 
+.nav-rectangle-button.unstyled {
+  min-width: unset;
+  max-width: unset;
+  min-height: 1rem;
+  max-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  display: inline;
+}
+
+.nav-rectangle-button.unstyled > svg {
+  width: 0.813rem;
+  height: 0.813rem;
+}
+
 .nav-rectangle-button.enabled-icon {
   padding: 0 0 0 1rem;
+}
+
+.nav-rectangle-button.unstyled.enabled-icon {
+  padding: 0;
 }
 
 .nav-rectangle-button > .icon-wrapper {
@@ -52,7 +73,7 @@
 .nav-rectangle-button > .tooltip-message {
   position: absolute;
   background-color: var(--color-black);
-  padding: 0.250rem 1rem;
+  padding: 0.25rem 1rem;
   bottom: -2rem;
   left: 50%;
   text-wrap: nowrap;
@@ -78,46 +99,319 @@
   margin: 0 0 0 0.5rem;
 }
 
-.nav-rectangle-button:disabled > .icon-wrapper {
-  display: none;
-}
-
-/* Background colors */
+/* Background Blue */
 
 .nav-rectangle-button.bg-blue {
   background-color: var(--color-blue);
 }
 
+/* Opacity */
+
+.nav-rectangle-button.bg-blue.opacity-80 {
+  background-color: var(--color-blue-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-blue.opacity-40 {
+  background-color: var(--color-blue-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-blue.opacity-20 {
+  background-color: var(--color-blue-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-blue.opacity-10 {
+  background-color: var(--color-blue-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-blue {
+  background-color: transparent;
+  color: var(--color-blue);
+}
+
+/* Background Red*/
+
 .nav-rectangle-button.bg-red {
   background-color: var(--color-red);
 }
+
+/* Opacity */
+
+.nav-rectangle-button.bg-red.opacity-80 {
+  background-color: var(--color-red-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-red.opacity-40 {
+  background-color: var(--color-red-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-red.opacity-20 {
+  background-color: var(--color-red-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-red.opacity-10 {
+  background-color: var(--color-red-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-red {
+  background-color: transparent;
+  color: var(--color-red);
+}
+
+/* Background Yellow */
 
 .nav-rectangle-button.bg-yellow {
   background-color: var(--color-yellow);
 }
 
+/* Opacity */
+
+.nav-rectangle-button.bg-yellow.opacity-80 {
+  background-color: var(--color-yellow-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-yellow.opacity-40 {
+  background-color: var(--color-yellow-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-yellow.opacity-20 {
+  background-color: var(--color-yellow-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-yellow.opacity-10 {
+  background-color: var(--color-yellow-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-yellow {
+  background-color: transparent;
+  color: var(--color-yellow);
+}
+
+/* Background Green */
+
 .nav-rectangle-button.bg-green {
   background-color: var(--color-green);
 }
+
+/* Opacity */
+
+.nav-rectangle-button.bg-green.opacity-80 {
+  background-color: var(--color-green-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-green.opacity-40 {
+  background-color: var(--color-green-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-green.opacity-20 {
+  background-color: var(--color-green-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-green.opacity-10 {
+  background-color: var(--color-green-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-green {
+  background-color: transparent;
+  color: var(--color-green);
+}
+
+/* Background  Purple*/
 
 .nav-rectangle-button.bg-purple {
   background-color: var(--color-purple);
 }
 
+/* Opacity */
+
+.nav-rectangle-button.bg-purple.opacity-80 {
+  background-color: var(--color-purple-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-purple.opacity-40 {
+  background-color: var(--color-purple-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-purple.opacity-20 {
+  background-color: var(--color-purple-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-purple.opacity-10 {
+  background-color: var(--color-purple-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-pruple {
+  background-color: transparent;
+  color: var(--color-purple);
+}
+
+/* Background Pink */
+
 .nav-rectangle-button.bg-pink {
   background-color: var(--color-pink);
 }
+
+/* Opacity */
+
+.nav-rectangle-button.bg-pink.opacity-80 {
+  background-color: var(--color-pink-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-pink.opacity-40 {
+  background-color: var(--color-pink-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-pink.opacity-20 {
+  background-color: var(--color-pink-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-pink.opacity-10 {
+  background-color: var(--color-pink-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-pink {
+  background-color: transparent;
+  color: var(--color-pink);
+}
+
+/* Background Orange */
 
 .nav-rectangle-button.bg-orange {
   background-color: var(--color-orange);
 }
 
-.nav-round-button.bg-white {
+/* Opacity */
+
+.nav-rectangle-button.bg-orange.opacity-80 {
+  background-color: var(--color-orange-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-orange.opacity-40 {
+  background-color: var(--color-orange-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-orange.opacity-20 {
+  background-color: var(--color-orange-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-orange.opacity-10 {
+  background-color: var(--color-orange-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-orange {
+  background-color: transparent;
+  color: var(--color-orange);
+}
+
+/* Background White */
+
+.nav-rectangle-button.bg-white {
   background-color: var(--color-white);
 }
 
+/* Opacity */
+
+.nav-rectangle-button.bg-white.opacity-80 {
+  background-color: var(--color-white-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-white.opacity-40 {
+  background-color: var(--color-white-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-white.opacity-20 {
+  background-color: var(--color-white-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-white.opacity-10 {
+  background-color: var(--color-white-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-white {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+/* Background Gray */
+
 .nav-rectangle-button.bg-gray {
   background-color: var(--color-gray);
+}
+
+/* Opacity */
+
+.nav-rectangle-button.bg-gray.opacity-80 {
+  background-color: var(--color-gray-80);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-gray.opacity-40 {
+  background-color: var(--color-gray-40);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-gray.opacity-20 {
+  background-color: var(--color-gray-20);
+  color: var(--color-black);
+}
+
+.nav-rectangle-button.bg-gray.opacity-10 {
+  background-color: var(--color-gray-10);
+  color: var(--color-black);
+}
+
+/* Unstyled */
+
+.nav-rectangle-button.unstyled.bg-gray {
+  background-color: transparent;
+  color: var(--color-gray);
 }
 
 .nav-rectangle-button.bg-blue > svg > path,
@@ -133,6 +427,13 @@
 
 .nav-rectangle-button.bg-white > svg > path {
   stroke: var(--color-black);
+}
+
+/* Active */
+
+.nav-rectangle-button.active[aria-current="page"] {
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 /* Effects */

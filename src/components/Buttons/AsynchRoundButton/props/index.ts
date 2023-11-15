@@ -1,6 +1,6 @@
 export interface AsynchRoundButtonProps {
   icon: React.ReactElement;
-  onClick: () => Promise<void> | null;
+  onClick: () => void;
   tooltipMessage?: string;
   bg:
     | "blue"
@@ -12,6 +12,11 @@ export interface AsynchRoundButtonProps {
     | "orange"
     | "white"
     | "gray";
+  bgOpacity?: 
+    |"10" 
+    | "20" 
+    | "40" 
+    | "80";
   successTitle: string;
   successDescription: string;
   errorTitle: string;

@@ -1,22 +1,29 @@
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .logo > img {
-    min-width: 3rem;
-    max-width: 3rem;
-    min-height: 3rem;
-    max-height: 3rem;
-    margin: 0 0.5rem 0 0;
+  min-width: 3rem;
+  max-width: 3rem;
+  min-height: 3rem;
+  max-height: 3rem;
+  margin: 0 0.5rem 0 0;
 }
 
 .logo > span {
-    font-family: var(--font-family-montserrat);
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
 
+.logo.text-color-white > span {
+  color: var(--color-white);
+}
+
+.logo.text-color-blue > span {
+  color: var(--color-blue);
 }

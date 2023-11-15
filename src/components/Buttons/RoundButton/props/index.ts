@@ -12,4 +12,9 @@ export interface RoundButtonProps {
     | "orange"
     | "white"
     | "gray";
+  bgOpacity?: 
+    |"10" 
+    | "20" 
+    | "40" 
+    | "80";
 }

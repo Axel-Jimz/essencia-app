@@ -73,42 +73,223 @@
   margin: 0 0 0 0.5rem;
 }
 
-/* Background colors */
+/* Background Blue */
 
 .nav-round-button.bg-blue {
   background-color: var(--color-blue);
 }
 
+/* Opacity */
+
+.nav-round-button.bg-blue.opacity-80 {
+  background-color: var(--color-blue-80);
+}
+
+.nav-round-button.bg-blue.opacity-40 {
+  background-color: var(--color-blue-40);
+}
+
+.nav-round-button.bg-blue.opacity-20 {
+  background-color: var(--color-blue-20);
+}
+
+.nav-round-button.bg-blue.opacity-10 {
+  background-color: var(--color-blue-10);
+}
+
+/* Background Red*/
+
 .nav-round-button.bg-red {
   background-color: var(--color-red);
 }
+
+/* Opacity */
+
+.nav-round-button.bg-red.opacity-80 {
+  background-color: var(--color-red-80);
+}
+
+.nav-round-button.bg-red.opacity-40 {
+  background-color: var(--color-red-40);
+}
+
+.nav-round-button.bg-red.opacity-20 {
+  background-color: var(--color-red-20);
+}
+
+.nav-round-button.bg-red.opacity-10 {
+  background-color: var(--color-red-10);
+}
+
+/* Background Yellow */
 
 .nav-round-button.bg-yellow {
   background-color: var(--color-yellow);
 }
 
+/* Opacity */
+
+.nav-round-button.bg-yellow.opacity-80 {
+  background-color: var(--color-yellow-80);
+}
+
+.nav-round-button.bg-yellow.opacity-40 {
+  background-color: var(--color-yellow-40);
+}
+
+.nav-round-button.bg-yellow.opacity-20 {
+  background-color: var(--color-yellow-20);
+}
+
+.nav-round-button.bg-yellow.opacity-10 {
+  background-color: var(--color-yellow-10);
+}
+
+/* Background Green */
+
 .nav-round-button.bg-green {
   background-color: var(--color-green);
 }
+
+/* Opacity */
+
+.nav-round-button.bg-green.opacity-80 {
+  background-color: var(--color-green-80);
+}
+
+.nav-round-button.bg-green.opacity-40 {
+  background-color: var(--color-green-40);
+}
+
+.nav-round-button.bg-green.opacity-20 {
+  background-color: var(--color-green-20);
+}
+
+.nav-round-button.bg-green.opacity-10 {
+  background-color: var(--color-green-10);
+}
+
+
+/* Background  Purple*/
 
 .nav-round-button.bg-purple {
   background-color: var(--color-purple);
 }
 
+/* Opacity */
+
+.nav-round-button.bg-purple.opacity-80 {
+  background-color: var(--color-purple-80);
+}
+
+.nav-round-button.bg-purple.opacity-40 {
+  background-color: var(--color-purple-40);
+}
+
+.nav-round-button.bg-purple.opacity-20 {
+  background-color: var(--color-purple-20);
+}
+
+.nav-round-button.bg-purple.opacity-10 {
+  background-color: var(--color-purple-10);
+}
+
+/* Background Pink */
+
 .nav-round-button.bg-pink {
   background-color: var(--color-pink);
 }
+
+/* Opacity */
+
+.nav-round-button.bg-pink.opacity-80 {
+  background-color: var(--color-pink-80);
+}
+
+.nav-round-button.bg-pink.opacity-40 {
+  background-color: var(--color-pink-40);
+}
+
+.nav-round-button.bg-pink.opacity-20 {
+  background-color: var(--color-pink-20);
+}
+
+.nav-round-button.bg-pink.opacity-10 {
+  background-color: var(--color-pink-10);
+}
+
+
+/* Background Orange */
 
 .nav-round-button.bg-orange {
   background-color: var(--color-orange);
 }
 
+/* Opacity */
+
+.nav-round-button.bg-orange.opacity-80 {
+  background-color: var(--color-orange-80);
+}
+
+.nav-round-button.bg-orange.opacity-40 {
+  background-color: var(--color-orange-40);
+}
+
+.nav-round-button.bg-orange.opacity-20 {
+  background-color: var(--color-orange-20);
+}
+
+.nav-round-button.bg-orange.opacity-10 {
+  background-color: var(--color-orange-10);
+}
+
+/* Background White */
+
 .nav-round-button.bg-white {
   background-color: var(--color-white);
 }
 
+/* Opacity */
+
+.nav-round-button.bg-white.opacity-80 {
+  background-color: var(--color-white-80);
+}
+
+.nav-round-button.bg-white.opacity-40 {
+  background-color: var(--color-white-40);
+}
+
+.nav-round-button.bg-white.opacity-20 {
+  background-color: var(--color-white-20);
+}
+
+.nav-round-button.bg-white.opacity-10 {
+  background-color: var(--color-white-10);
+}
+
+
+/* Background Gray */
+
 .nav-round-button.bg-gray {
   background-color: var(--color-gray);
+}
+
+/* Opacity */
+
+.nav-round-button.bg-gray.opacity-80 {
+  background-color: var(--color-gray-80);
+}
+
+.nav-round-button.bg-gray.opacity-40 {
+  background-color: var(--color-gray-40);
+}
+
+.nav-round-button.bg-gray.opacity-20 {
+  background-color: var(--color-gray-20);
+}
+
+.nav-round-button.bg-gray.opacity-10 {
+  background-color: var(--color-gray-10);
 }
 
 .nav-round-button.bg-blue > svg > path,

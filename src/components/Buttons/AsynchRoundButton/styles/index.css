@@ -23,9 +23,6 @@
   z-index: 500;
 }
 
-.asynch-round-button.enabled-icon {
-  padding: 0 0 0 1rem;
-}
 
 .asynch-round-button > .icon-wrapper {
   position: absolute;
@@ -73,42 +70,223 @@
   margin: 0 0 0 0.5rem;
 }
 
-/* Background colors */
+/* Background Blue */
 
 .asynch-round-button.bg-blue {
   background-color: var(--color-blue);
 }
 
+/* Opacity */
+
+.asynch-round-button.bg-blue.opacity-80 {
+  background-color: var(--color-blue-80);
+}
+
+.asynch-round-button.bg-blue.opacity-40 {
+  background-color: var(--color-blue-40);
+}
+
+.asynch-round-button.bg-blue.opacity-20 {
+  background-color: var(--color-blue-20);
+}
+
+.asynch-round-button.bg-blue.opacity-10 {
+  background-color: var(--color-blue-10);
+}
+
+/* Background Red*/
+
 .asynch-round-button.bg-red {
   background-color: var(--color-red);
 }
+
+/* Opacity */
+
+.asynch-round-button.bg-red.opacity-80 {
+  background-color: var(--color-red-80);
+}
+
+.asynch-round-button.bg-red.opacity-40 {
+  background-color: var(--color-red-40);
+}
+
+.asynch-round-button.bg-red.opacity-20 {
+  background-color: var(--color-red-20);
+}
+
+.asynch-round-button.bg-red.opacity-10 {
+  background-color: var(--color-red-10);
+}
+
+/* Background Yellow */
 
 .asynch-round-button.bg-yellow {
   background-color: var(--color-yellow);
 }
 
+/* Opacity */
+
+.asynch-round-button.bg-yellow.opacity-80 {
+  background-color: var(--color-yellow-80);
+}
+
+.asynch-round-button.bg-yellow.opacity-40 {
+  background-color: var(--color-yellow-40);
+}
+
+.asynch-round-button.bg-yellow.opacity-20 {
+  background-color: var(--color-yellow-20);
+}
+
+.asynch-round-button.bg-yellow.opacity-10 {
+  background-color: var(--color-yellow-10);
+}
+
+/* Background Green */
+
 .asynch-round-button.bg-green {
   background-color: var(--color-green);
 }
+
+/* Opacity */
+
+.asynch-round-button.bg-green.opacity-80 {
+  background-color: var(--color-green-80);
+}
+
+.asynch-round-button.bg-green.opacity-40 {
+  background-color: var(--color-green-40);
+}
+
+.asynch-round-button.bg-green.opacity-20 {
+  background-color: var(--color-green-20);
+}
+
+.asynch-round-button.bg-green.opacity-10 {
+  background-color: var(--color-green-10);
+}
+
+
+/* Background  Purple*/
 
 .asynch-round-button.bg-purple {
   background-color: var(--color-purple);
 }
 
+/* Opacity */
+
+.asynch-round-button.bg-purple.opacity-80 {
+  background-color: var(--color-purple-80);
+}
+
+.asynch-round-button.bg-purple.opacity-40 {
+  background-color: var(--color-purple-40);
+}
+
+.asynch-round-button.bg-purple.opacity-20 {
+  background-color: var(--color-purple-20);
+}
+
+.asynch-round-button.bg-purple.opacity-10 {
+  background-color: var(--color-purple-10);
+}
+
+/* Background Pink */
+
 .asynch-round-button.bg-pink {
   background-color: var(--color-pink);
 }
+
+/* Opacity */
+
+.asynch-round-button.bg-pink.opacity-80 {
+  background-color: var(--color-pink-80);
+}
+
+.asynch-round-button.bg-pink.opacity-40 {
+  background-color: var(--color-pink-40);
+}
+
+.asynch-round-button.bg-pink.opacity-20 {
+  background-color: var(--color-pink-20);
+}
+
+.asynch-round-button.bg-pink.opacity-10 {
+  background-color: var(--color-pink-10);
+}
+
+
+/* Background Orange */
 
 .asynch-round-button.bg-orange {
   background-color: var(--color-orange);
 }
 
+/* Opacity */
+
+.asynch-round-button.bg-orange.opacity-80 {
+  background-color: var(--color-orange-80);
+}
+
+.asynch-round-button.bg-orange.opacity-40 {
+  background-color: var(--color-orange-40);
+}
+
+.asynch-round-button.bg-orange.opacity-20 {
+  background-color: var(--color-orange-20);
+}
+
+.asynch-round-button.bg-orange.opacity-10 {
+  background-color: var(--color-orange-10);
+}
+
+/* Background White */
+
 .asynch-round-button.bg-white {
   background-color: var(--color-white);
 }
 
+/* Opacity */
+
+.asynch-round-button.bg-white.opacity-80 {
+  background-color: var(--color-white-80);
+}
+
+.asynch-round-button.bg-white.opacity-40 {
+  background-color: var(--color-white-40);
+}
+
+.asynch-round-button.bg-white.opacity-20 {
+  background-color: var(--color-white-20);
+}
+
+.asynch-round-button.bg-white.opacity-10 {
+  background-color: var(--color-white-10);
+}
+
+
+/* Background Gray */
+
 .asynch-round-button.bg-gray {
   background-color: var(--color-gray);
+}
+
+/* Opacity */
+
+.asynch-round-button.bg-gray.opacity-80 {
+  background-color: var(--color-gray-80);
+}
+
+.asynch-round-button.bg-gray.opacity-40 {
+  background-color: var(--color-gray-40);
+}
+
+.asynch-round-button.bg-gray.opacity-20 {
+  background-color: var(--color-gray-20);
+}
+
+.asynch-round-button.bg-gray.opacity-10 {
+  background-color: var(--color-gray-10);
 }
 
 .asynch-round-button.bg-blue > svg > path,

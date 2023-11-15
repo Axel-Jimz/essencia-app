@@ -1,0 +1,25 @@
+.card#user-suggestion {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border: 0.063rem solid var(--color-gray-80);
+  box-shadow: 0 2px 4px rgba(24, 24, 24, 0.05);
+}
+
+.card#user-suggestion > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card#user-suggestion > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

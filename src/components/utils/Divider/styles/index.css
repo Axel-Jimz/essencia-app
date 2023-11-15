@@ -1,0 +1,48 @@
+.divider {
+  width: 100%;
+  height: 0.063rem;
+}
+
+/* Background colors */
+
+.divider.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.divider.bg-red {
+  background-color: var(--color-red);
+}
+
+.divider.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.divider.bg-green {
+  background-color: var(--color-green);
+}
+
+
+.divider.bg-purple {
+  background-color: var(--color-purple);
+}
+
+
+.divider.bg-pink {
+  background-color: var(--color-pink);
+}
+
+
+.divider.bg-orange {
+  background-color: var(--color-orange);
+}
+
+
+.divider.bg-white {
+  background-color: var(--color-white);
+}
+
+
+.divider.bg-gray {
+  background-color: var(--color-gray);
+}
+

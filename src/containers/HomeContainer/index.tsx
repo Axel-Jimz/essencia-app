@@ -1,24 +1,33 @@
-import React, { useContext } from "react";
-import { UserModelContext } from "../../state/contexts/UserModelContext";
+import React from "react";
 
 import Container from "../../components/layout/Container";
-import HomeNavbar from "../../components/layout/Navbar/variants/HomeNavbar";
+
+import HomeNavbarAside from "../../components/layout/Aside/variants/HomeNavbarAside";
+import HomeUsersAside from "../../components/layout/Aside/variants/HomeUsersAside";
 
 import { Outlet } from "react-router-dom";
 
 import "./styles/index.css";
+import HomeMain from "../../components/layout/Main/variants/HomeMain";
+import BreakpointRenderer from "../../components/renderers/BreakpointRenderer";
+
 
 const HomeContainer: React.FC = () => {
-  const { signOutUser } = useContext(UserModelContext);
-
   return (
     <Container id="home">
-      <HomeNavbar />
-      <div>
+      <HomeMain>
+
+        <BreakpointRenderer maxWidth="md">
+          <HomeNavbarAside />
+        </BreakpointRenderer>
+
         <Outlet />
-        <button onClick={signOutUser}>Salir</button>
-        <br />
-      </div>
+
+        <BreakpointRenderer maxWidth="lg">
+          <HomeUsersAside />
+        </BreakpointRenderer>
+        
+      </HomeMain>
     </Container>
   );
 };

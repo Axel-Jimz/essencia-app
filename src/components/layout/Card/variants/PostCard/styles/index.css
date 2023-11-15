@@ -1,11 +1,11 @@
 .card#post {
-  max-width: 568px;
   border: 0.063rem solid var(--color-gray-80);
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(24, 24, 24, 0.05);
   overflow: hidden;
 }
 

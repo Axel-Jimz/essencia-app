@@ -2,6 +2,7 @@ export interface NavRectangleButtonProps {
   children: React.ReactNode;
   icon?: React.ReactElement;
   navigateTo: string;
+  unstyled?: boolean;
   tooltipMessage?: string;
   bg:
     | "blue"
@@ -13,4 +14,9 @@ export interface NavRectangleButtonProps {
     | "orange"
     | "white"
     | "gray";
+  bgOpacity?: 
+    |"10" 
+    | "20" 
+    | "40" 
+    | "80";
 }

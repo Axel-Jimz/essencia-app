@@ -1,0 +1,25 @@
+.card-group {
+    position: relative;
+    display: flex;
+    z-index: 500;
+}
+
+.card-group.stack-vertical {
+    flex-direction: column;
+}
+
+.card-group.stack-horizontal > .card {
+    margin: 0 1rem 0 0;
+}
+
+.card-group.stack-horizontal > .card:nth-last-child(1) {
+    margin: 0;
+}
+
+.card-group.stack-vertical > .card {
+    margin: 0 0 1rem 0;
+}
+
+.card-group.stack-vertical > .card:nth-last-child(1) {
+    margin: 0;
+}

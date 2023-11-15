@@ -8,10 +8,12 @@ const RoundButton: React.FC<RoundButtonProps> = ({
   onClick,
   tooltipMessage,
   bg,
+  bgOpacity,
 }) => {
   const classes = ['round-button'];
   
   bg && classes.push(`bg-${bg}`);
+  bgOpacity && classes.push(`opacity-${bgOpacity}`);
 
   return (
     <button className={classes.join(' ')} onClick={onClick}>
