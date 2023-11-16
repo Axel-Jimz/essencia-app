@@ -40,3 +40,48 @@
 .theme-dark .nav-rectangle-button.bg-gray.opacity-80 {
   color: var(--color-white);
 }
+
+.theme-dark .nav-rectangle-button.unstyled.bg-blue {
+  background-color: transparent;
+  color: var(--color-blue);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-red {
+  background-color: transparent;
+  color: var(--color-red);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-yellow {
+  background-color: transparent;
+  color: var(--color-yellow);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-green {
+  background-color: transparent;
+  color: var(--color-green);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-purple {
+  background-color: transparent;
+  color: var(--color-pruple);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-pink {
+  background-color: transparent;
+  color: var(--color-pink);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-orange {
+  background-color: transparent;
+  color: var(--color-orange);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-gray {
+  background-color: transparent;
+  color: var(--color-gray);
+}
+
+.theme-dark .nav-rectangle-button.unstyled.bg-white {
+  background-color: transparent;
+  color: var(--color-white);
+}

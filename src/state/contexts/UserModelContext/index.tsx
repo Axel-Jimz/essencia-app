@@ -4,8 +4,10 @@ import { UserModelContextProps } from "./props";
 export const UserModelContext = createContext<UserModelContextProps>({
     /* User Interface */
   theme: false,
+  mobileHomeNavbarVisibility: false,
   /* User Interface - Functions*/
   changeTheme: () => {},
+  toggleMobileHomeNavbarVisibility: () => {},
   /* User Auth - Functions */
   signInWithGoogle: () => {},
   signOutUser: () => {},

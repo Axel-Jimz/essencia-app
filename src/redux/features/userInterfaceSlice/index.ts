@@ -1,27 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
-
-interface userInterfaceSlice {
-  theme: boolean;
-}
-
-function generateInitialState(): userInterfaceSlice {
-  return {
-    property: undefined,
-  };
-}
+import { generateInitialState } from './functions/generateInitialState';
 
 const initialState = generateInitialState();
 
-export const nameSlice = createSlice({
+export const userInterfaceSlice = createSlice({
   name: 'userInterface',
   initialState,
   reducers: {
-    reducer: (state, action: PayloadAction<undefined>) => {
-      state.property = action.payload;
+    setMobileHomeNavbarVisibility: (state) => {
+      state.mobileHomeNavbarVisibility = !state.mobileHomeNavbarVisibility;
       return state;
     },
   },
 });
 
-export const { reducer } = nameSlice.actions
+export const { setMobileHomeNavbarVisibility } = userInterfaceSlice.actions

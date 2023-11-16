@@ -1,5 +1,7 @@
 .navbar#home {
+  position: fixed;
   background-color: var(--color-blue);
+  z-index: 1000;
 }
 
 .navbar#home > div {

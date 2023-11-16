@@ -1,24 +1,30 @@
 import React from 'react';
 import Navbar from '../..';
 
-import "./styles/index.css";
 import Logo from '../../../../brand/Logo';
+
 import ButtonGroup from '../../../../groups/ButtonGroup';
-import ToggleThemeButton from '../../../../buttons/RoundButton/variants/ToggleThemeButton';
+import GoToExplorePageButton from '../../../../buttons/NavRoundButton/variants/GoToExplorePageButton';
 import GoToNotificationsPageButton from '../../../../buttons/NavRoundButton/variants/GoToNotificationsPageButton';
-import GoToNewsPageButton from '../../../../buttons/NavRoundButton/variants/GoToNewsPageButton';
-import GoToConfigPageButton from '../../../../buttons/NavRoundButton/variants/GoToConfigPageButton';
+import ToggleNavbarMobile from '../../../../buttons/RoundButton/variants/ToggleNavbarMobile';
+
+import "./styles/index.css";
+import ProfilePicture from '../../../../avatars/ProfilePicture';
+
 
 const  HomeNavbar: React.FC = () => {
   return (
     <Navbar id='home'>
-      <Logo  showText={false} />
+      
+      <Logo showText={false} />
+
       <ButtonGroup stack='horizontal'>
-          <ToggleThemeButton />
+          <GoToExplorePageButton />
           <GoToNotificationsPageButton />
-          <GoToNewsPageButton />
-          <GoToConfigPageButton />
+          <ToggleNavbarMobile />
+          <ProfilePicture src='' alt='' />
       </ButtonGroup>
+
     </Navbar>
   );
 };

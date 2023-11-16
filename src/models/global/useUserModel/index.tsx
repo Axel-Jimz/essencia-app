@@ -10,8 +10,8 @@ import { useUserModelProps } from "./props";
 
 const useUserModel = (): useUserModelProps => {
 
-    const { theme } = useUserInterfaceData();
-    const { changeTheme } = useUserInterfaceFunctions();
+    const { theme, mobileHomeNavbarVisibility } = useUserInterfaceData();
+    const { changeTheme, toggleMobileHomeNavbarVisibility } = useUserInterfaceFunctions();
 
     const { signInWithGoogle, signOutUser } = useUserAuthFunctions();
 
@@ -23,8 +23,10 @@ const useUserModel = (): useUserModelProps => {
     return {
         /* User Interface */
         theme,
+        mobileHomeNavbarVisibility,
         /* User Interface - Functions*/
         changeTheme,
+        toggleMobileHomeNavbarVisibility,
         /* User Auth - Functions */
         signInWithGoogle,
         signOutUser,

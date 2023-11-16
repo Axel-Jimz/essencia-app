@@ -8,9 +8,11 @@ import thunk from 'redux-thunk';
 // Slices
 import { themeSlice } from '../features/themeSlice';
 import { userPersonalDataSlice } from '../features/userPersonalDataSlice';
+import { userInterfaceSlice } from '../features/userInterfaceSlice';
 
 const rootReducer = combineReducers({
   theme: themeSlice.reducer,
+  userInterface: userInterfaceSlice.reducer,
   userPersonalData: userPersonalDataSlice.reducer,
 })
 

@@ -1,8 +1,10 @@
 export interface UserModelContextProps {
   /* User Interface */
   theme: boolean;
+  mobileHomeNavbarVisibility: boolean;
   /* User Interface - Functions*/
   changeTheme: () => void;
+  toggleMobileHomeNavbarVisibility: () => void;
   /* User Auth - Functions */
   signInWithGoogle: () => void;
   signOutUser: () => void;

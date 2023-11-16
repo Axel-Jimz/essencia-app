@@ -1,8 +1,10 @@
 export interface useUserModelProps {
   /* User Interface */
   theme: boolean;
+  mobileHomeNavbarVisibility: boolean;
   /* User Interface - Functions*/
   changeTheme: () => void;
+  toggleMobileHomeNavbarVisibility: () => void;
   /* User Auth - Functions */
   signInWithGoogle: () => Promise<void>;
   signOutUser: () => Promise<void>;
