@@ -1,0 +1,4 @@
+.textarea#post-content {
+  border: unset;
+  border-bottom: 0.063rem solid var(--color-gray);
+}

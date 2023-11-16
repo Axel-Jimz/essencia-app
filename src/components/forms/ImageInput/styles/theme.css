@@ -1,3 +1,7 @@
+.theme-dark .image-input > label {
+  background-color: transparent;
+}
+
 .theme-dark .image-input > span {
-    color: var(--color-white);
+  color: var(--color-white);
 }

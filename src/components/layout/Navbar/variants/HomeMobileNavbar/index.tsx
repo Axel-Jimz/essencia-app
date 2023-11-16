@@ -6,13 +6,13 @@ import GoToHomePageButton from "../../../../buttons/NavRectangleButton/variants/
 import GoToProfilePageButton from "../../../../buttons/NavRectangleButton/variants/GoToProfilePageButton";
 import GoToExplorePageButton from "../../../../buttons/NavRectangleButton/variants/GoToExplorePageButton";
 import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
+import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
 import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNewsPageButton";
-import GoToCreatePageButton from "../../../../buttons/NavRectangleButton/variants/GoToCreatePageButton";
 import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
+import SignOutButton from "../../../../buttons/AsynchRectangleButton/variants/SignOutButton";
 
 import "./styles/index.css";
 import "./styles/theme.css";
-import SignOutButton from "../../../../buttons/AsynchRectangleButton/variants/SignOutButton";
 
 const HomeMobileNavbar: React.FC = () => {
   return (
@@ -22,8 +22,8 @@ const HomeMobileNavbar: React.FC = () => {
         <GoToProfilePageButton />
         <GoToExplorePageButton />
         <GoToNotificationsPageButton />
+        <GoToBookmarksButton />
         <GoToNewsPageButton />
-        <GoToCreatePageButton />
       </ButtonGroup>
 
       <ButtonGroup stack="vertical">

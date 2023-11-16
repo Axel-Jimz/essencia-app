@@ -9,8 +9,8 @@
 
 .image-input > label {
   position: relative;
-  min-width: 10rem;
-  min-height: 10rem;
+  width: 100%;
+  aspect-ratio: 1;
   display: inline-block;
   background-color: var(--color-white);
 }

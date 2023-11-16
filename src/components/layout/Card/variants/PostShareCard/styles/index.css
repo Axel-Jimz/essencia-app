@@ -11,7 +11,7 @@
 }
 
 .card#post-share > .card-header {
-  padding: 0.5rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: 2.5rem 1fr 2.5rem;
   column-gap: 0.5rem;

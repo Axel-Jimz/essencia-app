@@ -23,6 +23,23 @@ label span {
   cursor: pointer;
 }
 
+.textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background-color: var(--color-gray-10);
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background-color: var(--color-black-40);
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
 .textarea:focus {
   outline: none;
   border-color: var(--color-blue);

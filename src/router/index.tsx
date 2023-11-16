@@ -7,14 +7,13 @@ import ProtectedHome from "../pages/protected/ProtectedHome";
 
 import NotFound from "../pages/NotFound";
 
+import Feed from "../pages/Feed";
 import Profile from "../pages/Profile";
 import Explore from "../pages/Explore";
 import Notifications from "../pages/Notifications";
+import Bookmarks from "../pages/Bookmarks";
 import News from "../pages/News";
 import Setting from "../pages/Setting";
-import Feed from "../pages/Feed";
-import Create from "../pages/Create";
-
 
 export const router = createBrowserRouter([
   {
@@ -52,12 +51,12 @@ export const router = createBrowserRouter([
         element: <Notifications />,
       },
       {
-        path: "/news",
-        element: <News />,
+        path: "/bookmarks",
+        element: <Bookmarks />,
       },
       {
-        path: "/create",
-        element: <Create />,
+        path: "/news",
+        element: <News />,
       },
       {
         path: "/setting",

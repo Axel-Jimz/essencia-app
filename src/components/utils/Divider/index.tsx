@@ -4,10 +4,11 @@ import { DividerProps } from './props';
 import "./styles/index.css";
 import "./styles/theme.css";
 
-const Divider: React.FC<DividerProps> = ({ bg }) => {
+const Divider: React.FC<DividerProps> = ({ bg, bgOpacity }) => {
     const classes = ['divider'];
 
-    bg && classes.push(`bg-${bg}`)
+    bg && classes.push(`bg-${bg}`);
+    bgOpacity && classes.push(`opacity-${bgOpacity}`);
 
   return (
     <div className={classes.join(' ')}></div>

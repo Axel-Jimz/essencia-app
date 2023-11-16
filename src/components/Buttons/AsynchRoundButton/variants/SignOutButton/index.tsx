@@ -10,7 +10,7 @@ const SignOutButton: React.FC = () => {
     <AsynchRoundButton
       icon={<SignOutIcon />}
       onClick={signOutUser}
-      bg="white"
+      bg="red"
       successTitle=""
       successDescription=""
       errorTitle=""

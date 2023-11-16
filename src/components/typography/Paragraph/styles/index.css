@@ -11,7 +11,7 @@
   outline: none;
   padding: 0 0.250rem;
   background-color: transparent;
-  font-family: var(--font-family-montserrat);
+  font-family: var(--font-family-roboto);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--color-blue);
@@ -21,7 +21,7 @@
 /* Families */
 
 .paragraph.family-montserrat {
-  font-family: var(--font-family-montserrat);
+  font-family: var(--font-family-roboto);
 }
 
 /* Sizes */

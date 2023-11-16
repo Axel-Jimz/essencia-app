@@ -1,20 +1,21 @@
 import React from "react";
 import Aside from "../..";
 
-import GoToProfilePageButton from "../../../../buttons/NavRectangleButton/variants/GoToProfilePageButton";
-import GoToHomePageButton from "../../../../buttons/NavRectangleButton/variants/GoToHomePageButton";
-import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
-import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
-import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNewsPageButton";
+import Logo from "../../../../brand/Logo";
 
-import GoToExplorePageButton from "../../../../buttons/NavRectangleButton/variants/GoToExplorePageButton";
-import SignOutButton from "../../../../buttons/AsynchRectangleButton/variants/SignOutButton";
+import Divider from "../../../../utils/Divider";
+
 import ButtonGroup from "../../../../groups/ButtonGroup";
-import GoToCreatePageButton from "../../../../buttons/NavRectangleButton/variants/GoToCreatePageButton";
+
+import GoToHomePageButton from "../../../../buttons/NavRectangleButton/variants/GoToHomePageButton";
+import GoToProfilePageButton from "../../../../buttons/NavRectangleButton/variants/GoToProfilePageButton";
+import GoToExplorePageButton from "../../../../buttons/NavRectangleButton/variants/GoToExplorePageButton";
+import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
+import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
+import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNewsPageButton";
+import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
 
 import "./styles/index.css";
-import Logo from "../../../../brand/Logo";
-import Divider from "../../../../utils/Divider";
 
 const HomeNavbarAside: React.FC = () => {
   return (
@@ -22,19 +23,19 @@ const HomeNavbarAside: React.FC = () => {
       <div>
         <Logo textColor="blue" />
 
-        <Divider bg="gray" />
+        <Divider bg="gray" bgOpacity="80" />
 
         <ButtonGroup stack="vertical">
           <GoToHomePageButton />
           <GoToProfilePageButton />
           <GoToExplorePageButton />
           <GoToNotificationsPageButton />
-          <GoToNewsPageButton />
+          <GoToBookmarksButton />
         </ButtonGroup>
       </div>
 
       <ButtonGroup stack="vertical">
-        <GoToCreatePageButton />
+        <GoToNewsPageButton />
         <GoToSettingPageButton />
       </ButtonGroup>
     </Aside>
