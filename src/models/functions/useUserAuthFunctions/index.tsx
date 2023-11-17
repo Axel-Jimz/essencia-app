@@ -1,5 +1,6 @@
 import { firebaseSignInWithGoogleProvider } from "../../../services/firebase/functions/auth/firebaseSignInWithGoogleProvider";
 import { firebaseSignOutUser } from "../../../services/firebase/functions/auth/firebaseSignOutUser";
+import { firebaseHandlerUserAuth } from "../../../services/firebase/functions/auth/firebaseHandlerUserAuth";
 import { useUserAuthFunctionsProps } from "./props";
 
 const useUserAuthFunctions = (): useUserAuthFunctionsProps => {
@@ -18,6 +19,14 @@ const useUserAuthFunctions = (): useUserAuthFunctionsProps => {
       console.error(error);
     }
   };
+
+  const handlerUserAuth = async (user: any) => {
+    try {
+      await firebaseHandlerUserAuth(user);
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return {
     signInWithGoogle,

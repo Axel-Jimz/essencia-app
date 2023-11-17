@@ -7,6 +7,7 @@ import PostCardSkeleton from "../../components/layout/Card/skeletons/PostCardSke
 import "./styles/index.css";
 
 const FeedContainer: React.FC = () => {
+  console.log('hola')
   return (
     <Container id="feed">
       <CreatePostForm />

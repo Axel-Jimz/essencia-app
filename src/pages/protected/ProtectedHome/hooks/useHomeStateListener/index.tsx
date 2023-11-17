@@ -6,6 +6,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../../../../services/firebase/config";
 
 import { useHomeStateListenerProps } from "../../props";
+import { firebaseHandlerUserAuth } from "../../../../../services/firebase/functions/auth/firebaseHandlerUserAuth";
 
 const useHomeStateListener = (): useHomeStateListenerProps => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -13,11 +14,12 @@ const useHomeStateListener = (): useHomeStateListenerProps => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        setIsLoading(false);
-      } else {
-        navigate("/auth");
-      }
+      console.log('ejectutando useHomeStateListener')
+
+      user && await firebaseHandlerUserAuth(user);
+
+      user ? setIsLoading(false) : navigate("/auth");
+     
     });
   
     return () => {

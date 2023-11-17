@@ -11,6 +11,8 @@ const useAuthStateListener = (): useAuthStateListenerProps => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const navigate = useNavigate();
 
+  console.log('ejectutando useAuthStateListener')
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {

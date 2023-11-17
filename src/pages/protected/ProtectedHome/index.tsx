@@ -8,7 +8,7 @@ const ProtectedHome: React.FC<ProtectedHomeProps> = ({ children }) => {
 
     if (isLoading) {
       return <Loader />
-    }
+    } 
 
     return (
       <div>
