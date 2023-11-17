@@ -31,6 +31,7 @@ const useUserAuthFunctions = (): useUserAuthFunctionsProps => {
   return {
     signInWithGoogle,
     signOutUser,
+    handlerUserAuth,
   };
 };
 

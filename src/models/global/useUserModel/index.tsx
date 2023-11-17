@@ -13,7 +13,7 @@ const useUserModel = (): useUserModelProps => {
     const { theme, mobileHomeNavbarVisibility } = useUserInterfaceData();
     const { changeTheme, toggleMobileHomeNavbarVisibility } = useUserInterfaceFunctions();
 
-    const { signInWithGoogle, signOutUser } = useUserAuthFunctions();
+    const { signInWithGoogle, signOutUser, handlerUserAuth, } = useUserAuthFunctions();
 
     const { userId, username, biography, profilePictureURL, profileCoverURL, followers, following, posts, accountCreated, online } = useUserPersonalData();
 
@@ -30,6 +30,7 @@ const useUserModel = (): useUserModelProps => {
         /* User Auth - Functions */
         signInWithGoogle,
         signOutUser,
+        handlerUserAuth,
         /* User Personal Data */
         userId,
         username,

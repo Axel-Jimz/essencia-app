@@ -3,7 +3,13 @@ import { db } from "../../../../config"
 
 export const firebaseRegisterUser = async (user: any) => {
     const usersReference = collection(db, 'users');
-    // const followersReference = collection(doc(usersReference, user.uid), 'followers');
+
+    const followersReference = collection(doc(usersReference, user.uid), 'followers');
+    const followingReference = collection(doc(usersReference, user.uid), 'following');
+    const sharesReference = collection(doc(usersReference, user.uid), 'shares');
+    const bookmarksReference = collection(doc(usersReference, user.uid), 'bookmarks');
+    const blockedUsersReference = collection(doc(usersReference, user.uid), 'blockedUsers');
+    const notificationsReference = collection(doc(usersReference, user.uid), 'notifications');
 
     const userData = {
         userId: user.uid,
@@ -11,13 +17,17 @@ export const firebaseRegisterUser = async (user: any) => {
         profilePicture: user.photoURL,
         description: '',
         createdAt: user.metadata.creationTime,
+        viewedNotifications: false,
     }
 
     try {
-        console.log('creando usuario')
         await setDoc(doc(usersReference, user.uid), userData);
-        console.log('creando coleccion')
-        // await setDoc(doc(followersReference, 'default'), {});
+        await setDoc(doc(followersReference, 'default'), {});
+        await setDoc(doc(followingReference, 'default'), {});
+        await setDoc(doc(sharesReference, 'default'), {});
+        await setDoc(doc(bookmarksReference, 'default'), {});
+        await setDoc(doc(blockedUsersReference, 'default'), {});
+        await setDoc(doc(notificationsReference, 'default'), {});
     } catch (error) {
         console.log(error)
     }

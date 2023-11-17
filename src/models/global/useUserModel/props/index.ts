@@ -8,6 +8,7 @@ export interface useUserModelProps {
   /* User Auth - Functions */
   signInWithGoogle: () => Promise<void>;
   signOutUser: () => Promise<void>;
+  handlerUserAuth: (user: any) => Promise<void>;
   /* User Personal Data */
   userId: string;
   username: string;

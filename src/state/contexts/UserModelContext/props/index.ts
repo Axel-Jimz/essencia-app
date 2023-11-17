@@ -8,6 +8,7 @@ export interface UserModelContextProps {
   /* User Auth - Functions */
   signInWithGoogle: () => void;
   signOutUser: () => void;
+  handlerUserAuth: (user: any) => Promise<void>;
   /* User Personal Data */
   userId: string;
   username: string;
