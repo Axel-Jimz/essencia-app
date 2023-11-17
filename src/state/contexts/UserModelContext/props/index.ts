@@ -18,6 +18,11 @@ export interface UserModelContextProps {
   followers: {}[];
   following: {}[];
   posts: {}[];
+  savedPosts: {}[];
+  sharedPosts: {}[];
+  blockedUsers: {}[];
+  notifications: {}[];
+  viewedNotifications: boolean;
   accountCreated: string;
   online: boolean;
   /* User Personal Data  Functions */
@@ -25,10 +30,13 @@ export interface UserModelContextProps {
   changeUsername: (value: string) => void;
   changeBiography: (value: string) => void;
   changeProfilePictureURL: (value: string) => void;
-  changeProfileCoverURL: (value: string) => void;
   changeFollowers: (value: {}[]) => void;
   changeFollowing: (value: {}[]) => void;
   changePosts: (value: {}[]) => void;
+  changeSavedPosts: (value: {}[]) => void;
+  changeSharedPosts: (value: {}[]) => void;
+  changeBlockedUsers: (value: {}[]) => void;
+  changeNotifications: (value: {}[]) => void;
+  changeViewedNotifications: (value: boolean) => void;
   changeAccountCreated: (value: string) => void;
-  changeOnlineStatus: (value: boolean) => void;
 }

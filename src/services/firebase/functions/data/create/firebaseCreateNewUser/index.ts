@@ -14,9 +14,9 @@ export const firebaseRegisterUser = async (user: any) => {
     const userData = {
         userId: user.uid,
         username: user.displayName,
-        profilePicture: user.photoURL,
-        description: '',
-        createdAt: user.metadata.creationTime,
+        profilePictureURL: user.photoURL,
+        biography: '',
+        accountCreated: user.metadata.creationTime,
         viewedNotifications: false,
     }
 

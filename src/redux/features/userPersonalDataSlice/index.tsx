@@ -24,10 +24,6 @@ export const userPersonalDataSlice = createSlice({
       state.profilePictureURL = action.payload;
       return state;
     },
-    setProfileCoverURL: (state, action: PayloadAction<string>) => {
-      state.profileCoverURL = action.payload;
-      return state;
-    },
     setFollowers: (state, action: PayloadAction<{}[]>) => {
       state.followers = action.payload;
       return state;
@@ -40,12 +36,28 @@ export const userPersonalDataSlice = createSlice({
       state.posts = action.payload;
       return state;
     },
-    setAccountCreated: (state, action: PayloadAction<string>) => {
-      state.accountCreated = action.payload;
+    setSavedPosts: (state, action: PayloadAction<{}[]>) => {
+      state.savedPosts = action.payload;
       return state;
     },
-    setOnlineStatus: (state, action: PayloadAction<boolean>) => {
-      state.online = action.payload;
+    setSharedPosts: (state, action: PayloadAction<{}[]>) => {
+      state.sharedPosts = action.payload;
+      return state;
+    },
+    setBlockedUsers: (state, action: PayloadAction<{}[]>) => {
+      state.blockedUsers = action.payload;
+      return state;
+    },
+    setNotifications: (state, action: PayloadAction<{}[]>) => {
+      state.notifications = action.payload;
+      return state;
+    },
+    setViewedNotifications: (state, action: PayloadAction<boolean>) => {
+      state.viewedNotifications = action.payload;
+      return state;
+    },
+    setAccountCreated: (state, action: PayloadAction<string>) => {
+      state.accountCreated = action.payload;
       return state;
     },
   },
@@ -56,10 +68,13 @@ export const {
   setUsername,
   setBiography,
   setProfilePictureURL,
-  setProfileCoverURL,
   setFollowers,
   setFollowing,
   setPosts,
+  setSavedPosts,
+  setSharedPosts,
+  setBlockedUsers,
+  setNotifications,
+  setViewedNotifications,
   setAccountCreated,
-  setOnlineStatus,
 } = userPersonalDataSlice.actions;

@@ -3,10 +3,13 @@ export interface useUserPersonalDataProps {
   username: string;
   biography: string;
   profilePictureURL: string;
-  profileCoverURL: string;
   followers: {}[];
   following: {}[];
   posts: {}[];
+  savedPosts: {}[];
+  sharedPosts: {}[];
+  blockedUsers: {}[];
+  notifications: {}[];
+  viewedNotifications: boolean;
   accountCreated: string;
-  online: boolean;
 }

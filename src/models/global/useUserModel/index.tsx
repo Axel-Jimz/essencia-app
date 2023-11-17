@@ -15,10 +15,9 @@ const useUserModel = (): useUserModelProps => {
 
     const { signInWithGoogle, signOutUser, handlerUserAuth, } = useUserAuthFunctions();
 
-    const { userId, username, biography, profilePictureURL, profileCoverURL, followers, following, posts, accountCreated, online } = useUserPersonalData();
+    const { userId, username, biography, profilePictureURL, followers, following, posts, savedPosts, sharedPosts, blockedUsers, notifications, viewedNotifications,  accountCreated } = useUserPersonalData();
 
-    const { changeUserId, changeUsername, changeBiography, changeProfilePictureURL, changeProfileCoverURL, changeFollowers, changeFollowing, changePosts, changeAccountCreated, changeOnlineStatus } = useUserPersonalDataFunctions();
-
+    const { changeUserId, changeUsername, changeBiography, changeProfilePictureURL, changeFollowers, changeFollowing, changePosts, changeSavedPosts, changeSharedPosts, changeBlockedUsers, changeNotifications, changeViewedNotifications, changeAccountCreated } = useUserPersonalDataFunctions();
 
     return {
         /* User Interface */
@@ -36,23 +35,29 @@ const useUserModel = (): useUserModelProps => {
         username,
         biography,
         profilePictureURL,
-        profileCoverURL,
         followers,
         following,
         posts,
+        savedPosts,
+        sharedPosts,
+        blockedUsers,
+        notifications,
+        viewedNotifications,
         accountCreated,
-        online,
         /* User Personal Data  Functions */
         changeUserId,
         changeUsername,
         changeBiography,
         changeProfilePictureURL,
-        changeProfileCoverURL,
         changeFollowers,
         changeFollowing,
         changePosts,
+        changeSavedPosts,
+        changeSharedPosts,
+        changeBlockedUsers,
+        changeNotifications,
+        changeViewedNotifications,
         changeAccountCreated,
-        changeOnlineStatus,
     };
   };
   

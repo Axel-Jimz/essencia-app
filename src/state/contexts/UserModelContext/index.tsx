@@ -11,6 +11,7 @@ export const UserModelContext = createContext<UserModelContextProps>({
   /* User Auth - Functions */
   signInWithGoogle: () => {},
   signOutUser: () => {},
+  handlerUserAuth: () => {}, // Error por promesa.
   /* User Personal Data */
   userId: '',
   username: '',
@@ -20,6 +21,11 @@ export const UserModelContext = createContext<UserModelContextProps>({
   followers: [],
   following: [],
   posts: [],
+  savedPosts: [],
+  sharedPosts: [],
+  blockedUsers: [],
+  notifications: [],
+  viewedNotifications: false,
   accountCreated: '',
   online: false,
   /* User Personal Data  Functions */
@@ -27,11 +33,13 @@ export const UserModelContext = createContext<UserModelContextProps>({
   changeUsername: () => {},
   changeBiography: () => {},
   changeProfilePictureURL: () => {},
-  changeProfileCoverURL: () => {},
   changeFollowers: () => {},
   changeFollowing: () => {},
   changePosts: () => {},
+  changeSavedPosts: () => {},
+  changeSharedPosts: () => {},
+  changeBlockedUsers: () => {},
+  changeViewedNotifications: () => {},
   changeAccountCreated: () => {},
-  changeOnlineStatus: () => {},
 });
   

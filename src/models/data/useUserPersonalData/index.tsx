@@ -6,24 +6,30 @@ const useUserPersonalData = (): useUserPersonalDataProps => {
     const username = useAppSelector((state) => state.userPersonalData.username);
     const biography = useAppSelector((state) => state.userPersonalData.biography);
     const profilePictureURL = useAppSelector((state) => state.userPersonalData.profilePictureURL);
-    const profileCoverURL = useAppSelector((state) => state.userPersonalData.profileCoverURL);
     const followers = useAppSelector((state) => state.userPersonalData.followers);
     const following = useAppSelector((state) => state.userPersonalData.following);
     const posts = useAppSelector((state) => state.userPersonalData.posts);
+    const savedPosts = useAppSelector((state) => state.userPersonalData.savedPosts);
+    const sharedPosts = useAppSelector((state) => state.userPersonalData.sharedPosts);
+    const blockedUsers = useAppSelector((state) => state.userPersonalData.blockedUsers);
+    const notifications = useAppSelector((state) => state.userPersonalData.notifications);
+    const viewedNotifications = useAppSelector((state) => state.userPersonalData.viewedNotifications);
     const accountCreated = useAppSelector((state) => state.userPersonalData.accountCreated);
-    const online = useAppSelector((state) => state.userPersonalData.online);
 
     return {
         userId,
         username,
         biography,
         profilePictureURL,
-        profileCoverURL,
         followers,
         following,
         posts,
+        savedPosts,
+        sharedPosts,
+        blockedUsers,
+        notifications,
+        viewedNotifications,
         accountCreated,
-        online
     };
   };
   
