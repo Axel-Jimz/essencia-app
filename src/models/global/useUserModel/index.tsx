@@ -1,3 +1,5 @@
+import { useUserModelProps } from "./props";
+
 import useUserInterfaceData from "../../data/useUserInterfaceData";
 import useUserInterfaceFunctions from "../../functions/useUserInterfaceFunctions";
 
@@ -6,7 +8,8 @@ import useUserAuthFunctions from "../../functions/useUserAuthFunctions";
 import useUserPersonalData from "../../data/useUserPersonalData";
 import useUserPersonalDataFunctions from "../../functions/useUserPersonalDataFunctions";
 
-import { useUserModelProps } from "./props";
+import useUserCreateFunctions from "../../functions/useUserCreateFunctions";
+import useUserReadFunctions from "../../functions/useUserReadFunctions";
 
 const useUserModel = (): useUserModelProps => {
 
@@ -16,8 +19,11 @@ const useUserModel = (): useUserModelProps => {
     const { signInWithGoogle, signOutUser, handlerUserAuth, } = useUserAuthFunctions();
 
     const { userId, username, biography, profilePictureURL, followers, following, posts, savedPosts, sharedPosts, blockedUsers, notifications, viewedNotifications,  accountCreated } = useUserPersonalData();
+    const { changeUserId, changeUsername, changeBiography, changeProfilePictureURL, changeFollowers, changeFollowing, changePosts, changeSavedPosts, changeSharedPosts, changeBlockedUsers, changeNotifications, changeViewedNotifications, changeAccountCreated, updateUserPersonalData } = useUserPersonalDataFunctions();
 
-    const { changeUserId, changeUsername, changeBiography, changeProfilePictureURL, changeFollowers, changeFollowing, changePosts, changeSavedPosts, changeSharedPosts, changeBlockedUsers, changeNotifications, changeViewedNotifications, changeAccountCreated } = useUserPersonalDataFunctions();
+    const { createPost } = useUserCreateFunctions();
+
+    const { getPersonalData } = useUserReadFunctions();
 
     return {
         /* User Interface */
@@ -58,6 +64,11 @@ const useUserModel = (): useUserModelProps => {
         changeNotifications,
         changeViewedNotifications,
         changeAccountCreated,
+        updateUserPersonalData,
+        /* User Create Functions */
+        createPost,
+        /* User read Functions */
+        getPersonalData,
     };
   };
   

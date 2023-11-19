@@ -30,9 +30,8 @@ const ImageInput: React.FC<ImageInputProps> = ({ register, registerName, fieldNa
   return (
     <div className={classes.join(" ")}>
       {fieldName && <span>{fieldName}:</span> }
-      <label htmlFor={id}>
+      <label htmlFor={id} {...register(registerName)}>
         <input
-          {...register(registerName)}
           name={registerName}
           id={id}
           type="file"

@@ -1,5 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 
+import { useHomeStateListenerProps } from "../../props";
+
 import { useNavigate } from "react-router-dom";
 
 import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
@@ -7,24 +9,25 @@ import { UserModelContext } from "../../../../../state/contexts/UserModelContext
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../../../../services/firebase/config";
 
-import { useHomeStateListenerProps } from "../../props";
 
 
 const useHomeStateListener = (): useHomeStateListenerProps => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const navigate = useNavigate();
 
-  const { handlerUserAuth } = useContext(UserModelContext);
+  const { handlerUserAuth, getPersonalData, updateUserPersonalData } = useContext(UserModelContext);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-
-      user && await handlerUserAuth(user);
+      if (user) {
+        await handlerUserAuth(user);
+        const data = await getPersonalData(user);
+        updateUserPersonalData(data);
+      }
 
       user ? setIsLoading(false) : navigate("/auth");
-     
     });
-  
+
     return () => {
       unsubscribe();
     };

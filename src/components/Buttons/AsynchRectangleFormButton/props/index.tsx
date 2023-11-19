@@ -14,7 +14,7 @@ export interface AsynchRectangleFormButtonProps {
     | "white"
     | "gray";
   bgOpacity?: 
-    |"10" 
+    | "10" 
     | "20" 
     | "40" 
     | "80";

@@ -37,4 +37,9 @@ export interface useUserModelProps {
   changeNotifications: (value: {}[]) => void;
   changeViewedNotifications: (value: boolean) => void;
   changeAccountCreated: (value: string) => void;
+  updateUserPersonalData: (data: any) => void;
+   /* User Create Functions */
+  createPost: (data: any, userId: string) => Promise<void>;
+  /* User read Functions */
+  getPersonalData: (user: any) => void;
 }

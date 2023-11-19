@@ -39,4 +39,9 @@ export interface UserModelContextProps {
   changeNotifications: (value: {}[]) => void;
   changeViewedNotifications: (value: boolean) => void;
   changeAccountCreated: (value: string) => void;
+  updateUserPersonalData: (data: any) => void;
+  /* User Create Functions */
+  createPost: (data: any, userId: string) => Promise<void>;
+  /* User Create Functions */
+  getPersonalData: (user: any) => void;
 }

@@ -12,4 +12,5 @@ export interface useUserPersonalDataFunctionsProps {
   changeNotifications: (value: {}[]) => void;
   changeViewedNotifications: (value: boolean) => void;
   changeAccountCreated: (value: string) => void;
+  updateUserPersonalData: (data: any) => void;
 }

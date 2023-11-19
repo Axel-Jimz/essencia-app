@@ -41,5 +41,10 @@ export const UserModelContext = createContext<UserModelContextProps>({
   changeBlockedUsers: () => {},
   changeViewedNotifications: () => {},
   changeAccountCreated: () => {},
+  updateUserPersonalData: () => {},
+  /* User Create Functions */
+  createPost: () => {},  // Error por promesa.
+  /* User Create Functions */
+  getPersonalData: () => {},  // Error por promesa.
 });
   

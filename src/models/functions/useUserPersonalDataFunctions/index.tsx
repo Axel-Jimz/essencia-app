@@ -20,6 +20,21 @@ const useUserPersonalDataFunctions = (): useUserPersonalDataFunctionsProps => {
     const changeViewedNotifications = (value: boolean) => dispatch(setViewedNotifications(value));
     const changeAccountCreated = (value: string) => dispatch(setAccountCreated(value));
 
+    const updateUserPersonalData = (data: any) => {
+        dispatch(setUserId(data.userId));
+        dispatch(setUsername(data.username));
+        dispatch(setBiography(data.biography));
+        dispatch(setProfilePictureURL(data.profilePictureURL));
+        dispatch(setFollowers(data.followers));
+        dispatch(setFollowing(data.following));
+        dispatch(setSavedPosts(data.savedPosts));
+        dispatch(setSharedPosts(data.sharedPosts));
+        dispatch(setBlockedUsers(data.blockedUsers));
+        dispatch(setNotifications(data.notifications));
+        dispatch(setViewedNotifications(data.viewedNotifications));
+        dispatch(setAccountCreated(data.accountCreated));
+    };      
+
     return {
         changeUserId,
         changeUsername,
@@ -34,6 +49,7 @@ const useUserPersonalDataFunctions = (): useUserPersonalDataFunctionsProps => {
         changeNotifications,
         changeViewedNotifications,
         changeAccountCreated,
+        updateUserPersonalData
     };
   };
   
