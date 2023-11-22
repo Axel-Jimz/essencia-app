@@ -1,12 +1,15 @@
 import React from "react";
 import { TotalLikesProps } from "./props";
 import Paragraph from "../..";
+import useTotalLikes from "./hooks/useTotalLikes";
 
-const TotalLikes: React.FC<TotalLikesProps> = ({ value }) => {
+const TotalLikes: React.FC<TotalLikesProps> = ({ postId }) => {
+  const { totalLikes } = useTotalLikes(postId)
+
   let content: string;
 
-  if (value > 0) {
-    content = `${value} me gusta`;
+  if (totalLikes > 0) {
+    content = `${totalLikes} me gusta`;
   } else {
     content = "";
   }

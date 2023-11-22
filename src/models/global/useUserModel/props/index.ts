@@ -1,3 +1,5 @@
+import { Unsubscribe } from "firebase/firestore";
+
 export interface useUserModelProps {
   /* User Interface */
   theme: boolean;
@@ -42,4 +44,10 @@ export interface useUserModelProps {
   createPost: (data: any, userId: string) => Promise<void>;
   /* User read Functions */
   getPersonalData: (user: any) => void;
+  /* User Snapshot Functions */
+  watchBlockedUsers: (userId: string, callback: (blockedUsersData: any[]) => void) =>  Unsubscribe;
+  watchPostLikes: (postId: string, callback: (likesData: any[]) => void) => Unsubscribe;
+  watchPostReports: (postId: string, callback: (reportsData: any[]) => void) => Unsubscribe;
+  watchPostShares: (postId: string, callback: (sharesData: any[]) => void) => Unsubscribe;
+  watchSavedPosts: (postId: string, callback: (savedPostsData: any[]) => void) => Unsubscribe;
 }

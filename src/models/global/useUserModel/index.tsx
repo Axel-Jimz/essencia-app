@@ -10,6 +10,7 @@ import useUserPersonalDataFunctions from "../../functions/useUserPersonalDataFun
 
 import useUserCreateFunctions from "../../functions/useUserCreateFunctions";
 import useUserReadFunctions from "../../functions/useUserReadFunctions";
+import useUserSnapshotFunctions from "../../functions/useUserSnapshotFunctions";
 
 const useUserModel = (): useUserModelProps => {
 
@@ -24,6 +25,9 @@ const useUserModel = (): useUserModelProps => {
     const { createPost } = useUserCreateFunctions();
 
     const { getPersonalData } = useUserReadFunctions();
+
+    const { watchBlockedUsers, watchPostLikes, watchPostReports, watchPostShares, watchSavedPosts } = useUserSnapshotFunctions();
+
 
     return {
         /* User Interface */
@@ -69,6 +73,12 @@ const useUserModel = (): useUserModelProps => {
         createPost,
         /* User read Functions */
         getPersonalData,
+        /* User Snapshot Functions */
+        watchBlockedUsers,
+        watchPostLikes,
+        watchPostReports,
+        watchPostShares,
+        watchSavedPosts
     };
   };
   

@@ -1,3 +1,5 @@
+import { Unsubscribe } from "firebase/firestore";
+
 export interface UserModelContextProps {
   /* User Interface */
   theme: boolean;
@@ -14,7 +16,6 @@ export interface UserModelContextProps {
   username: string;
   biography: string;
   profilePictureURL: string;
-  profileCoverURL: string;
   followers: {}[];
   following: {}[];
   posts: {}[];
@@ -44,4 +45,10 @@ export interface UserModelContextProps {
   createPost: (data: any, userId: string) => Promise<void>;
   /* User Create Functions */
   getPersonalData: (user: any) => void;
+  /* User Snapshot Functions */
+  watchBlockedUsers: (userId: string, callback: (blockedUsersData: any[]) => void) =>  Unsubscribe;
+  watchPostLikes: (postId: string, callback: (likesData: any[]) => void) => Unsubscribe;
+  watchPostReports: (postId: string, callback: (reportsData: any[]) => void) => Unsubscribe;
+  watchPostShares: (postId: string, callback: (sharesData: any[]) => void) => Unsubscribe;
+  watchSavedPosts: (postId: string, callback: (savedPostsData: any[]) => void) => Unsubscribe;
 }

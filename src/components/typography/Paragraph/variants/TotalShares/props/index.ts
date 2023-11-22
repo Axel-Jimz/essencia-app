@@ -1,3 +1,3 @@
 export interface TotalSharesProps {
-  value: number;
+  postId: string;
 }

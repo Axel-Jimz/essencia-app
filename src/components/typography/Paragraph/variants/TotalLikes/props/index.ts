@@ -1,3 +1,3 @@
 export interface TotalLikesProps {
-  value: number;
+  postId: string;
 }

@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ReportPostButtonProps } from "./props";
+import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
+import usePostReports from "./hooks/usePostReports";
 import AsynchRectangleButton from "../..";
 import ReportIcon from "../../../../icons/ReportIcon";
+import { firebaseReportPost } from "../../../../../services/firebase/functions/data/create/firebaseReportPost";
 
-const ReportPostButton: React.FC = () => {
+const ReportPostButton: React.FC<ReportPostButtonProps> = ({ postId }) => {
+  const { userId } = useContext(UserModelContext)
+
+  const { isReported } = usePostReports(postId, userId);
+
   return (
     <AsynchRectangleButton
       icon={<ReportIcon />}
-      onClick={() => console.log('reportar publicacion')}
+      onClick={async () => await firebaseReportPost(postId, userId)}
       bg="orange"
-      successTitle="Publicación reportada"
-      successDescription="Has reportado esta publicación. Gracias por tu contribución."
+      successTitle={isReported ? 'Has eliminado el reporte' : 'Publicación reportada'}
+      successDescription={isReported ? 'Has eliminado el reporte de esta publicación. Gracias por tu contribución.' : 'Has reportado esta publicación. Gracias por tu contribución.'}
       errorTitle="Error al reportar la publicación"
       errorDescription="No se pudo reportar la publicación. Por favor, inténtalo de nuevo."
     >
-      Reportar publicación
+      {isReported ? 'Eliminar reporte' : 'Reportar publicación'}
     </AsynchRectangleButton>
   );
 };

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PostCardProps } from "./props";
+import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
+
 import Card from "../..";
 import ProfilePicture from "../../../../avatars/ProfilePicture";
 import Username from "../../../../typography/Heading/variants/Username";
+import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 import CreatedAt from "../../../../typography/Paragraph/variants/CreatedAt";
+import OptionsPersonalPost from "../../../../groups/RoundExpandableButtonGroup/variants/OptionsPersonalPost";
 import OptionsPost from "../../../../groups/RoundExpandableButtonGroup/variants/OptionsPost";
-
 import Content from "../../../../typography/Paragraph/variants/Content";
 import PostImage from "../../../../images/CustomImage/variants/PostImage";
 import LikePostButton from "../../../../buttons/AsynchRectangleButton/variants/LikePostButton";
@@ -16,52 +20,61 @@ import TotalComments from "../../../../typography/Paragraph/variants/TotalCommen
 
 import "./styles/index.css";
 import "./styles/theme.css";
-import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 
-const PostCard: React.FC = () => {
+const PostCard: React.FC<PostCardProps> = ({
+  postId,
+  authorId,
+  profilePictureURL,
+  username,
+  createdAt,
+  postContent,
+  postImage,
+}) => {
+  const { userId } = useContext(UserModelContext);
+
   return (
     <Card id="post">
       <div className="card-header">
         <div>
-          <ProfilePicture src="" alt="" />
+          <ProfilePicture src={profilePictureURL} alt={username} />
         </div>
         <div>
-          <Username>Axel Jiménez - <FollowUserButton /> </Username>
-          <CreatedAt>11 de noviembre de 210</CreatedAt>
+          <Username>
+            {username} - {authorId !== userId && <FollowUserButton />}
+          </Username>
+          <CreatedAt>{createdAt}</CreatedAt>
         </div>
         <div>
-          <OptionsPost />
+          {authorId === userId ? (
+            <OptionsPersonalPost postId={postId} />
+          ) : (
+            <OptionsPost postId={postId} authorId={authorId} />
+          )}
         </div>
       </div>
 
       <div className="card-main">
         <div>
-          <Content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex
-            atque minima at? Recusandae rerum consectetur aliquid, sunt debitis
-            aperiam optio ullam excepturi suscipit ex iure veniam odit ad
-            molestias. 
-          </Content>
+          <Content>{postContent}</Content>
         </div>
 
         <div>
-            <PostImage src="https://www.elnuevoherald.com/ultimas-noticias/70talg/picture281778918/alternates/LANDSCAPE_768/USATSI_21886415.jpg"  alt="example"/>
+          <PostImage src={postImage} alt={username} />
         </div>
 
         <div>
-          <TotalLikes value={0} />
+          <TotalLikes postId={postId} />
           <div>
             <TotalComments value={0} />
-            <TotalShares value={0} />
+            <TotalShares postId={postId}/>
           </div>
         </div>
-
       </div>
 
       <div className="card-footer">
-        <LikePostButton />
-        <CommentPostButton />
-        <SharePostButton />
+        <LikePostButton postId={postId} />
+        <CommentPostButton postId={postId}  />
+        <SharePostButton postId={postId} />
       </div>
     </Card>
   );

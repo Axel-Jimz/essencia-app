@@ -15,7 +15,7 @@ const CreatePostForm: React.FC = () => {
   const [showImageInput, setShowImageInput] = useState<boolean>(false);
   const [resetImageInput, setResetImageInput] = useState<boolean>(false);
 
-  const { createPost, userId } = useContext(UserModelContext);
+  const { createPost, userId, profilePictureURL, username } = useContext(UserModelContext);
 
   const {
     handleSubmit,
@@ -46,7 +46,7 @@ const CreatePostForm: React.FC = () => {
       id="create-post"
     >
       <div>
-        <ProfilePicture src="" alt="" />
+        <ProfilePicture src={profilePictureURL} alt={username} />
       </div>
 
       <div>

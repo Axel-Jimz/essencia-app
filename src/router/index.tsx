@@ -14,6 +14,7 @@ import Notifications from "../pages/Notifications";
 import Bookmarks from "../pages/Bookmarks";
 import News from "../pages/News";
 import Setting from "../pages/Setting";
+import Post from "../pages/Post";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Feed />,
+      },
+      {
+        path: "/posts/:postId",
+        element: <Post />,
       },
       {
         path: "/profile",

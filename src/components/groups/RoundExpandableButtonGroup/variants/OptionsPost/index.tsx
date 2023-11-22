@@ -5,12 +5,12 @@ import ReportPostButton from "../../../../buttons/AsynchRectangleButton/variants
 import SavePostButton from "../../../../buttons/AsynchRectangleButton/variants/SavePostButton";
 import BlockUserButton from "../../../../buttons/AsynchRectangleButton/variants/BlockUserButton";
 
-const OptionsPost: React.FC = () => {
+const OptionsPost: React.FC<OptionsPostProps> = ({ postId, authorId }) => {
   return (
     <RoundExpandableButtonGroup icon={<MoreIcon />} bg="white" id="post">
-      <SavePostButton />
-      <ReportPostButton />
-      <BlockUserButton />
+      <SavePostButton  postId={postId} />
+      <ReportPostButton postId={postId} />
+      <BlockUserButton userToBlockId={authorId} />
     </RoundExpandableButtonGroup>
   );
 };

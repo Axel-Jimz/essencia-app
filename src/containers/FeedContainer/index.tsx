@@ -6,14 +6,38 @@ import PostCardSkeleton from "../../components/layout/Card/skeletons/PostCardSke
 
 import "./styles/index.css";
 
+import { useQuery } from "react-query";
+import { firebaseGetUserPostsAndData } from "../../services/firebase/functions/data/read/firebaseGetUserPostsAndData";
+import PostCard from "../../components/layout/Card/variants/PostCard";
+
 const FeedContainer: React.FC = () => {
+  const posts = useQuery("posts", firebaseGetUserPostsAndData);
+
   return (
     <Container id="feed">
       <CreatePostForm />
       <CardGroup stack="vertical">
-        <PostCardSkeleton />
-        <PostCardSkeleton />
-        <PostCardSkeleton />
+        {posts.isLoading ? (
+          <>
+            <PostCardSkeleton />
+            <PostCardSkeleton />
+            <PostCardSkeleton />
+          </>
+        ) : (
+          posts.data.map((post) => (
+            <div key={post.postId}>
+              <PostCard
+                postId={post.postId}
+                authorId={post.authorId}
+                profilePictureURL={post.profilePictureURL}
+                username={post.username}
+                createdAt={post.createdAt}
+                postContent={post.postContent}
+                postImage={post.postImage}
+              />
+            </div>
+          ))
+        )}
       </CardGroup>
     </Container>
   );

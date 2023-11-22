@@ -17,7 +17,6 @@ export const UserModelContext = createContext<UserModelContextProps>({
   username: '',
   biography: '',
   profilePictureURL: '',
-  profileCoverURL: '',
   followers: [],
   following: [],
   posts: [],
@@ -46,5 +45,11 @@ export const UserModelContext = createContext<UserModelContextProps>({
   createPost: () => {},  // Error por promesa.
   /* User Create Functions */
   getPersonalData: () => {},  // Error por promesa.
+  /* User Snapshot Functions */
+  watchBlockedUsers: () => {}, // Error por promesa. (Unsubscribe) 
+  watchPostLikes: () => {}, // Error por promesa. (Unsubscribe)
+  watchPostReports: () => {}, // Error por promesa. (Unsubscribe)
+  watchPostShares: () => {}, // Error por promesa. (Unsubscribe)
+  watchSavedPosts: () => {}, // Error por promesa. (Unsubscribe)
 });
   

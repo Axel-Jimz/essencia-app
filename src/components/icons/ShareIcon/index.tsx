@@ -1,17 +1,20 @@
 import React from "react";
 
-const ShareIcon: React.FC = () => {
+interface ShareIconProps {
+  active: boolean;
+}
+
+const ShareIcon: React.FC<ShareIconProps> = ({ active }) => {
   return (
     <svg
       width={16}
       height={16}
       viewBox="0 0 16 16"
-      fill="none"
+      fill={active ? "#66ccff" : "none"}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M11.3073 4.11337C12.6406 5.04004 13.5606 6.51337 13.7473 8.21337"
-        stroke="#181818"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
