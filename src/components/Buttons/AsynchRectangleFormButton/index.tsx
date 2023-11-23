@@ -5,7 +5,6 @@ import LoadingIcon from "../../icons/LoadingIcon";
 import "./styles/index.css";
 import "./styles/theme.css";
 
-
 const AsynchRectangleFormButton: React.FC<AsynchRectangleFormButtonProps> = ({
   children,
   icon,

@@ -1,14 +1,17 @@
 import React from "react";
 import { TotalCommentsProps } from "./props";
+import useTotalComments from "./hooks/useTotalComments";
 import Paragraph from "../..";
 
-const TotalComments: React.FC<TotalCommentsProps> = ({ value }) => {
+const TotalComments: React.FC<TotalCommentsProps> = ({ postId }) => {
+  const { totalComments } = useTotalComments(postId);
+
   let content: string;
 
-  if (value > 0) {
-    value === 1
-      ? (content = `${value} comentario`)
-      : (content = `${value} comentarios`);
+  if (totalComments > 0) {
+    totalComments === 1
+      ? (content = `${totalComments} comentario`)
+      : (content = `${totalComments} comentarios`);
   } else {
     content = "";
   }

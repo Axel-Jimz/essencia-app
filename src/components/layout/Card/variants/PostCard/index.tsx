@@ -21,15 +21,7 @@ import TotalComments from "../../../../typography/Paragraph/variants/TotalCommen
 import "./styles/index.css";
 import "./styles/theme.css";
 
-const PostCard: React.FC<PostCardProps> = ({
-  postId,
-  authorId,
-  profilePictureURL,
-  username,
-  createdAt,
-  postContent,
-  postImage,
-}) => {
+const PostCard: React.FC<PostCardProps> = ({ postId, authorId, profilePictureURL, username, createdAt, postContent, postImage }) => {
   const { userId } = useContext(UserModelContext);
 
   return (
@@ -65,7 +57,7 @@ const PostCard: React.FC<PostCardProps> = ({
         <div>
           <TotalLikes postId={postId} />
           <div>
-            <TotalComments value={0} />
+            <TotalComments postId={postId} />
             <TotalShares postId={postId}/>
           </div>
         </div>

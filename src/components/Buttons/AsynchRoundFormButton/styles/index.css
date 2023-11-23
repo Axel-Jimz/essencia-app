@@ -1,0 +1,361 @@
+.asynch-round-form-button {
+  position: relative;
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  min-width: 2.5rem;
+  max-width: 2.5rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  z-index: 500;
+}
+
+.asynch-round-form-button > .icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.asynch-round-form-button > .tooltip-message {
+  position: absolute;
+  background-color: var(--color-black);
+  padding: 0.25rem 1rem;
+  bottom: -2rem;
+  left: 50%;
+  text-wrap: nowrap;
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  display: none;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: 1000;
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+
+.asynch-round-form-button.enabled-icon > .tooltip-message {
+  margin: 0 0 0 0.5rem;
+}
+
+/* Background Blue */
+
+.asynch-round-form-button.bg-blue {
+  background-color: var(--color-blue);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-blue.opacity-80 {
+  background-color: var(--color-blue-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-blue.opacity-40 {
+  background-color: var(--color-blue-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-blue.opacity-20 {
+  background-color: var(--color-blue-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-blue.opacity-10 {
+  background-color: var(--color-blue-10);
+  color: var(--color-black);
+}
+
+/* Background Red*/
+
+.asynch-round-form-button.bg-red {
+  background-color: var(--color-red);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-red.opacity-80 {
+  background-color: var(--color-red-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-red.opacity-40 {
+  background-color: var(--color-red-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-red.opacity-20 {
+  background-color: var(--color-red-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-red.opacity-10 {
+  background-color: var(--color-red-10);
+  color: var(--color-black);
+}
+
+/* Background Yellow */
+
+.asynch-round-form-button.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-yellow.opacity-80 {
+  background-color: var(--color-yellow-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-yellow.opacity-40 {
+  background-color: var(--color-yellow-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-yellow.opacity-20 {
+  background-color: var(--color-yellow-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-yellow.opacity-10 {
+  background-color: var(--color-yellow-10);
+  color: var(--color-black);
+}
+
+/* Background Green */
+
+.asynch-round-form-button.bg-green {
+  background-color: var(--color-green);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-green.opacity-80 {
+  background-color: var(--color-green-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-green.opacity-40 {
+  background-color: var(--color-green-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-green.opacity-20 {
+  background-color: var(--color-green-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-green.opacity-10 {
+  background-color: var(--color-green-10);
+  color: var(--color-black);
+}
+
+/* Background  Purple*/
+
+.asynch-round-form-button.bg-purple {
+  background-color: var(--color-purple);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-purple.opacity-80 {
+  background-color: var(--color-purple-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-purple.opacity-40 {
+  background-color: var(--color-purple-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-purple.opacity-20 {
+  background-color: var(--color-purple-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-purple.opacity-10 {
+  background-color: var(--color-purple-10);
+  color: var(--color-black);
+}
+
+/* Background Pink */
+
+.asynch-round-form-button.bg-pink {
+  background-color: var(--color-pink);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-pink.opacity-80 {
+  background-color: var(--color-pink-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-pink.opacity-40 {
+  background-color: var(--color-pink-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-pink.opacity-20 {
+  background-color: var(--color-pink-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-pink.opacity-10 {
+  background-color: var(--color-pink-10);
+  color: var(--color-black);
+}
+
+/* Background Orange */
+
+.asynch-round-form-button.bg-orange {
+  background-color: var(--color-orange);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-orange.opacity-80 {
+  background-color: var(--color-orange-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-orange.opacity-40 {
+  background-color: var(--color-orange-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-orange.opacity-20 {
+  background-color: var(--color-orange-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-orange.opacity-10 {
+  background-color: var(--color-orange-10);
+  color: var(--color-black);
+}
+
+/* Background White */
+
+.asynch-round-form-button.bg-white {
+  background-color: var(--color-white);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-white.opacity-80 {
+  background-color: var(--color-white-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-white.opacity-40 {
+  background-color: var(--color-white-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-white.opacity-20 {
+  background-color: var(--color-white-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-white.opacity-10 {
+  background-color: var(--color-white-10);
+  color: var(--color-black);
+}
+
+/* Background Gray */
+
+.asynch-round-form-button.bg-gray {
+  background-color: var(--color-gray);
+}
+
+/* Opacity */
+
+.asynch-round-form-button.bg-gray.opacity-80 {
+  background-color: var(--color-gray-80);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-gray.opacity-40 {
+  background-color: var(--color-gray-40);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-gray.opacity-20 {
+  background-color: var(--color-gray-20);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-gray.opacity-10 {
+  background-color: var(--color-gray-10);
+  color: var(--color-black);
+}
+
+.asynch-round-form-button.bg-blue > svg > path,
+.asynch-round-form-button.bg-red > svg > path,
+.asynch-round-form-button.bg-yellow > svg > path,
+.asynch-round-form-button.bg-green > svg > path,
+.asynch-round-form-button.bg-purple > svg > path,
+.asynch-round-form-button.bg-pink > svg > path,
+.asynch-round-form-button.bg-orange > svg > path,
+.asynch-round-form-button.bg-gray > svg > path {
+  stroke: var(--color-white);
+}
+
+.asynch-round-form-button.bg-white > svg > path {
+  stroke: var(--color-black);
+}
+
+/* Effects */
+
+.asynch-round-form-button:active {
+  opacity: 0.8;
+}
+
+.asynch-round-form-button:active > .tooltip-message {
+  display: block;
+}
+
+@media (hover: hover) {
+  .asynch-round-form-button:hover {
+    opacity: 0.8;
+  }
+
+  .asynch-round-form-button:hover > .tooltip-message {
+    display: block;
+  }
+}

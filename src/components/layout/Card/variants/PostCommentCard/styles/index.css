@@ -1,5 +1,4 @@
 .card#post-comment {
-  max-width: 568px;
   padding: 0.5rem;
   display: grid;
   grid-template-columns: 2.5rem 1fr 2.5rem;

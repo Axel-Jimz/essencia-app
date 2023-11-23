@@ -3,7 +3,6 @@ import { CardGroupProps } from './props';
 
 import "./styles/index.css";
 
-
 const CardGroup: React.FC<CardGroupProps> = ({ children, stack }) => {
   const classes = ["card-group"];
 

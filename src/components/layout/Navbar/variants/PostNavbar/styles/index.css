@@ -1,0 +1,10 @@
+.navbar#post {
+  border-bottom: 0.063rem solid var(--color-gray-80);
+}
+
+.navbar#post > div {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

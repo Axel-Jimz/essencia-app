@@ -1,0 +1,5 @@
+.main#post > div {
+  height: calc((100vh - 9.188rem));
+  padding: 0.5rem 1rem;
+  overflow-y: scroll;
+}

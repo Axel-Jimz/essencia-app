@@ -260,8 +260,9 @@
 
 .asynch-rectangle-form-button.bg-orange.opacity-40 {
   background-color: var(--color-orange-40);
+  color: var(--color-black);
 }
-color: var(--color-black);
+
 
 .asynch-rectangle-form-button.bg-orange.opacity-20 {
   background-color: var(--color-orange-20);

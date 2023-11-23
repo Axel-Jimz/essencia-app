@@ -1,0 +1,13 @@
+.form#create-post-comment {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2.5rem;
+  column-gap: 0.5rem;
+}
+
+.form#create-post-comment > div {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

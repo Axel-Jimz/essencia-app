@@ -1,13 +1,8 @@
 import React from "react";
-import { UseFormRegister } from "react-hook-form";
+import { PostContentTextareaProps } from "./props";
 import Textarea from "../..";
 
 import "./styles/index.css";
-
-export interface PostContentTextareaProps {
-  register: UseFormRegister<any>;
-  rules: Record<string, any>;
-}
 
 const PostContentTextarea: React.FC<PostContentTextareaProps> = ({
   register,

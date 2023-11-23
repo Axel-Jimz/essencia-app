@@ -1,11 +1,8 @@
-import { useContext, useState, useEffect } from 'react';
-import { UserModelContext } from '../../../../../../../state/contexts/UserModelContext';
+import { useState, useEffect } from 'react';
 import { firebaseWatchPostLikes } from '../../../../../../../services/firebase/functions/data/snapshot/firebaseWatchPostLikes';
 
 const usePostLikes = (postId: string, userId: string) => {
   const [likesData, setLikesData] = useState<any[]>([]);
-
-  const { watchPostLikes } = useContext(UserModelContext);
 
   useEffect(() => {
     const updateLikesData = (newLikesData: any[]) => {

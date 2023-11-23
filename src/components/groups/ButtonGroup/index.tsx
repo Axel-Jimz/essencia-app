@@ -3,7 +3,6 @@ import { ButtonGroupProps } from './props';
 
 import "./styles/index.css";
 
-
 const ButtonGroup: React.FC<ButtonGroupProps> = ({ children, stack }) => {
   const classes = ["button-group"];
 

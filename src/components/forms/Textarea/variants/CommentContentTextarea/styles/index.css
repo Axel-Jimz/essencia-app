@@ -1,0 +1,5 @@
+.textarea#comment-content {
+  border: unset;
+  min-height: 3rem;
+  border: 0.063rem solid var(--color-gray);
+}
