@@ -13,8 +13,9 @@ const NavRectangleButton: React.FC<NavRectangleButtonProps> = ({
   bg,
   bgOpacity,
   tooltipMessage,
+  showNotificationDot,
 }) => {
-  const classes = ['nav-rectangle-button'];
+  const classes = ["nav-rectangle-button"];
 
   icon && classes.push(`enabled-icon`);
   bg && classes.push(`bg-${bg}`);
@@ -22,10 +23,16 @@ const NavRectangleButton: React.FC<NavRectangleButtonProps> = ({
   unstyled && classes.push(`unstyled`);
 
   return (
-    <NavLink className={classes.join(' ')} to={navigateTo}>
-      {!unstyled && icon && <div className="icon-wrapper">{icon}</div>}
+    <NavLink className={classes.join(" ")} to={navigateTo}>
+      {!unstyled && icon && (
+        <div className="icon-wrapper">
+          {icon} {showNotificationDot && <div className="dot"></div>}
+        </div>
+      )}
       {children}
-      {tooltipMessage && <span className="tooltip-message">{tooltipMessage}</span>}
+      {tooltipMessage && (
+        <span className="tooltip-message">{tooltipMessage}</span>
+      )}
     </NavLink>
   );
 };

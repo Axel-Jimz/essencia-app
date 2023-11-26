@@ -19,4 +19,5 @@ export interface NavRectangleButtonProps {
     | "20" 
     | "40" 
     | "80";
+  showNotificationDot?: boolean;
 }

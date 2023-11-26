@@ -7,9 +7,10 @@ import { db } from "../../../../config";
 import { getFormattedCurrentDate } from "../../../../../../utils/date/getFormattedCurrentDate";
 import { getTimestamp } from "../../../../../../utils/date/getTimestamp";
 import { generateId } from "../../../../../../utils/ids/generateId";
+import { firebaseCreateCommentNotification } from "../firebaseCreateCommentNotification";
 
 // Esta función permite a un usuario comentar un post.
-export const firebaseCommentPost = async (postId: string, userId: string, data: any) => {
+export const firebaseCommentPost = async (postId: string, authorId: string, userId: string, data: any) => {
   // Creamos una referencia al documento específico dentro de la colección "posts"
   const postDocReference = doc(collection(db, 'posts'), postId);
 
@@ -32,6 +33,7 @@ export const firebaseCommentPost = async (postId: string, userId: string, data: 
   try {
     // Utilizar setDoc con el identificador único generado para agregar el nuevo documento
     await setDoc(doc(commentsReference, commentId), commentMetadata);
+    await firebaseCreateCommentNotification(postId, authorId, userId)
   } catch (error) {
     console.log(error);
   }

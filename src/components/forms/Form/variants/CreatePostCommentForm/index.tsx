@@ -11,7 +11,7 @@ import { firebaseCommentPost } from "../../../../../services/firebase/functions/
 
 import "./styles/index.css";
 
-const CreatePostCommentForm: React.FC<CreatePostCommentFormProps> = ({ postId }) => {
+const CreatePostCommentForm: React.FC<CreatePostCommentFormProps> = ({ postId, authorId }) => {
   const { userId } = useContext(UserModelContext);
 
   const {
@@ -22,7 +22,7 @@ const CreatePostCommentForm: React.FC<CreatePostCommentFormProps> = ({ postId })
   } = useForm();
 
   const onSubmit = async (data: any) => {
-    await firebaseCommentPost(postId, userId, data)
+    await firebaseCommentPost(postId, authorId, userId, data)
     reset()
   };
 

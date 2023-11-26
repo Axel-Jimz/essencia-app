@@ -3,9 +3,10 @@ import { collection, doc, getDoc, setDoc, deleteDoc } from "firebase/firestore";
 
 // Importamos la variable de configuración de Firebase
 import { db } from "../../../../config";
+import { firebaseCreateNotification } from "../firebaseCreateNotification";
 
 // Esta función permite a un usuario dar like a un post.
-export const firebaseLikePost = async (postId: string, likerId: string) => {
+export const firebaseLikePost = async (postId: string, authorId: string, likerId: string) => {
   // Obtiene la referencia al documento del post.
   const postDocRef = doc(db, "posts", postId);
 
@@ -25,6 +26,7 @@ export const firebaseLikePost = async (postId: string, likerId: string) => {
     } else {
       // Si el like no existe, lo agrega.
       await setDoc(likerLikeDocRef, { likerId: likerId });
+      await firebaseCreateNotification(postId, authorId, likerId, 'like')
     }
   } catch (error) {
     console.error("Error al agregar o eliminar el like:", error);

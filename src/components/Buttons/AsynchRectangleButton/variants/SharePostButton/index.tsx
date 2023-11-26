@@ -6,14 +6,14 @@ import AsynchRectangleButton from "../..";
 import ShareIcon from "../../../../icons/ShareIcon";
 import { firebaseSharePost } from "../../../../../services/firebase/functions/data/create/firebaseSharePost";
 
-const SharePostButton: React.FC<SharePostButtonProps> = ({ postId }) => {
+const SharePostButton: React.FC<SharePostButtonProps> = ({ postId, authorId }) => {
   const { userId } = useContext(UserModelContext);
 
   const { isShared } = usePostShares(postId, userId);
 
   return (
     <AsynchRectangleButton
-      onClick={async () => await firebaseSharePost(postId, userId)}
+      onClick={async () => await firebaseSharePost(postId, authorId, userId)}
       bg="gray"
       successTitle={isShared ? 'Has eliminado la publicación compartida' : 'Publicación compartida'}
       successDescription={isShared ? 'Publicación eliminada con éxito' : 'Publicación compartida con éxito'}

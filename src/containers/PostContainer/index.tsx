@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../../components/layout/Container";
 
 import "./styles/index.css";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import PostNavbar from "../../components/layout/Navbar/variants/PostNavbar";
 import PostMain from "../../components/layout/Main/variants/PostMain";
 import CreatePostCommentForm from "../../components/forms/Form/variants/CreatePostCommentForm";
@@ -13,6 +13,7 @@ import PostCardSkeleton from "../../components/layout/Card/skeletons/PostCardSke
 
 const PostContainer: React.FC = () => {
   const { postId } = useParams();
+  const { state: { authorId } } = useLocation();
 
   const { commentsData } = usePostComments(postId);
 
@@ -42,7 +43,7 @@ const PostContainer: React.FC = () => {
           )}
         </CardGroup>
       </PostMain>
-      <CreatePostCommentForm postId={postId} />
+      <CreatePostCommentForm postId={postId} authorId={authorId} />
     </Container>
   );
 };

@@ -13,7 +13,7 @@ import Content from "../../../../typography/Paragraph/variants/Content";
 import PostImage from "../../../../images/CustomImage/variants/PostImage";
 import LikePostButton from "../../../../buttons/AsynchRectangleButton/variants/LikePostButton";
 import SharePostButton from "../../../../buttons/AsynchRectangleButton/variants/SharePostButton";
-import CommentPostButton from "../../../../buttons/NavRectangleButton/variants/CommentPostButton";
+import CommentPostButton from "../../../../buttons/RectangleButton/variants/CommentPostButton";
 import TotalShares from "../../../../typography/Paragraph/variants/TotalShares";
 import TotalLikes from "../../../../typography/Paragraph/variants/TotalLikes";
 import TotalComments from "../../../../typography/Paragraph/variants/TotalComments";
@@ -32,7 +32,7 @@ const PostCard: React.FC<PostCardProps> = ({ postId, authorId, profilePictureURL
         </div>
         <div>
           <Username>
-            {username} - {authorId !== userId && <FollowUserButton />}
+            {username} - {authorId !== userId && <FollowUserButton authorId={authorId} />}
           </Username>
           <CreatedAt>{createdAt}</CreatedAt>
         </div>
@@ -64,9 +64,9 @@ const PostCard: React.FC<PostCardProps> = ({ postId, authorId, profilePictureURL
       </div>
 
       <div className="card-footer">
-        <LikePostButton postId={postId} />
-        <CommentPostButton postId={postId}  />
-        <SharePostButton postId={postId} />
+        <LikePostButton postId={postId} authorId={authorId} />
+        <CommentPostButton postId={postId} authorId={authorId} />
+        <SharePostButton postId={postId} authorId={authorId} />
       </div>
     </Card>
   );

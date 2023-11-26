@@ -1,6 +1,6 @@
 export interface RectangleButtonProps {
   children: React.ReactNode;
-  icon: React.ReactElement;
+  icon?: React.ReactElement;
   onClick: () => void;
   unstyled?: boolean;
   tooltipMessage?: string;

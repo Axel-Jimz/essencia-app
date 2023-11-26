@@ -6,9 +6,10 @@ import { db } from "../../../../config";
 
 // Importa la función firebaseGetUserSpecificPost para obtener los datos de un post específico.
 import { firebaseGetUserSpecificPost } from "../../read/firebaseGetUserSpecificPost";
+import { firebaseCreateNotification } from "../firebaseCreateNotification";
 
 // Esta función guarda o elimina un post específico en la colección "sharedPosts" de un usuario específico.
-export const firebaseSharePost = async (postId: string, sharerId: string) => {
+export const firebaseSharePost = async (postId: string, authorId: string, sharerId: string) => {
   // Obtiene una referencia al documento del usuario que comparte el post.
   const sharerUserDocRef = doc(db, "users", sharerId);
 
@@ -39,6 +40,7 @@ export const firebaseSharePost = async (postId: string, sharerId: string) => {
       // Si la publicación no ha sido compartida, la compartimos.
       await setDoc(userShareDocRef, { sharerId: sharerId });
       await setDoc(sharedPostDocRef, postData);
+      await firebaseCreateNotification(postId, authorId, sharerId, 'share')
     }
   } catch (error) {
     console.error("Error compartiendo el post:", error);

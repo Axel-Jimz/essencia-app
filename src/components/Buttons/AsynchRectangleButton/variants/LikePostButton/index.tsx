@@ -6,14 +6,14 @@ import AsynchRectangleButton from "../..";
 import HeartIcon from "../../../../icons/HeartIcon";
 import { firebaseLikePost } from "../../../../../services/firebase/functions/data/create/firebaseLikePost";
 
-const LikePostButton: React.FC<LikePostButtonProps> = ({ postId }) => {
+const LikePostButton: React.FC<LikePostButtonProps> = ({ postId, authorId, }) => {
   const { userId } = useContext(UserModelContext);
 
   const { isLiked } = usePostLikes(postId, userId);
 
   return (
     <AsynchRectangleButton
-      onClick={async () => await firebaseLikePost(postId, userId)}
+      onClick={async () => await firebaseLikePost(postId, authorId, userId)}
       bg="gray"
     >
       <HeartIcon active={isLiked} /> Me gusta 
