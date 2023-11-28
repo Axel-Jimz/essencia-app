@@ -31,7 +31,7 @@ const HomeContainer: React.FC = () => {
 
         <Outlet />
 
-        <BreakpointRenderer maxWidth="lg">
+        <BreakpointRenderer maxWidth="xl">
           <HomeUsersAside />
         </BreakpointRenderer>
       </HomeMain>

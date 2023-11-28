@@ -22,7 +22,7 @@ export const firebaseRegisterUser = async (user: any) => {
         userId: user.uid,
         username: user.displayName.trim().toLowerCase().replace(/ /g, ""),
         profilePictureURL: user.photoURL,
-        biography: '',
+        biography: '¡Bienvenido! Actualiza tu biografía para compartir más sobre ti.',
         accountCreated: user.metadata.creationTime,
         viewedNotifications: false,
     }

@@ -5,13 +5,13 @@ import CustomImage from '../../images/CustomImage';
 
 import "./styles/index.css";
 
-const ProfilePicture: React.FC<ProfilePictureProps> = ({ src, alt, onlineStatus }) => {
+const ProfilePicture: React.FC<ProfilePictureProps> = ({ src, alt, navigateTo, onlineStatus }) => {
   const classes = ['status'];
 
   onlineStatus ? classes.push('online') : classes.push('offline');
 
   return (
-    <Link to="/profile">
+    <Link to={`/profile/${navigateTo}`}>
         <CustomImage src={src} alt={alt} id='profile-picture' />
         {onlineStatus !== undefined && <div className={classes.join(' ')}></div>}
     </Link>

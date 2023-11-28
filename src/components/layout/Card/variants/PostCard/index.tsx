@@ -28,7 +28,7 @@ const PostCard: React.FC<PostCardProps> = ({ postId, authorId, profilePictureURL
     <Card id="post">
       <div className="card-header">
         <div>
-          <ProfilePicture src={profilePictureURL} alt={username} />
+          <ProfilePicture src={profilePictureURL} alt={username} navigateTo={authorId} />
         </div>
         <div>
           <Username>

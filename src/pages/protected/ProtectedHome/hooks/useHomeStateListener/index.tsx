@@ -21,7 +21,7 @@ const useHomeStateListener = (): useHomeStateListenerProps => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         await handlerUserAuth(user);
-        const data = await getPersonalData(user);
+        const data = await getPersonalData(user.uid);
         updateUserPersonalData(data);
       }
 

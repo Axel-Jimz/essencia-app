@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Aside from "../..";
 
 import Logo from "../../../../brand/Logo";
@@ -16,8 +16,11 @@ import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/
 import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
 
 import "./styles/index.css";
+import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
 
 const HomeNavbarAside: React.FC = () => {
+  const { userId } = useContext(UserModelContext)
+
   return (
     <Aside id="home-navbar">
       <div>
@@ -27,7 +30,7 @@ const HomeNavbarAside: React.FC = () => {
 
         <ButtonGroup stack="vertical">
           <GoToHomePageButton />
-          <GoToProfilePageButton />
+          <GoToProfilePageButton navigateTo={userId} />
           <GoToExplorePageButton />
           <GoToNotificationsPageButton />
           <GoToBookmarksButton />

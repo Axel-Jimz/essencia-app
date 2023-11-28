@@ -8,11 +8,11 @@ a {
     max-width: 2.5rem;
     min-height: 2.5rem;
     max-height: 2.5rem;
-    border-radius: 2.5rem;
-    -webkit-border-radius: 2.5rem;
-    -moz-border-radius: 2.5rem;
-    -ms-border-radius: 2.5rem;
-    -o-border-radius: 2.5rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
 }
 
 .custom-image#profile-picture + .status {

@@ -5,9 +5,9 @@ import { getDoc, doc } from "firebase/firestore";
 import { db } from "../../../../config";
 
 // Esta función obtiene los datos personales de un usuario específico.
-export const firebaseGetPersonalData = async (user: any) => {
+export const firebaseGetPersonalData = async (userId: string) => {
   // Obtiene una referencia al documento del usuario.
-  const userRefeference = doc(db, "users", user.uid);
+  const userRefeference = doc(db, "users", userId);
 
   let data;
 

@@ -1,0 +1,53 @@
+.header#profile {
+    padding: 0 0 1rem 0;
+    border-bottom: 0.063rem solid var(--color-gray);
+    overflow: scroll;
+}
+
+.header#profile > div {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    column-gap: 1rem;
+}
+
+.header#profile > div > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header#profile > div > div:first-child > a > .custom-image#profile-picture {
+    min-width: 6rem;
+    max-width: 6rem;
+    min-height: 6rem;
+    max-height: 6rem;
+}
+
+.header#profile > div > div:last-child {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 0.875rem;
+}
+
+.header#profile > div > div:last-child > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header#profile > div > div:last-child > div:first-child > .heading {
+    font-size: var(--font-size-sm);
+}
+
+.header#profile > div > div:last-child > div:nth-child(2) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header#profile > div > div:last-child > div:nth-child(2) > .paragraph {
+    margin: 0 1rem 0 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
