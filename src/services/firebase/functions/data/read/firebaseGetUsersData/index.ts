@@ -5,14 +5,14 @@ import { DocumentData, collection, getDocs, query, where } from "firebase/firest
 import { db } from "../../../../config";
 
 // Esta función obtiene los datos de los usuarios cuyos IDs se pasan como argumento.
-export const firebaseGetUsersData = async (usersId: Array<string>) => {
+export const firebaseGetUsersData = async (userIds: Array<string>) => {
   // Obtiene una referencia a la colección "users".
   const usersCollection = collection(db, "users");
 
   let data: Array<DocumentData> = [];
 
   // Crea una consulta que busca documentos cuyo campo "userId" está incluido en el array de IDs de usuario.
-  const usersQuery = query(usersCollection, where("userId", "in", usersId));
+  const usersQuery = query(usersCollection, where("userId", "in", userIds));
 
   try {
     // Obtiene los datos de los documentos que cumplen con la consulta.

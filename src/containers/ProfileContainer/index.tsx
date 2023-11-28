@@ -42,7 +42,7 @@ const ProfileContainer: React.FC = () => {
   return (
     <Container id="profile">
       {profileData.isLoading || profilePersonalPosts.isLoading ? (
-        <div>
+        <div className="loading">
           <LoadingIcon />
         </div>
       ) : (

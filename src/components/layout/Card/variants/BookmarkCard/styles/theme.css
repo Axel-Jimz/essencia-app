@@ -1,0 +1,9 @@
+.theme-dark .card#bookmark > .card-footer > button,
+.theme-dark .card#bookmark > .card-footer > a {
+  color: var(--color-white);
+}
+
+.theme-dark .card#bookmark > .card-footer > button > svg > path,
+.theme-dark .card#bookmark > .card-footer > a > svg > path {
+  stroke: var(--color-white);
+}

@@ -36,7 +36,7 @@ const NotificationsContainer: React.FC = () => {
       <CardGroup stack="vertical">
         {data.isLoading === true ? (
           <h1>Cargando...</h1>
-        ) : sortedNotifications.length === 0 ? (
+        ) : sortedNotifications.length <= 0 ? (
           <NotificationsNotice />
         ) : (
           sortedNotifications.map((notification) => (

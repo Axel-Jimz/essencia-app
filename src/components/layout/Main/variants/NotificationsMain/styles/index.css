@@ -1,7 +1,3 @@
-.main#notifications {
-    height: 100%;
-}
-
 .main#notifications > div {
     padding: 1rem 0;
 }
