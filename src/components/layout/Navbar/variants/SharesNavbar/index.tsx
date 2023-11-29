@@ -2,18 +2,18 @@ import React from 'react';
 import Navbar from '../..';
 import BackToHomePageButton from '../../../../buttons/NavRoundButton/variants/BackToHomePageButton';
 import Callout from '../../../../typography/Heading/variants/Callout';
-import BookmarksOptions from '../../../../groups/RoundExpandableButtonGroup/variants/BookmarksOptions';
+import SharedPostsOptions from '../../../../groups/RoundExpandableButtonGroup/variants/SharedPostsOptions';
 
 import "./styles/index.css";
 
-const BookmarksNavbar: React.FC = () => {
+const SharesNavbar: React.FC = () => {
   return (
-    <Navbar id='bookmarks'>
+    <Navbar id='shares'>
       <BackToHomePageButton />
-      <Callout>Guardados</Callout>
-      <BookmarksOptions />
+      <Callout>Compartidos</Callout>
+      <SharedPostsOptions />
     </Navbar>
   );
 };
 
-export default BookmarksNavbar;
+export default SharesNavbar;

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
+
 import Navbar from "../..";
 
 import ButtonGroup from "../../../../groups/ButtonGroup";
@@ -7,6 +9,7 @@ import GoToProfilePageButton from "../../../../buttons/NavRectangleButton/varian
 import GoToExplorePageButton from "../../../../buttons/NavRectangleButton/variants/GoToExplorePageButton";
 import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
 import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
+import GoToSharesPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSharesPageButton";
 import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNewsPageButton";
 import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
 import SignOutButton from "../../../../buttons/AsynchRectangleButton/variants/SignOutButton";
@@ -15,19 +18,21 @@ import "./styles/index.css";
 import "./styles/theme.css";
 
 const HomeMobileNavbar: React.FC = () => {
+  const { userId } = useContext(UserModelContext);
+
   return (
     <Navbar id="home-mobile">
       <ButtonGroup stack="vertical">
         <GoToHomePageButton />
-        <GoToProfilePageButton />
+        <GoToProfilePageButton navigateTo={userId}  />
         <GoToExplorePageButton />
         <GoToNotificationsPageButton />
+        <GoToSharesPageButton />
         <GoToBookmarksButton />
         <GoToNewsPageButton />
       </ButtonGroup>
 
       <ButtonGroup stack="vertical">
-        
         <GoToSettingPageButton />
         <SignOutButton />
       </ButtonGroup>

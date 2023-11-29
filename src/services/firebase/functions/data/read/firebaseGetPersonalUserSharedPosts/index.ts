@@ -2,22 +2,20 @@ import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../../../config";
 import { firebaseGetUsersData } from "../firebaseGetUsersData";
 
-export const firebaseGetPersonalUserSavedPosts = async (userId: string) => {
-  const userRef = collection(db, "users", userId, "savedPosts");
+export const firebaseGetPersonalUserSharedPosts = async (userId: string) => {
+  const userRef = collection(db, "users", userId, "sharedPosts");
   const userPostsQuery = query(userRef);
 
   let authorIds: Array<string> = [];
-  let userSavedPosts: any[] = [];
+  let userSharedPosts: any[] = [];
 
   try {
     const querySnapshot = await getDocs(userPostsQuery);
 
-
     querySnapshot.forEach((doc) => {
       const postData = doc.data();
-
       if (Object.keys(postData).length > 0) {
-        userSavedPosts.push(postData);
+        userSharedPosts.push(postData);
         const authorId = postData.authorId;
         if (authorId) {
           authorIds.push(authorId);
@@ -27,7 +25,7 @@ export const firebaseGetPersonalUserSavedPosts = async (userId: string) => {
 
     const usersData = await firebaseGetUsersData(authorIds);
 
-    userSavedPosts.forEach((post) => {
+    userSharedPosts.forEach((post) => {
       const authorData = usersData.find(
         (user) => user.userId === post.authorId
       );
@@ -36,9 +34,9 @@ export const firebaseGetPersonalUserSavedPosts = async (userId: string) => {
       }
     });
 
-    return userSavedPosts;
+    return userSharedPosts;
   } catch (error) {
-    console.error("Error al obtener los posts guardados del usuario:", error);
+    console.error("Error al obtener los posts compartidos del usuario:", error);
     return [];
   }
 };

@@ -12,6 +12,7 @@ import Profile from "../pages/Profile";
 import Explore from "../pages/Explore";
 import Notifications from "../pages/Notifications";
 import Bookmarks from "../pages/Bookmarks";
+import Shares from "../pages/Shares";
 import News from "../pages/News";
 import Setting from "../pages/Setting";
 import Post from "../pages/Post";
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
       {
         path: "/notifications",
         element: <Notifications />,
+      },
+      {
+        path: "/shares",
+        element: <Shares />,
       },
       {
         path: "/bookmarks",

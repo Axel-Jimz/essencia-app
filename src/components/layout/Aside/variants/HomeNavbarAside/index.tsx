@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
+
 import Aside from "../..";
 
 import Logo from "../../../../brand/Logo";
@@ -11,12 +13,12 @@ import GoToHomePageButton from "../../../../buttons/NavRectangleButton/variants/
 import GoToProfilePageButton from "../../../../buttons/NavRectangleButton/variants/GoToProfilePageButton";
 import GoToExplorePageButton from "../../../../buttons/NavRectangleButton/variants/GoToExplorePageButton";
 import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
+import GoToSharesPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSharesPageButton";
 import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
 import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNewsPageButton";
 import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
 
 import "./styles/index.css";
-import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
 
 const HomeNavbarAside: React.FC = () => {
   const { userId } = useContext(UserModelContext)
@@ -33,6 +35,7 @@ const HomeNavbarAside: React.FC = () => {
           <GoToProfilePageButton navigateTo={userId} />
           <GoToExplorePageButton />
           <GoToNotificationsPageButton />
+          <GoToSharesPageButton />
           <GoToBookmarksButton />
         </ButtonGroup>
       </div>

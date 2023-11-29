@@ -20,6 +20,7 @@ import TotalComments from "../../../../typography/Paragraph/variants/TotalCommen
 
 import "./styles/index.css";
 import "./styles/theme.css";
+import BookmarkOptions from "../../../../groups/RoundExpandableButtonGroup/variants/BookmarkOptions";
 
 const BookmarkCard: React.FC<BookmarkCardProps> = ({ postId, authorId, profilePictureURL, username, createdAt, postContent, postImage }) => {
   const { userId } = useContext(UserModelContext);
@@ -40,7 +41,7 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({ postId, authorId, profilePi
           {authorId === userId ? (
             <OptionsPersonalPost postId={postId} />
           ) : (
-            <OptionsPost postId={postId} authorId={authorId} />
+            <BookmarkOptions bookmarkId={postId} />
           )}
         </div>
       </div>

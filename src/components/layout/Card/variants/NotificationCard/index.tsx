@@ -39,7 +39,7 @@ const NotificationCard: React.FC<NotificationCardProps> = ({ notificationId, pos
         <div>
           {typeNotification === 'like' && <Callout>Han dado me gusta a tu publicación</Callout>}
           {typeNotification === 'comment' && <Callout>Han comentado tu publicación</Callout>}
-          {typeNotification === 'share' && <Callout>Has compartido tu publicación</Callout>}     
+          {typeNotification === 'share' && <Callout>Han compartido tu publicación</Callout>}     
 
           <CreatedAt>{createdAt}</CreatedAt>
 

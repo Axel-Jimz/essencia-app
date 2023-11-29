@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
+import { ProfileHeaderProps } from './props';
 import Header from '../..';
 
-import "./styles/index.css";
 import ProfilePicture from '../../../../avatars/ProfilePicture';
 import Username from '../../../../typography/Heading/variants/Username';
 import TotalPosts from '../../../../typography/Paragraph/variants/TotalPosts';
@@ -12,13 +12,9 @@ import GoToSettingPageButton from '../../../../buttons/NavRoundButton/variants/G
 import { UserModelContext } from '../../../../../state/contexts/UserModelContext';
 import FollowUserButton from '../../../../buttons/AsynchRectangleButton/variants/FollowUserButton';
 
-export interface ProfileHeaderProps {
-    username: string;
-    profileId: string;
-    profilePictureURL: string;
-}
+import "./styles/index.css";
 
-const ProfileHeader: React.FC<ProfileHeaderProps> = ({ username, profileId, profilePictureURL }) => {
+const ProfileHeader: React.FC<ProfileHeaderProps> = ({ username, profileId, profilePictureURL, biography }) => {
     const { userId } = useContext(UserModelContext);
 
   return (
@@ -48,7 +44,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ username, profileId, prof
 
             <div>
                 <Biography>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus autem modi nam enim ducimus obcaecati officiis.
+                    {biography}
                 </Biography>
             </div>
 

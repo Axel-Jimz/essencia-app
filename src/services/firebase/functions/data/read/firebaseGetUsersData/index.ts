@@ -11,6 +11,10 @@ export const firebaseGetUsersData = async (userIds: Array<string>) => {
 
   let data: Array<DocumentData> = [];
 
+  if (userIds.length <= 0) {
+    return []; 
+  }
+
   // Crea una consulta que busca documentos cuyo campo "userId" está incluido en el array de IDs de usuario.
   const usersQuery = query(usersCollection, where("userId", "in", userIds));
 

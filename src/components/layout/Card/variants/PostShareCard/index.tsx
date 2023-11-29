@@ -1,81 +1,68 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PostShareCardProps } from "./props";
+import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
+
 import Card from "../..";
 import ProfilePicture from "../../../../avatars/ProfilePicture";
 import Username from "../../../../typography/Heading/variants/Username";
+import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 import CreatedAt from "../../../../typography/Paragraph/variants/CreatedAt";
-import OptionsPost from "../../../../groups/RoundExpandableButtonGroup/variants/OptionsPost";
-
+import OptionsPersonalPost from "../../../../groups/RoundExpandableButtonGroup/variants/OptionsPersonalPost";
+import SharedPostOptions from "../../../../groups/RoundExpandableButtonGroup/variants/SharedPostOptions";
 import Content from "../../../../typography/Paragraph/variants/Content";
 import PostImage from "../../../../images/CustomImage/variants/PostImage";
+import LikePostButton from "../../../../buttons/AsynchRectangleButton/variants/LikePostButton";
+import SharePostButton from "../../../../buttons/AsynchRectangleButton/variants/SharePostButton";
+import CommentPostButton from "../../../../buttons/RectangleButton/variants/CommentPostButton";
+import TotalShares from "../../../../typography/Paragraph/variants/TotalShares";
 import TotalLikes from "../../../../typography/Paragraph/variants/TotalLikes";
 import TotalComments from "../../../../typography/Paragraph/variants/TotalComments";
-import TotalShares from "../../../../typography/Paragraph/variants/TotalShares";
-import LikePostButton from "../../../../buttons/AsynchRectangleButton/variants/LikePostButton";
-import CommentPostButton from "../../../../buttons/NavRectangleButton/variants/CommentPostButton";
-import SharePostButton from "../../../../buttons/AsynchRectangleButton/variants/SharePostButton";
 
 import "./styles/index.css";
 import "./styles/theme.css";
 
+const PostShareCard: React.FC<PostShareCardProps> = ({ postId, authorId, profilePictureURL, username, createdAt, postContent, postImage }) => {
+  const { userId } = useContext(UserModelContext);
 
-const PostShareCard: React.FC = () => {
   return (
     <Card id="post-share">
       <div className="card-header">
         <div>
-          <ProfilePicture src="" alt="" />
+          <ProfilePicture src={profilePictureURL} alt={username} navigateTo={authorId} />
         </div>
         <div>
-          <Username>Axel Jiménez</Username>
-          <CreatedAt>11 de noviembre de 210</CreatedAt>
+          <Username>
+            {username} - {authorId !== userId && <FollowUserButton authorId={authorId} />}
+          </Username>
+          <CreatedAt>{createdAt}</CreatedAt>
         </div>
         <div>
-          <OptionsPost />
+            <SharedPostOptions sharedPostId={postId} authorId={authorId} />
         </div>
       </div>
 
       <div className="card-main">
-
         <div>
-          <div>
-            <ProfilePicture src="" alt="" />
-          </div>
-          <div>
-            <Username>Usuario original</Username>
-            <CreatedAt>11 de noviembre de 210</CreatedAt>
-          </div>
+          <Content>{postContent}</Content>
         </div>
 
         <div>
-          <Content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex
-            atque minima at? Recusandae rerum consectetur aliquid, sunt debitis
-            aperiam optio ullam excepturi suscipit ex iure veniam odit ad
-            molestias.
-          </Content>
+          <PostImage src={postImage} alt={username} />
         </div>
 
         <div>
-          <PostImage
-            src="https://www.elnuevoherald.com/ultimas-noticias/70talg/picture281778918/alternates/LANDSCAPE_768/USATSI_21886415.jpg"
-            alt="example"
-          />
-        </div>
-
-        <div>
-          <TotalLikes value={0} />
+          <TotalLikes postId={postId} />
           <div>
-            <TotalComments value={0} />
-            <TotalShares value={0} />
+            <TotalComments postId={postId} />
+            <TotalShares postId={postId}/>
           </div>
         </div>
-        
       </div>
 
       <div className="card-footer">
-        <LikePostButton />
-        <CommentPostButton />
-        <SharePostButton />
+        <LikePostButton postId={postId} authorId={authorId} />
+        <CommentPostButton postId={postId} authorId={authorId} />
+        <SharePostButton postId={postId} authorId={authorId} />
       </div>
     </Card>
   );

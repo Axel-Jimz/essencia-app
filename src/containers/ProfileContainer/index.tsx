@@ -51,6 +51,7 @@ const ProfileContainer: React.FC = () => {
             username={profileData.data.username}
             profileId={profileId}
             profilePictureURL={profileData.data.profilePictureURL}
+            biography={profileData.data.biography}
           />
           <ProfileMain>
             <CardGroup stack="vertical">
