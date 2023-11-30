@@ -6,7 +6,7 @@ import Navbar from "../..";
 import ButtonGroup from "../../../../groups/ButtonGroup";
 import GoToHomePageButton from "../../../../buttons/NavRectangleButton/variants/GoToHomePageButton";
 import GoToProfilePageButton from "../../../../buttons/NavRectangleButton/variants/GoToProfilePageButton";
-import GoToExplorePageButton from "../../../../buttons/NavRectangleButton/variants/GoToExplorePageButton";
+import GoToSearchPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSearchPageButton";
 import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
 import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
 import GoToSharesPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSharesPageButton";
@@ -25,7 +25,7 @@ const HomeMobileNavbar: React.FC = () => {
       <ButtonGroup stack="vertical">
         <GoToHomePageButton />
         <GoToProfilePageButton navigateTo={userId}  />
-        <GoToExplorePageButton />
+        <GoToSearchPageButton />
         <GoToNotificationsPageButton />
         <GoToSharesPageButton />
         <GoToBookmarksButton />

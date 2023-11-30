@@ -9,7 +9,7 @@ import NotFound from "../pages/NotFound";
 
 import Feed from "../pages/Feed";
 import Profile from "../pages/Profile";
-import Explore from "../pages/Explore";
+import Search from "../pages/Search";
 import Notifications from "../pages/Notifications";
 import Bookmarks from "../pages/Bookmarks";
 import Shares from "../pages/Shares";
@@ -49,8 +49,8 @@ export const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path: "/explore",
-        element: <Explore />,
+        path: "/search",
+        element: <Search />,
       },
       {
         path: "/notifications",

@@ -3,17 +3,15 @@ import { UserModelContext } from '../../state/contexts/UserModelContext';
 import { useQuery } from 'react-query';
 import { firebaseGetPersonalUserSharedPosts } from '../../services/firebase/functions/data/read/firebaseGetPersonalUserSharedPosts';
 import { sortNotificationsByTimestamp } from '../../utils/array/groupAndSortNotificationsByDate';
-
 import Container from '../../components/layout/Container';
-
-import "./styles/index.css";
 import LoadingIcon from '../../components/icons/LoadingIcon';
 import SharesNavbar from '../../components/layout/Navbar/variants/SharesNavbar';
 import SharesMain from '../../components/layout/Main/variants/SharesMain';
 import CardGroup from '../../components/groups/CardGroup';
-import BookmarkNotice from '../../components/utils/Notice/variants/BookmarkNotice';
+import SharesNotice from '../../components/utils/Notice/variants/SharesNotice';
 import PostShareCard from '../../components/layout/Card/variants/PostShareCard';
 
+import "./styles/index.css";
 
 const SharesContainer: React.FC = () => {
   const { userId } = useContext(UserModelContext);
@@ -40,7 +38,7 @@ const SharesContainer: React.FC = () => {
             <SharesMain>
               <CardGroup stack="vertical">
                 {sortedSharedPosts.length <= 0 ? (
-                  <BookmarkNotice />
+                  <SharesNotice />
                 ) : (
                   sortedSharedPosts.map((sharePost) => (
                     <div key={sharePost.postId}>

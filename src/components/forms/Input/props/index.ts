@@ -5,9 +5,9 @@ export interface InputProps {
   registerName: string;
   rules?: Record<string, any>;
   fieldName?: string;
-  id: string;
   placeholder: string;
   type: "text" | "password" | "email" | "number";
   errors?: FieldErrors<any>; 
   errorDescription?: string;
+  id: string;
 }

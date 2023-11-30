@@ -11,7 +11,7 @@ import ButtonGroup from "../../../../groups/ButtonGroup";
 
 import GoToHomePageButton from "../../../../buttons/NavRectangleButton/variants/GoToHomePageButton";
 import GoToProfilePageButton from "../../../../buttons/NavRectangleButton/variants/GoToProfilePageButton";
-import GoToExplorePageButton from "../../../../buttons/NavRectangleButton/variants/GoToExplorePageButton";
+import GoToSearchPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSearchPageButton";
 import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
 import GoToSharesPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSharesPageButton";
 import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
@@ -33,7 +33,7 @@ const HomeNavbarAside: React.FC = () => {
         <ButtonGroup stack="vertical">
           <GoToHomePageButton />
           <GoToProfilePageButton navigateTo={userId} />
-          <GoToExplorePageButton />
+          <GoToSearchPageButton />
           <GoToNotificationsPageButton />
           <GoToSharesPageButton />
           <GoToBookmarksButton />

@@ -3,21 +3,27 @@ import Card from "../..";
 import ProfilePicture from "../../../../avatars/ProfilePicture";
 import Username from "../../../../typography/Heading/variants/Username";
 import TotalFollowers from "../../../../typography/Paragraph/variants/TotalFollowers";
+import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 
 import "./styles/index.css";
 import "./styles/theme.css";
-import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 
-const UserSuggestionCard: React.FC = () => {
+export interface UserSuggestionCardProps {
+  userId: string;
+  profilePictureURL: string;
+  username: string;
+}
+
+const UserSuggestionCard: React.FC<UserSuggestionCardProps> = ({ userId, profilePictureURL, username }) => {
   return (
     <Card id="user-suggestion">
-      <ProfilePicture src="" alt="" />
+      <ProfilePicture src={profilePictureURL} alt={username} navigateTo={userId} />
       <div>
-        <Username>axel_jimz</Username>
-        <TotalFollowers value={0}>Seguidores</TotalFollowers>
+        <Username>{username}</Username>
+        <TotalFollowers profileId={userId} />
       </div>
       <div>
-        <FollowUserButton />
+        <FollowUserButton authorId={userId} />
       </div>
     </Card>
   );
