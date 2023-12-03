@@ -29,7 +29,6 @@ const HomeMobileNavbar: React.FC = () => {
         <GoToNotificationsPageButton />
         <GoToSharesPageButton />
         <GoToBookmarksButton />
-        <GoToNewsPageButton />
       </ButtonGroup>
 
       <ButtonGroup stack="vertical">

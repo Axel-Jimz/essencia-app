@@ -14,9 +14,7 @@ const AuthMain: React.FC = () => {
         ¡Bienvenido a <Highlight color="blue">Essencia</Highlight>!
       </Title>
       <Description>
-        Conéctate, comparte tus pensamientos y explora intereses comunes en una
-        plataforma intuitiva y segura. Únete y sumérgete en la autenticidad y la
-        conexión genuina.
+      ¡Bienvenido a mi proyecto! Aquí podrás explorar una demostración de mis habilidades en programación a través de esta aplicación. ¡Disfruta y descubre lo que puedo lograr en el mundo del desarrollo de software!".
       </Description>
       <SignInWithGoogleButton />
     </Main>

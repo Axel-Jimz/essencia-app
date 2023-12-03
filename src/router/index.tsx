@@ -65,10 +65,6 @@ export const router = createBrowserRouter([
         element: <Bookmarks />,
       },
       {
-        path: "/news",
-        element: <News />,
-      },
-      {
         path: "/setting",
         element: <Setting />,
       },

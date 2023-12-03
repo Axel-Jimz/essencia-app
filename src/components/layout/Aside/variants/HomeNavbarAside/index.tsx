@@ -15,7 +15,6 @@ import GoToSearchPageButton from "../../../../buttons/NavRectangleButton/variant
 import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
 import GoToSharesPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSharesPageButton";
 import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
-import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNewsPageButton";
 import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
 
 import "./styles/index.css";
@@ -41,7 +40,6 @@ const HomeNavbarAside: React.FC = () => {
       </div>
 
       <ButtonGroup stack="vertical">
-        <GoToNewsPageButton />
         <GoToSettingPageButton />
       </ButtonGroup>
     </Aside>

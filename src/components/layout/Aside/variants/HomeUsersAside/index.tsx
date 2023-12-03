@@ -12,7 +12,6 @@ import SuggestedUsersNotice from "../../../../utils/Notice/variants/SuggestedUse
 
 import "./styles/index.css";
 
-
 const HomeUsersAside: React.FC = () => {
   const { userId, profilePictureURL, username } = useContext(UserModelContext);
 
@@ -31,7 +30,7 @@ const HomeUsersAside: React.FC = () => {
 
       <div>
         <Callout>Sugerencias para ti</Callout>
-        <ViewUserSuggestionsButton />
+        <div></div>
       </div>
 
       <CardGroup stack="vertical">

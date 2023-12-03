@@ -55,8 +55,7 @@ const UpdatePersonalDataForm: React.FC = () => {
           register={register}
           rules={{
             minLength: 10,
-            maxLength: 80,
-            pattern: /^[A-Za-z0-9\s.,!?_-ñ]{10,80}$/,
+            maxLength: 150,
           }}
           errors={errors}
         />

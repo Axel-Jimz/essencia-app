@@ -3,28 +3,32 @@ import Container from "../../components/layout/Container";
 import CreatePostForm from "../../components/forms/Form/variants/CreatePostForm";
 import CardGroup from "../../components/groups/CardGroup";
 import PostCardSkeleton from "../../components/layout/Card/skeletons/PostCardSkeleton";
+import { useQuery } from "react-query";
+import PostCard from "../../components/layout/Card/variants/PostCard";
+import { sortNotificationsByTimestamp } from "../../utils/array/groupAndSortNotificationsByDate";
+import { firebaseGetUserPostsAndData } from "../../services/firebase/functions/data/read/firebaseGetUserPostsAndData";
 
 import "./styles/index.css";
 
-import { useQuery } from "react-query";
-import { firebaseGetUserPostsAndData } from "../../services/firebase/functions/data/read/firebaseGetUserPostsAndData";
-import PostCard from "../../components/layout/Card/variants/PostCard";
-
 const FeedContainer: React.FC = () => {
-  const posts = useQuery("posts", firebaseGetUserPostsAndData);
+  const postsData = useQuery("posts", firebaseGetUserPostsAndData);
+
+  const sortedPosts = postsData.data
+    ? sortNotificationsByTimestamp(postsData.data)
+    : [];
 
   return (
     <Container id="feed">
       <CreatePostForm />
       <CardGroup stack="vertical">
-        {posts.isLoading ? (
+        {postsData.isLoading ? (
           <>
             <PostCardSkeleton />
             <PostCardSkeleton />
             <PostCardSkeleton />
           </>
         ) : (
-          posts.data.map((post) => (
+          sortedPosts.map((post) => (
             <div key={post.postId}>
               <PostCard
                 postId={post.postId}

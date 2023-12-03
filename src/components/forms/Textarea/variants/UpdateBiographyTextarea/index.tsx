@@ -16,8 +16,8 @@ const UpdateBiographyTextarea: React.FC<UpdateBiographyTextareaProps> = ({
       rules={rules}
       fieldName="Biografía"
       errors={errors}
-      errorDescription="La biografía debe tener entre 10 y 80 caracteres y solo puede
-      contener letras, números, espacios en blanco y los caracteres .,!?_-."
+      errorDescription="La biografía debe tener entre 10 y 150 caracteres y solo puede
+      contener letras, números, espacios en blanco y los caracteres .,!¡¿?_-."
       placeholder="Escribe una biografía"
       id="biography"
     />
