@@ -12,7 +12,6 @@ const ImageInput: React.FC<ImageInputProps> = ({ register, registerName, fieldNa
   const classes = ['image-input'];
 
   const handleFile = (e) => {
-    console.log(e.target.files[0])
     const fileSelected = e.target.files[0];
     setFile(fileSelected);
   }

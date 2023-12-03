@@ -1,0 +1,17 @@
+.form#update-personal-data {
+    margin: 1rem 0;
+}
+
+.form#update-personal-data > div:nth-child(2) {
+    margin: 1rem 0;
+}
+
+.form#update-personal-data > div:nth-child(2) > label:first-child > input{
+    margin: 0 0 0.75rem 0;
+}
+
+.form#update-personal-data  button {
+    min-width: unset;
+    max-width: unset;
+    padding: 0 1rem;
+}

@@ -12,7 +12,6 @@ const SearchContainer: React.FC = () => {
   const [searched, setSearched] = useState(false);
 
   useEffect(() => {
-    console.log(users);
   }, [users]);
 
   return (

@@ -1,0 +1,4 @@
+.theme-dark .input {
+    background-color: transparent;
+    color: var(--color-white);
+}

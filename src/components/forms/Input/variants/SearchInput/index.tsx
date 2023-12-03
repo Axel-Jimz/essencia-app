@@ -10,7 +10,6 @@ export interface SearchInputProps {
   rules: Record<string, any>;
 }
 
-
 const SearchInput: React.FC<SearchInputProps> = ({  register, rules }) => {
   return (
     <Input 

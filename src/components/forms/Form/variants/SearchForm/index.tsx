@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
+import { SearchFormProps } from "./props";
 import Form from "../..";
 import { useForm } from "react-hook-form";
 import { firebaseSearchUsersByUsername } from "../../../../../services/firebase/functions/data/read/firebaseSearchUsersByUsername";
@@ -6,10 +7,6 @@ import SearchInput from "../../../Input/variants/SearchInput";
 import SearchButton from "../../../../buttons/AsynchRoundFormButton/variants/SearchButton";
 
 import "./styles/index.css";
-
-export interface SearchFormProps {
-  setUsers: Dispatch<SetStateAction<any[]>>;
-}
 
 const SearchForm: React.FC<SearchFormProps> = ({ setUsers }) => {
   const {
