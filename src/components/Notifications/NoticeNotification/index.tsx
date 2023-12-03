@@ -5,7 +5,6 @@ import SuccessIcon from "../../icons/SuccessIcon";
 import InfoIcon from "../../icons/InfoIcon";
 import ErrorIcon from "../../icons/ErrorIcon";
 import WarningIcon from "../../icons/WarningIcon";
-import CloseIcon from "../../icons/CloseIcon";
 
 import "./styles/index.css";
 import "./styles/theme.css";

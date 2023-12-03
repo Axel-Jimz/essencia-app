@@ -8,16 +8,19 @@ import SignOutButton from '../../../../buttons/AsynchRoundButton/variants/SignOu
 import "./styles/index.css";
 import "./styles/theme.css";
 
+export interface ProfileCardProps {
+  userId: string;
+  username: string;
+  profilePictureURL: string;
+}
 
-const ProfileCard: React.FC = () => {
+const ProfileCard: React.FC<ProfileCardProps> = ({ userId, profilePictureURL, username }) => {
   return (
     <Card id='profile'>
-        <ProfilePicture src='' alt='' />
+        <ProfilePicture src={profilePictureURL} alt={username} navigateTo={userId} />
         <div>
-            <Username>axel_jimz</Username>
-            <TotalFollowers value={0}>
-              Seguidores
-            </TotalFollowers>
+            <Username>{username}</Username>
+            <TotalFollowers profileId={userId} />
         </div>
         <SignOutButton />
     </Card>

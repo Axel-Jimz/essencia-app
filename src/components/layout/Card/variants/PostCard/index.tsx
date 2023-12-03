@@ -51,7 +51,8 @@ const PostCard: React.FC<PostCardProps> = ({ postId, authorId, profilePictureURL
         </div>
 
         <div>
-          <PostImage src={postImage} alt={username} />
+          {postImage !== undefined && <PostImage src={postImage} alt={username} />}
+          
         </div>
 
         <div>

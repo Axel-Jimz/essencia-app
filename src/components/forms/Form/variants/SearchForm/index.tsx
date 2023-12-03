@@ -25,10 +25,6 @@ const SearchForm: React.FC<SearchFormProps> = ({ setUsers }) => {
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}
-      successTitle=""
-      successDescription=""
-      errorTitle=""
-      errorDescription=""
       id="search"
     >
       <SearchInput register={register} rules={{ required: true }} />

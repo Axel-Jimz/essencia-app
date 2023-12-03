@@ -17,8 +17,8 @@ export interface AsynchRoundButtonProps {
     | "20" 
     | "40" 
     | "80";
-  successTitle: string;
-  successDescription: string;
-  errorTitle: string;
-  errorDescription: string;
+  successTitle?: string;
+  successDescription?: string;
+  errorTitle?: string;
+  errorDescription?: string;
 }

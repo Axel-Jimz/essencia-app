@@ -11,10 +11,6 @@ const SignOutButton: React.FC = () => {
       icon={<SignOutIcon />}
       onClick={signOutUser}
       bg="red"
-      successTitle=""
-      successDescription=""
-      errorTitle=""
-      errorDescription=""
       tooltipMessage="Salir"
     />
   );

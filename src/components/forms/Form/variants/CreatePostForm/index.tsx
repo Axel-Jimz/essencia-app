@@ -46,7 +46,7 @@ const CreatePostForm: React.FC = () => {
       id="create-post"
     >
       <div>
-        <ProfilePicture src={profilePictureURL} alt={username} />
+        <ProfilePicture src={profilePictureURL} alt={username} navigateTo={userId} />
       </div>
 
       <div>

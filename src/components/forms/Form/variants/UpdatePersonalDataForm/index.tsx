@@ -31,10 +31,6 @@ const UpdatePersonalDataForm: React.FC = () => {
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}
-      successTitle=""
-      successDescription=""
-      errorTitle=""
-      errorDescription=""
       id="update-personal-data"
     >
       <div>

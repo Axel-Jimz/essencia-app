@@ -12,10 +12,10 @@ const Form: React.FC<FormProps> = ({ children, id, onSubmit, successTitle, succe
   const classes = ['form'];
 
   const termino = (status: string) => {
-    if (status === 'success') {
-      showNotification('success', successTitle , successDescription)
-    } else {
-      showNotification('error', errorTitle, errorDescription)
+    if (status === 'success' && successTitle && successDescription) {
+      showNotification('success', successTitle, successDescription);
+    } else if (status === 'error' && errorTitle && errorDescription) {
+      showNotification('error', errorTitle, errorDescription);
     }
   };
 
@@ -25,7 +25,7 @@ const Form: React.FC<FormProps> = ({ children, id, onSubmit, successTitle, succe
       onSubmit={(event) => {
         handleSubmit(onSubmit)(event)
           .then(() => termino('success'))
-          .catch((error) => termino(error));
+          .catch((error) => termino('error'));
       }}
       encType="multipart/form-data"
       id={id}

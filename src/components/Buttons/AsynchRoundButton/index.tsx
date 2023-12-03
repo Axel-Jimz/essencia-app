@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AsynchRoundButtonProps } from "../AsynchRoundButton/props";
 import { NotificationsContext } from "../../../state/contexts/NotificationsContext";
 import LoadingIcon from "../../icons/LoadingIcon";
+
 import "./styles/index.css";
 import "./styles/theme.css";
 
@@ -28,10 +29,10 @@ const AsynchRoundButton: React.FC<AsynchRoundButtonProps> = ({
     setIsLoading(true);
     try {
       await onClick?.();
-      showNotification('success', successTitle, successDescription);
+      successTitle && successDescription && showNotification('success', successTitle, successDescription);
     } catch (error) {
       console.error(error);
-      showNotification('error', errorTitle, errorDescription);
+      errorTitle && errorDescription && showNotification('error', errorTitle, errorDescription);
     }
     setIsLoading(false);
   };

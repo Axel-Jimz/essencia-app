@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../..';
 
 import Logo from '../../../../brand/Logo';
@@ -10,9 +10,12 @@ import ToggleNavbarMobile from '../../../../buttons/RoundButton/variants/ToggleN
 
 import "./styles/index.css";
 import ProfilePicture from '../../../../avatars/ProfilePicture';
+import { UserModelContext } from '../../../../../state/contexts/UserModelContext';
 
 
 const  HomeNavbar: React.FC = () => {
+  const { userId, profilePictureURL, username } = useContext(UserModelContext);
+
   return (
     <Navbar id='home'>
       
@@ -22,7 +25,7 @@ const  HomeNavbar: React.FC = () => {
           <GoToExplorePageButton />
           <GoToNotificationsPageButton />
           <ToggleNavbarMobile />
-          <ProfilePicture src='' alt='' />
+          <ProfilePicture src={profilePictureURL} alt={username} navigateTo={userId}  />
       </ButtonGroup>
 
     </Navbar>
