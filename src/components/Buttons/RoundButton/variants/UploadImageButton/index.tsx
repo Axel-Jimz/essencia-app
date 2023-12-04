@@ -5,7 +5,7 @@ import CloseIcon from "../../../../icons/CloseIcon";
 
 export interface UploadImageButtonProps {
   showImageInput: boolean;
-  onClick: () => void;
+  onClick: any;
 }
 
 const UploadImageButton: React.FC<UploadImageButtonProps> = ({ showImageInput, onClick }) => {

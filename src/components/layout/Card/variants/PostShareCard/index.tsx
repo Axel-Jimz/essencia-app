@@ -7,7 +7,6 @@ import ProfilePicture from "../../../../avatars/ProfilePicture";
 import Username from "../../../../typography/Heading/variants/Username";
 import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 import CreatedAt from "../../../../typography/Paragraph/variants/CreatedAt";
-import OptionsPersonalPost from "../../../../groups/RoundExpandableButtonGroup/variants/OptionsPersonalPost";
 import SharedPostOptions from "../../../../groups/RoundExpandableButtonGroup/variants/SharedPostOptions";
 import Content from "../../../../typography/Paragraph/variants/Content";
 import PostImage from "../../../../images/CustomImage/variants/PostImage";

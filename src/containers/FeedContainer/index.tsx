@@ -28,7 +28,7 @@ const FeedContainer: React.FC = () => {
             <PostCardSkeleton />
           </>
         ) : (
-          sortedPosts.map((post) => (
+          sortedPosts.map((post: any) => (
             <div key={post.postId}>
               <PostCard
                 postId={post.postId}

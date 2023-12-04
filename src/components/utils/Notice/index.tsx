@@ -23,7 +23,7 @@ const Notice: React.FC<NoticeProps> = ({
       <h3>{title}</h3>
       <p>{description}</p>
       {buttonContent && (
-        <RedirectPageButton to={buttonRedirectPath}>{buttonContent}</RedirectPageButton>
+        <RedirectPageButton to={buttonRedirectPath || ''}>{buttonContent}</RedirectPageButton>
       )}
     </div>
   );

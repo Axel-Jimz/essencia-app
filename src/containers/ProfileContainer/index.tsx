@@ -48,17 +48,17 @@ const ProfileContainer: React.FC = () => {
       ) : (
         <>
           <ProfileHeader
-            username={profileData.data.username}
-            profileId={profileId}
-            profilePictureURL={profileData.data.profilePictureURL}
-            biography={profileData.data.biography}
+            username={profileData.data?.username}
+            profileId={profileId || ''}
+            profilePictureURL={profileData.data?.profilePictureURL}
+            biography={profileData.data?.biography}
           />
           <ProfileMain>
             <CardGroup stack="vertical">
-              {profilePersonalPosts.data.length <= 0 ? (
+              {profilePersonalPosts.data && profilePersonalPosts.data.length <= 0 ? (
                 <ProfileNotice />
               ) : (
-                profilePersonalPosts.data.map((post) => (
+                profilePersonalPosts.data?.map((post) => (
                   <div key={post.postId}>
                     <PostCard
                       postId={post.postId}

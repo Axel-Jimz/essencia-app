@@ -44,7 +44,7 @@ const NotificationsContainer: React.FC = () => {
               {sortedNotifications.length <= 0 ? (
                 <NotificationsNotice />
               ) : (
-                sortedNotifications.map((notification) => (
+                sortedNotifications.map((notification: any) => (
                   <div key={notification.notificationId}>
                     <NotificationCard
                       notificationId={notification.notificationId}

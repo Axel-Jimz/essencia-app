@@ -24,7 +24,7 @@ const CreatePostForm: React.FC = () => {
     formState: { isSubmitting },
   } = useForm();
 
-  const handleButton = (e) => {
+  const handleButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setShowImageInput(!showImageInput);
   };
@@ -64,7 +64,7 @@ const CreatePostForm: React.FC = () => {
           <ButtonGroup stack="horizontal">
             <UploadImageButton
               showImageInput={showImageInput}
-              onClick={(e) => handleButton(e)}
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleButton(e)}
             />
           </ButtonGroup>
           <CreatePostButton isSubmitting={isSubmitting} />

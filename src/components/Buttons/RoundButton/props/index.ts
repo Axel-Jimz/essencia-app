@@ -1,6 +1,6 @@
 export interface RoundButtonProps {
   icon: React.ReactElement;
-  onClick: () => void;
+  onClick: any;
   tooltipMessage?: string;
   bg:
     | "blue"

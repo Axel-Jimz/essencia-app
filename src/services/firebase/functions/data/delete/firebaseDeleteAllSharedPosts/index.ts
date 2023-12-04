@@ -1,4 +1,4 @@
-import { collection, doc, deleteDoc, getDocs, query, where } from "firebase/firestore";
+import { collection, doc, deleteDoc, getDocs, query } from "firebase/firestore";
 import { db } from "../../../../config";
 
 export const firebaseDeleteAllSharedPosts = async (userId: string) => {

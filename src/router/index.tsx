@@ -13,7 +13,6 @@ import Search from "../pages/Search";
 import Notifications from "../pages/Notifications";
 import Bookmarks from "../pages/Bookmarks";
 import Shares from "../pages/Shares";
-import News from "../pages/News";
 import Setting from "../pages/Setting";
 import Post from "../pages/Post";
 

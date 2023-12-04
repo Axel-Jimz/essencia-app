@@ -10,7 +10,6 @@ import GoToSearchPageButton from "../../../../buttons/NavRectangleButton/variant
 import GoToNotificationsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNotificationsPageButton";
 import GoToBookmarksButton from "../../../../buttons/NavRectangleButton/variants/GoToBookmarksPageButton";
 import GoToSharesPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSharesPageButton";
-import GoToNewsPageButton from "../../../../buttons/NavRectangleButton/variants/GoToNewsPageButton";
 import GoToSettingPageButton from "../../../../buttons/NavRectangleButton/variants/GoToSettingPageButton";
 import SignOutButton from "../../../../buttons/AsynchRectangleButton/variants/SignOutButton";
 

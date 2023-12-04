@@ -39,14 +39,12 @@ const BookmarksContainer: React.FC = () => {
                 {sortedBookmarks.length <= 0 ? (
                   <BookmarkNotice />
                 ) : (
-                  sortedBookmarks.map((bookmark) => (
+                  sortedBookmarks.map((bookmark: any) => (
                     <div key={bookmark.postId}>
                       <BookmarkCard
                         postId={bookmark.postId}
                         authorId={bookmark.authorId}
-                        profilePictureURL={
-                          bookmark.authorData.profilePictureURL
-                        }
+                        profilePictureURL={bookmark.authorData.profilePictureURL}
                         username={bookmark.authorData.username}
                         createdAt={bookmark.createdAt}
                         postContent={bookmark.postContent}

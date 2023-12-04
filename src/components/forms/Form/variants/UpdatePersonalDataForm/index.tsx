@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
+import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
 import { useForm } from "react-hook-form";
 import Form from "../..";
 import UpdateUsernameInput from "../../../Input/variants/UpdateUsernameInput";
 import UpdateBiographyTextarea from "../../../Textarea/variants/UpdateBiographyTextarea";
 import ChangeProfilePicture from "../../../ImageInput/variants/ChangeProfilePicture";
-
-import "./styles/index.css";
 import UpdatePersonalDataButton from "../../../../buttons/AsynchRectangleFormButton/variants/UpdatePersonalDataButton";
 import { firebaseUpdatePersonalData } from "../../../../../services/firebase/functions/data/uptate/firebaseUpdatePersonalData";
-import { UserModelContext } from "../../../../../state/contexts/UserModelContext";
+
+import "./styles/index.css";
 
 const UpdatePersonalDataForm: React.FC = () => {
   const [resetImageInput, setResetImageInput] = useState<boolean>(false);

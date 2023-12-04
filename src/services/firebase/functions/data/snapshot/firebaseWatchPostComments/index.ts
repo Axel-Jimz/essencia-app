@@ -21,7 +21,7 @@ export const firebaseWatchPostComments = (postId: string, callback: (commentsDat
   // Observa los cambios en la colección "comments".
   return onSnapshot(commentsRef, async (snapshot) => {
     let commentsData: any[] = [];
-    let usersData;
+    let usersData: any;
 
     snapshot.forEach((doc) => {
       const data = doc.data();

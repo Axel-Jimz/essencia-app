@@ -1,5 +1,5 @@
 export const extractUniqueProperties = (array: any[], property: string): string[] => {
-  const uniqueValues = [];
+  const uniqueValues: any = [];
 
   for (const object of array) {
     const value = object[property];

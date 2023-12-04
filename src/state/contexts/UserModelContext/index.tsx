@@ -26,7 +26,6 @@ export const UserModelContext = createContext<UserModelContextProps>({
   notifications: [],
   viewedNotifications: false,
   accountCreated: '',
-  online: false,
   /* User Personal Data  Functions */
   changeUserId: () => {},
   changeUsername: () => {},
@@ -38,6 +37,7 @@ export const UserModelContext = createContext<UserModelContextProps>({
   changeSavedPosts: () => {},
   changeSharedPosts: () => {},
   changeBlockedUsers: () => {},
+  changeNotifications: () => {},
   changeViewedNotifications: () => {},
   changeAccountCreated: () => {},
   updateUserPersonalData: () => {},

@@ -9,13 +9,15 @@ import CreatePostCommentForm from "../../components/forms/Form/variants/CreatePo
 import PostCommentCard from "../../components/layout/Card/variants/PostCommentCard";
 import CardGroup from "../../components/groups/CardGroup";
 import usePostComments from "./hooks/usePostComments";
-import PostCardSkeleton from "../../components/layout/Card/skeletons/PostCardSkeleton";
+import CommentsNotice from "../../components/utils/Notice/variants/CommentsNotice";
 
 const PostContainer: React.FC = () => {
   const { postId } = useParams();
-  const { state: { authorId } } = useLocation();
+  const {
+    state: { authorId },
+  } = useLocation();
 
-  const { commentsData } = usePostComments(postId);
+  const { commentsData } = usePostComments(postId || '');
 
   return (
     <Container id="post">
@@ -24,10 +26,10 @@ const PostContainer: React.FC = () => {
         <CardGroup stack="vertical">
           {commentsData.length <= 0 ? (
             <>
-              <PostCardSkeleton />
+              <CommentsNotice />
             </>
           ) : (
-            commentsData.map((comment) => (
+            commentsData.map((comment: any) => (
               <div key={comment.commentId}>
                 <PostCommentCard
                   profilePictureURL={comment.profilePictureURL}
@@ -35,15 +37,15 @@ const PostContainer: React.FC = () => {
                   commentContent={comment.commentContent}
                   createdAt={comment.createdAt}
                   authorId={comment.authorId}
-                  commentId={comment.commentId}   
-                  postId={comment.postId}             
+                  commentId={comment.commentId}
+                  postId={comment.postId}
                 />
               </div>
             ))
           )}
         </CardGroup>
       </PostMain>
-      <CreatePostCommentForm postId={postId} authorId={authorId} />
+      <CreatePostCommentForm postId={postId || ""} authorId={authorId} />
     </Container>
   );
 };

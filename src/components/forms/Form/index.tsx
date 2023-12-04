@@ -25,7 +25,7 @@ const Form: React.FC<FormProps> = ({ children, id, onSubmit, successTitle, succe
       onSubmit={(event) => {
         handleSubmit(onSubmit)(event)
           .then(() => termino('success'))
-          .catch((error) => termino('error'));
+          .catch((error) => termino(error));
       }}
       encType="multipart/form-data"
       id={id}

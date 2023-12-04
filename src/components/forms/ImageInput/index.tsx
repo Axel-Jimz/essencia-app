@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { ImageInputProps } from './props';
+import CloseIcon from '../../icons/CloseIcon';
+import UploadImageIcon from '../../icons/UploadImageIcon';
 
 import "./styles/index.css";
 import "./styles/theme.css";
-import CloseIcon from '../../icons/CloseIcon';
-import UploadImageIcon from '../../icons/UploadImageIcon';
 
 const ImageInput: React.FC<ImageInputProps> = ({ register, registerName, fieldName, id, resetImageInput, setResetImageInput }) => {
   const [file, setFile] = useState<File | null>(null);
 
   const classes = ['image-input'];
 
-  const handleFile = (e) => {
-    const fileSelected = e.target.files[0];
-    setFile(fileSelected);
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const fileSelected = e.target.files;
+    if (fileSelected && fileSelected.length > 0) {
+      const firstFile = fileSelected[0];
+      setFile(firstFile);
+    }
   }
-
+  
   const removeImage = () => {
     setFile(null);
     setResetImageInput(false)

@@ -8,7 +8,6 @@ import Username from "../../../../typography/Heading/variants/Username";
 import FollowUserButton from "../../../../buttons/AsynchRectangleButton/variants/FollowUserButton";
 import CreatedAt from "../../../../typography/Paragraph/variants/CreatedAt";
 import OptionsPersonalPost from "../../../../groups/RoundExpandableButtonGroup/variants/OptionsPersonalPost";
-import OptionsPost from "../../../../groups/RoundExpandableButtonGroup/variants/OptionsPost";
 import Content from "../../../../typography/Paragraph/variants/Content";
 import PostImage from "../../../../images/CustomImage/variants/PostImage";
 import LikePostButton from "../../../../buttons/AsynchRectangleButton/variants/LikePostButton";

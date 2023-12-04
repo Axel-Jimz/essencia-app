@@ -4,7 +4,6 @@ import Aside from "../..";
 import ProfileCard from "../../../Card/variants/ProfileCard";
 import CardGroup from "../../../../groups/CardGroup";
 import Callout from "../../../../typography/Heading/variants/Callout";
-import ViewUserSuggestionsButton from "../../../../buttons/NavRectangleButton/variants/ViewUserSuggestionsButton";
 import UserSuggestionCard from "../../../Card/variants/UserSuggestionCard";
 import { useQuery } from "react-query";
 import { firebaseGetSuggestedUsers } from "../../../../../services/firebase/functions/data/read/firebaseGetSuggestedUsers";

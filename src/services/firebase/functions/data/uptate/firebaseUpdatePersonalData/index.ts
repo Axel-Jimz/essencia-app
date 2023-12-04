@@ -6,7 +6,7 @@ import { generateId } from "../../../../../../utils/ids/generateId";
 
 export const firebaseUpdatePersonalData = async (userId: string, data: any) => {
     const userReference = doc(db, "users", userId);
-    const updateData = {};
+    const updateData: any = {};
   
     if (data.biography !== '') {
       updateData.biography = data.biography;

@@ -40,7 +40,7 @@ const SharesContainer: React.FC = () => {
                 {sortedSharedPosts.length <= 0 ? (
                   <SharesNotice />
                 ) : (
-                  sortedSharedPosts.map((sharePost) => (
+                  sortedSharedPosts.map((sharePost: any) => (
                     <div key={sharePost.postId}>
                       <PostShareCard
                         postId={sharePost.postId}

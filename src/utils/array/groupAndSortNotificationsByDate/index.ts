@@ -1,5 +1,5 @@
-export const sortNotificationsByTimestamp = (notifications) => {
-  const groupedNotifications = notifications.reduce((acc, notification) => {
+export const sortNotificationsByTimestamp = (notifications: any) => {
+  const groupedNotifications = notifications.reduce((acc: any, notification: any) => {
     const key = `${notification.postId}-${notification.type}`;
     if (!acc[key] || acc[key].timestamp < notification.timestamp) {
       acc[key] = notification;
@@ -7,6 +7,6 @@ export const sortNotificationsByTimestamp = (notifications) => {
     return acc;
   }, {});
 
-  const sortedNotifications = Object.values(groupedNotifications).sort((a, b) => b.timestamp - a.timestamp);
+  const sortedNotifications = Object.values(groupedNotifications).sort((a: any, b: any) => b.timestamp - a.timestamp);
   return sortedNotifications;
 };
